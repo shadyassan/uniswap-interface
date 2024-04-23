@@ -365,11 +365,19 @@ export const UNI: { [chainId: number]: Token } = {
 };
 
 export const AMB = new Token(
-  22040,
+  ChainId.AIRDAO,
   '0x586EE5Df24c5a426e42eD7Ea6e3EB0f00a4a2256',
   18,
   'AMB',
   'Amber'
+);
+
+export const BOND_AIRDAO = new Token(
+  ChainId.AIRDAO,
+  '0x58E98B0974A22270D974Ce914Fc430E048368546',
+  18,
+  'BOND',
+  'AirBond'
 );
 
 export const ARB = new Token(
@@ -504,8 +512,8 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } =
       'WETH',
       'Wrapped Ether'
     ),
-    22040: new Token(
-      22040,
+    [ChainId.AIRDAO]: new Token(
+      ChainId.AIRDAO,
       '0x00662a0aC35717A1898bEfd243B47e373cFd73f7',
       18,
       'sAMB',

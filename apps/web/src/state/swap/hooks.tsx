@@ -150,8 +150,6 @@ export function useDerivedSwapInfo(state: SwapState): SwapInfo {
     )
   );
 
-  console.log('relevantTokenBalances', relevantTokenBalances);
-
   const isExactIn: boolean = independentField === Field.INPUT;
   const parsedAmount = useMemo(
     () =>

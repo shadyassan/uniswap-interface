@@ -45,6 +45,7 @@ import {
   WETH_POLYGON_MUMBAI,
   WRAPPED_NATIVE_CURRENCY,
   nativeOnChain,
+  BOND_AIRDAO,
 } from './tokens';
 
 type ChainTokenList = {
@@ -166,6 +167,11 @@ export const COMMON_BASES: ChainCurrencyList = {
     USDC_AVALANCHE,
     USDT_AVALANCHE,
     WETH_AVALANCHE,
+  ],
+  [ChainId.AIRDAO]: [
+    nativeOnChain(ChainId.AIRDAO),
+    WRAPPED_NATIVE_CURRENCY[ChainId.AIRDAO] as Token,
+    BOND_AIRDAO,
   ],
 };
 

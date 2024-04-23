@@ -59,8 +59,6 @@ export default function SwapPage({ className }: { className?: string }) {
     chainId
   );
 
-  // console.log('initialInputCurrency: ', initialInputCurrency);
-
   return (
     <Trace page={InterfacePageName.SWAP_PAGE} shouldLogImpression>
       <PageWrapper>

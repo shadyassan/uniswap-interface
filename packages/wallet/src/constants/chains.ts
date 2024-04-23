@@ -338,7 +338,7 @@ export const CHAIN_INFO: ChainInfo = {
       [RPCType.PublicAlt]: 'https://rpc-endpoints.superfluid.dev/mumbai',
     },
   },
-  22040: {
+  [ChainId.AirDAO]: {
     blockWaitMsBeforeWarning: 600000, // 10 minutes
     bridge: '',
     docs: '',

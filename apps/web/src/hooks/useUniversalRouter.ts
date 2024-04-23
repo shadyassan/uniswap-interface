@@ -120,16 +120,16 @@ export function useUniversalRouterSwapCallback(
             gasLimit = calculateGasMargin(gasEstimate);
             trace.setData('gasLimit', gasLimit.toNumber());
           } catch (gasError) {
-            sendAnalyticsEvent(SwapEventName.SWAP_ESTIMATE_GAS_CALL_FAILED, {
-              ...formatCommonPropertiesForTrade(
-                trade,
-                options.slippageTolerance
-              ),
-              ...analyticsContext,
-              client_block_number: blockNumber,
-              tx,
-              isAutoSlippage,
-            });
+            // sendAnalyticsEvent(SwapEventName.SWAP_ESTIMATE_GAS_CALL_FAILED, {
+            //   ...formatCommonPropertiesForTrade(
+            //     trade,
+            //     options.slippageTolerance
+            //   ),
+            //   ...analyticsContext,
+            //   client_block_number: blockNumber,
+            //   tx,
+            //   isAutoSlippage,
+            // });
             console.warn(gasError);
             throw new GasEstimationError();
           }
@@ -153,37 +153,37 @@ export function useUniversalRouterSwapCallback(
               }
             }
           );
-          sendAnalyticsEvent(SwapEventName.SWAP_SIGNED, {
-            ...formatSwapSignedAnalyticsEventProperties({
-              trade,
-              timeToSignSinceRequestMs: trace.now(),
-              allowedSlippage: options.slippageTolerance,
-              fiatValues,
-              txHash: response.hash,
-              portfolioBalanceUsd,
-            }),
-            ...analyticsContext,
-            // TODO (WEB-2993): remove these after debugging missing user properties.
-            [CustomUserProperties.WALLET_ADDRESS]: account,
-            [CustomUserProperties.WALLET_TYPE]:
-              getConnection(connector).getProviderInfo().name,
-            [CustomUserProperties.PEER_WALLET_AGENT]: provider
-              ? getWalletMeta(provider)?.agent
-              : undefined,
-          });
-          if (tx.data !== response.data) {
-            sendAnalyticsEvent(SwapEventName.SWAP_MODIFIED_IN_WALLET, {
-              txHash: response.hash,
-              ...analyticsContext,
-            });
-            if (
-              !response.data ||
-              response.data.length === 0 ||
-              response.data === '0x'
-            ) {
-              throw new ModifiedSwapError();
-            }
-          }
+          // sendAnalyticsEvent(SwapEventName.SWAP_SIGNED, {
+          //   ...formatSwapSignedAnalyticsEventProperties({
+          //     trade,
+          //     timeToSignSinceRequestMs: trace.now(),
+          //     allowedSlippage: options.slippageTolerance,
+          //     fiatValues,
+          //     txHash: response.hash,
+          //     portfolioBalanceUsd,
+          //   }),
+          //   ...analyticsContext,
+          //   // TODO (WEB-2993): remove these after debugging missing user properties.
+          //   [CustomUserProperties.WALLET_ADDRESS]: account,
+          //   [CustomUserProperties.WALLET_TYPE]:
+          //     getConnection(connector).getProviderInfo().name,
+          //   [CustomUserProperties.PEER_WALLET_AGENT]: provider
+          //     ? getWalletMeta(provider)?.agent
+          //     : undefined,
+          // });
+          // if (tx.data !== response.data) {
+          //   sendAnalyticsEvent(SwapEventName.SWAP_MODIFIED_IN_WALLET, {
+          //     txHash: response.hash,
+          //     ...analyticsContext,
+          //   });
+          //   if (
+          //     !response.data ||
+          //     response.data.length === 0 ||
+          //     response.data === '0x'
+          //   ) {
+          //     throw new ModifiedSwapError();
+          //   }
+          // }
           return { type: TradeFillType.Classic as const, response, deadline };
         } catch (error: unknown) {
           if (error instanceof GasEstimationError) {

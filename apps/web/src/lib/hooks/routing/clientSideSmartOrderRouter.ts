@@ -7,7 +7,7 @@ import {
 } from 'shady-sdk-core';
 // This file is lazy-loaded, so the import of smart-order-router is intentional.
 // eslint-disable-next-line @typescript-eslint/no-restricted-imports
-import { AlphaRouter, AlphaRouterConfig } from '@uniswap/smart-order-router';
+import { AlphaRouter, AlphaRouterConfig } from 'shady-smart-order-router';
 import { asSupportedChain } from 'constants/chains';
 import { RPC_PROVIDERS } from 'constants/providers';
 import { nativeOnChain } from 'constants/tokens';
@@ -35,6 +35,7 @@ const CLIENT_SIDE_ROUTING_ALLOW_LIST = [
   ChainId.BNB,
   ChainId.AVALANCHE,
   ChainId.BASE,
+  ChainId.AIRDAO,
 ];
 const routers = new Map<ChainId, AlphaRouter>();
 export function getRouter(chainId: ChainId): AlphaRouter {

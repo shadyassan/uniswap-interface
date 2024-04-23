@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro';
-import { ethers } from 'ethers';
+import { providers as ethersProviders } from 'ethers';
 import {
   BrowserEvent,
   InterfaceElementName,
@@ -22,6 +22,7 @@ import confirmPriceImpactWithoutFee from 'components/swap/confirmPriceImpactWith
 import { Field } from 'components/swap/constants';
 import PriceImpactModal from 'components/swap/PriceImpactModal';
 import PriceImpactWarning from 'components/swap/PriceImpactWarning';
+
 import {
   ArrowContainer,
   ArrowWrapper,
@@ -77,12 +78,9 @@ import { CurrencyState } from 'state/swap/types';
 import { getIsReviewableQuote } from '.';
 import { OutputTaxTooltipBody } from './TaxTooltipBody';
 
-const DEV_QUOTER_CONTRACT_ADDRESS =
-  '0xceCd6B1ee8B685457e24Faa52355e8Edf0239Cd5';
-const provider = new ethers.providers.JsonRpcProvider(
-  'https://network.ambrosus-test.io'
-);
-import QuoterV2ABI from '@uniswap/v3-periphery/artifacts/contracts/lens/QuoterV2.sol/QuoterV2.json';
+// import { getRouter } from 'lib/hooks/routing/clientSideSmartOrderRouter';
+import { AlphaRouter, AlphaRouterConfig } from 'shady-smart-order-router';
+import { RPC_PROVIDERS } from 'constants/providers';
 
 const SWAP_FORM_CURRENCY_SEARCH_FILTERS = {
   showCommonBases: true,
@@ -105,28 +103,21 @@ export function SwapForm({
   const { swapState, setSwapState, derivedSwapInfo } = useSwapContext();
   const { typedValue, independentField } = swapState;
 
-  const quoterContract = new ethers.Contract(
-    DEV_QUOTER_CONTRACT_ADDRESS,
-    QuoterV2ABI.abi,
-    provider
-  );
-
-  // const params = {
-  //   tokenIn: '',
-  //   tokenOut: '',
-  //   fee: 3000,
-  //   amountIn: ethers.utils.parseUnits('10', DEV_USDC_TOKEN.decimals),
-  //   sqrtPriceLimitX96: 0,
-  // }
-
   // useEffect(() => {
-  //   (async function() {
-  //     const quotedAmounts = await quoterContract.callStatic.quoteExactInputSingle(params, {value: 0});
-  //     console.log('Quoted amount out:', quotedAmounts.amountOut.toString());
-  //   })()
-  // }, []);
+  //   (async function () {
+  // const router = getRouter(22040);
 
-  // console.log('quoterContract', quoterContract);
+  // if (chainId === undefined) return;
+
+  // const web3Provider = new ethersProviders.JsonRpcProvider(
+  //   process.env.JSON_RPC_PROVIDER
+  // );
+
+  // const provider = RPC_PROVIDERS[chainId];
+  // const router = new AlphaRouter({ chainId, provider: web3Provider });
+  // console.log('router; ', router);
+  //   })();
+  // }, [chainId]);
 
   // token warning stuff
   const parsedQs = useParsedQueryString();
@@ -427,7 +418,8 @@ export function SwapForm({
       parsedAmounts[independentField]?.greaterThan(JSBI.BigInt(0))
   );
 
-  // console.log('UNIVERSAL_ROUTER_ADDRESS', UNIVERSAL_ROUTER_ADDRESS(chainId));
+  // 0xD3FeB6dCdeA02ecD1FA5127535D2b624eE48b843
+  // UNIVERSAL_ROUTER_ADDRESS(chainId)
 
   const maximumAmountIn = useMaxAmountIn(trade, allowedSlippage);
   const allowance = usePermit2Allowance(
@@ -436,7 +428,7 @@ export function SwapForm({
         ? (parsedAmounts[Field.INPUT] as CurrencyAmount<Token>)
         : undefined),
     isSupportedChain(chainId)
-      ? '0xfe99543dca6Cb549FaF0fb024C41103862ADFFaA'
+      ? '0xD3FeB6dCdeA02ecD1FA5127535D2b624eE48b843'
       : undefined,
     trade?.fillType
   );
@@ -608,27 +600,27 @@ export function SwapForm({
   const showPriceImpactWarning =
     isClassicTrade(trade) && largerPriceImpact && priceImpactSeverity > 3;
 
-  // const prevTrade = usePrevious(trade);
-  // useEffect(() => {
-  //   if (!trade || prevTrade === trade) return; // no new swap quote to log
+  const prevTrade = usePrevious(trade);
+  useEffect(() => {
+    if (!trade || prevTrade === trade) return; // no new swap quote to log
 
-  //   sendAnalyticsEvent(SwapEventName.SWAP_QUOTE_RECEIVED, {
-  //     ...formatSwapQuoteReceivedEventProperties(
-  //       trade,
-  //       allowedSlippage,
-  //       swapQuoteLatency,
-  //       outputFeeFiatValue
-  //     ),
-  //     ...trace,
-  //   });
-  // }, [
-  //   prevTrade,
-  //   trade,
-  //   trace,
-  //   allowedSlippage,
-  //   swapQuoteLatency,
-  //   outputFeeFiatValue,
-  // ]);
+    sendAnalyticsEvent(SwapEventName.SWAP_QUOTE_RECEIVED, {
+      ...formatSwapQuoteReceivedEventProperties(
+        trade,
+        allowedSlippage,
+        swapQuoteLatency,
+        outputFeeFiatValue
+      ),
+      ...trace,
+    });
+  }, [
+    prevTrade,
+    trade,
+    trace,
+    allowedSlippage,
+    swapQuoteLatency,
+    outputFeeFiatValue,
+  ]);
 
   const showDetailsDropdown = Boolean(
     !showWrap &&

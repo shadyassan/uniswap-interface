@@ -284,7 +284,7 @@ const CHAIN_INFO: ChainInfoMap = {
     nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
     color: darkTheme.chain_81457,
   },
-  22040: {
+  [ChainId.AIRDAO]: {
     networkType: NetworkType.L1,
     bridge: 'https://airdao.io/bridge',
     defaultListUrl: '',

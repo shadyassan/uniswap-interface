@@ -142,7 +142,7 @@ export const PUBLIC_RPC_URLS: Record<SupportedInterfaceChain, string[]> = {
     'https://blastl2-mainnet.public.blastapi.io',
     'https://blast.blockpi.network/v1/rpc/public',
   ],
-  22040: ['https://explorer.ambrosus-test.io/'],
+  [ChainId.AIRDAO]: ['https://network.ambrosus-test.io'],
 };
 
 /**
@@ -150,10 +150,7 @@ export const PUBLIC_RPC_URLS: Record<SupportedInterfaceChain, string[]> = {
  * These are URLs which may only be used by the interface, due to origin policies, &c.
  */
 export const APP_RPC_URLS: Record<SupportedInterfaceChain, string[]> = {
-  [ChainId.MAINNET]: [
-    `https://mainnet.infura.io/v3/${INFURA_KEY}`,
-    QUICKNODE_MAINNET_RPC_URL,
-  ],
+  [ChainId.MAINNET]: [`https://mainnet.infura.io/v3/${INFURA_KEY}`],
   [ChainId.GOERLI]: [`https://goerli.infura.io/v3/${INFURA_KEY}`],
   [ChainId.SEPOLIA]: [`https://sepolia.infura.io/v3/${INFURA_KEY}`],
   [ChainId.OPTIMISM]: [`https://optimism-mainnet.infura.io/v3/${INFURA_KEY}`],
@@ -179,6 +176,7 @@ export const APP_RPC_URLS: Record<SupportedInterfaceChain, string[]> = {
   [ChainId.AVALANCHE]: [`https://avalanche-mainnet.infura.io/v3/${INFURA_KEY}`],
   [ChainId.BASE]: [`https://base-mainnet.infura.io/v3/${INFURA_KEY}`],
   [ChainId.BLAST]: [`https://blast-mainnet.infura.io/v3/${INFURA_KEY}`],
+  [ChainId.AIRDAO]: [`https://network.ambrosus-test.io`],
 };
 
 export const INFURA_PREFIX_TO_CHAIN_ID: { [prefix: string]: ChainId } = {

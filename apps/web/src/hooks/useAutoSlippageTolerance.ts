@@ -121,7 +121,8 @@ export default function useClassicAutoSlippageTolerance(
   const skipNativeEstimate = Boolean(gasEstimateUSD || !trade);
   const nativeGasPrice = useGasPrice(/* skip= */ skipNativeEstimate);
   const nativeCurrency = useNativeCurrency(chainId);
-  const gasEstimate = guesstimateGas(trade);
+  // const gasEstimate = guesstimateGas(trade);
+  const gasEstimate = 0;
   const nativeGasCost =
     nativeGasPrice && typeof gasEstimate === 'number'
       ? JSBI.multiply(nativeGasPrice, JSBI.BigInt(gasEstimate))

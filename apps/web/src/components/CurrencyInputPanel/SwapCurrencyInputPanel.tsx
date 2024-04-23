@@ -294,14 +294,6 @@ const SwapCurrencyInputPanel = forwardRef<
     const theme = useTheme();
     const { formatCurrencyAmount } = useFormatter();
 
-    // console.log(
-    //   'selectedCurrencyBalance: ',
-    //   formatCurrencyAmount({
-    //     amount: selectedCurrencyBalance,
-    //     type: NumberType.TokenNonTx,
-    //   })
-    // );
-
     const handleDismissSearch = useCallback(() => {
       setModalOpen(false);
     }, [setModalOpen]);

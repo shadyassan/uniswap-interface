@@ -156,6 +156,7 @@ export function useCurrencyBalances(
 
   const { chainId } = useWeb3React();
   const tokenBalances = useTokenBalances(account, tokens);
+
   const containsETH: boolean = useMemo(
     () => currencies?.some((currency) => currency?.isNative) ?? false,
     [currencies]

@@ -183,11 +183,6 @@ export function useV2RouterContract(): Contract | null {
   );
 }
 
-// {
-//   ...MULTICALL_ADDRESSES,
-//   22040: '0x939362e616DabEb19da923B8C8Fffcf2b8d3eca4',
-// },
-
 export function useInterfaceMulticall() {
   return useContract<UniswapInterfaceMulticall>(
     MULTICALL_ADDRESSES,

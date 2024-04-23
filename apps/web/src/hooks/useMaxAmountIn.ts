@@ -7,9 +7,11 @@ export function useMaxAmountIn(
   allowedSlippage: Percent
 ) {
   return useMemo(() => {
-    const maximumAmountIn = trade?.maximumAmountIn(allowedSlippage);
-    return maximumAmountIn?.currency.isToken
-      ? (maximumAmountIn as CurrencyAmount<Token>)
-      : undefined;
+    // const maximumAmountIn = trade?.maximumAmountIn(allowedSlippage);
+    // return maximumAmountIn?.currency.isToken
+    //   ? (maximumAmountIn as CurrencyAmount<Token>)
+    //   : undefined;
+
+    return undefined;
   }, [allowedSlippage, trade]);
 }

@@ -32,8 +32,8 @@ import {
   useSimpleTokenQuery,
 } from 'uniswap/src/data/graphql/uniswap-data-api/__generated__/types-and-hooks';
 import { CurrencyInfo } from 'uniswap/src/features/dataApi/types';
-import { FeatureFlags } from 'uniswap/src/features/experiments/flags';
-import { useFeatureFlag } from 'uniswap/src/features/experiments/hooks';
+import { FeatureFlags } from 'uniswap/src/features/statsig/flags';
+import { useFeatureFlag } from 'uniswap/src/features/statsig/hooks';
 import { isAddress } from 'utilities/src/addresses';
 import { DEFAULT_ERC20_DECIMALS } from 'utilities/src/tokens/constants';
 import { getNativeTokenDBAddress } from 'utils/nativeTokens';
@@ -227,7 +227,6 @@ function useCurrencyFromMap(
   currencyId?: string | null
 ): Currency | undefined {
   const nativeCurrency = useNativeCurrency(chainId);
-
   const isNative = Boolean(
     nativeCurrency && currencyId?.toUpperCase() === 'ETH'
   );
@@ -462,7 +461,6 @@ function useTokenListCurrency(
   chainId?: ChainId
 ): Currency | undefined {
   const { chainId: connectedChainId } = useWeb3React();
-
   const tokens = useDefaultActiveTokens(chainId ?? connectedChainId);
   return useCurrencyFromMap(tokens, chainId ?? connectedChainId, currencyId);
 }
@@ -475,8 +473,8 @@ export function useCurrency(
   const currencyInfo = useCurrencyInfo(address, chainId, skip);
   const gqlTokenListsEnabled = useFeatureFlag(FeatureFlags.GqlTokenLists);
   const tokenListCurrency = useTokenListCurrency(address, chainId);
-
-  return gqlTokenListsEnabled ? currencyInfo?.currency : tokenListCurrency;
+  // return gqlTokenListsEnabled ? currencyInfo?.currency : tokenListCurrency;
+  return tokenListCurrency;
 }
 
 /**
@@ -484,16 +482,35 @@ export function useCurrency(
  * be used directly if the gqlTokenListsEnabled flag is enabled, otherwise it
  * will return undefined every time.
  */
-function useCurrencyInfo(
+export function useCurrencyInfo(currency?: Currency): Maybe<CurrencyInfo>;
+export function useCurrencyInfo(
   address?: string,
+  chainId?: ChainId,
+  skip?: boolean
+): Maybe<CurrencyInfo>;
+export function useCurrencyInfo(
+  addressOrCurrency?: string | Currency,
   chainId?: ChainId,
   skip?: boolean
 ): Maybe<CurrencyInfo> {
   const { chainId: connectedChainId } = useWeb3React();
   const gqlTokenListsEnabled = useFeatureFlag(FeatureFlags.GqlTokenLists);
 
-  const backendChainName = chainIdToBackendName(chainId ?? connectedChainId);
+  const address =
+    typeof addressOrCurrency === 'string'
+      ? addressOrCurrency
+      : addressOrCurrency?.isNative
+      ? NATIVE_CHAIN_ID
+      : addressOrCurrency?.address;
 
+  const currencyChainId =
+    typeof addressOrCurrency === 'string'
+      ? chainId
+      : addressOrCurrency?.chainId;
+
+  const backendChainName = chainIdToBackendName(
+    currencyChainId ?? connectedChainId
+  );
   const isNative =
     address === NATIVE_CHAIN_ID ||
     address?.toLowerCase() === 'native' ||
