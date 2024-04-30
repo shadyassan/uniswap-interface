@@ -122,12 +122,10 @@ export class LiquidityBarChartModel extends ChartModel<LiquidityBarData> {
     );
     const midPoint = activeTickIndex !== -1 ? activeTickIndex : length / 2;
 
-    this.api
-      .timeScale()
-      .setVisibleLogicalRange({
-        from: Math.max(midPoint - 50, 0),
-        to: Math.min(midPoint + 50, this.data.length),
-      });
+    this.api.timeScale().setVisibleLogicalRange({
+      from: Math.max(midPoint - 50, 0),
+      to: Math.min(midPoint + 50, this.data.length),
+    });
   }
 }
 
@@ -319,8 +317,8 @@ export function useLiquidityBarData({
           activeRangePercentage =
             (activePoolData.currentTick - t.tick) / TICK_SPACINGS[feeTier];
 
-          price0 = tickToPrice(tokenA, tokenB, t.tick);
-          price1 = price0.invert();
+          // price0 = tickToPrice(tokenA, tokenB, t.tick);
+          // price1 = price0.invert();
         }
 
         const { amount0Locked, amount1Locked } = await calculateTokensLocked(

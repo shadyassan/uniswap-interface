@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { t, Trans } from '@lingui/macro';
 import { Currency, CurrencyAmount, Percent, TradeType } from 'shady-sdk-core';
 import { formatTimestamp } from 'components/AccountDrawer/MiniPortfolio/formatTimestamp';

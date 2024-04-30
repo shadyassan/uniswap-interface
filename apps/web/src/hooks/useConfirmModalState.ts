@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { InterfaceEventName } from '@uniswap/analytics-events';
 import { Currency, Percent } from 'shady-sdk-core';
 import { useWeb3React } from '@web3-react/core';

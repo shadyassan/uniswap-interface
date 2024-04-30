@@ -1,3 +1,4 @@
+/* eslint-enable prettier/prettier */
 import { ChainId } from 'shady-sdk-core';
 
 // Breakpoints specifically for the token pages

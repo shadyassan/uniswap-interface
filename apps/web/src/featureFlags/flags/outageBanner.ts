@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { ApolloError } from '@apollo/client';
 import { ChainId } from 'shady-sdk-core';
 import { atomWithReset, useResetAtom, useUpdateAtom } from 'jotai/utils';

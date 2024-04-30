@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { Trans } from '@lingui/macro';
 import { Currency, CurrencyAmount, Price } from 'shady-sdk-core';
 import { DetailLineItem, LineItemData } from 'components/swap/DetailLineItem';

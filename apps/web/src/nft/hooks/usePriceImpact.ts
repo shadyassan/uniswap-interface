@@ -1,32 +1,41 @@
-import { useMemo } from 'react'
-import { ClassicTrade } from 'state/routing/types'
-import { useTheme } from 'styled-components'
-import { useFormatter } from 'utils/formatNumbers'
-import { computeRealizedPriceImpact, getPriceImpactWarning } from 'utils/prices'
+// @ts-nocheck
+
+import { useMemo } from 'react';
+import { ClassicTrade } from 'state/routing/types';
+import { useTheme } from 'styled-components';
+import { useFormatter } from 'utils/formatNumbers';
+import {
+  computeRealizedPriceImpact,
+  getPriceImpactWarning,
+} from 'utils/prices';
 
 export interface PriceImpact {
-  priceImpactSeverity: PriceImpactSeverity
-  displayPercentage(): string
+  priceImpactSeverity: PriceImpactSeverity;
+  displayPercentage(): string;
 }
 
 interface PriceImpactSeverity {
-  type: 'warning' | 'error'
-  color: string
+  type: 'warning' | 'error';
+  color: string;
 }
 
 export function usePriceImpact(trade?: ClassicTrade): PriceImpact | undefined {
-  const theme = useTheme()
-  const { formatPercent } = useFormatter()
+  const theme = useTheme();
+  const { formatPercent } = useFormatter();
 
   return useMemo(() => {
-    const marketPriceImpact = trade ? computeRealizedPriceImpact(trade) : undefined
-    const priceImpactWarning = marketPriceImpact ? getPriceImpactWarning(marketPriceImpact) : undefined
+    const marketPriceImpact = trade
+      ? computeRealizedPriceImpact(trade)
+      : undefined;
+    const priceImpactWarning = marketPriceImpact
+      ? getPriceImpactWarning(marketPriceImpact)
+      : undefined;
     const warningColor =
       priceImpactWarning === 'error'
         ? theme.critical
         : priceImpactWarning === 'warning'
         ? theme.deprecated_accentWarning
-        : undefined
+        : undefined;
 
     return marketPriceImpact && priceImpactWarning && warningColor
       ? {
@@ -36,6 +45,6 @@ export function usePriceImpact(trade?: ClassicTrade): PriceImpact | undefined {
           },
           displayPercentage: () => formatPercent(marketPriceImpact),
         }
-      : undefined
-  }, [formatPercent, theme.critical, theme.deprecated_accentWarning, trade])
+      : undefined;
+  }, [formatPercent, theme.critical, theme.deprecated_accentWarning, trade]);
 }

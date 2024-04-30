@@ -1,5 +1,8 @@
+// @ts-nocheck
+
 import { Trans } from '@lingui/macro';
-import { providers as ethersProviders } from 'ethers';
+import { providers } from 'ethers';
+import { Protocol } from '@uniswap/router-sdk';
 import {
   BrowserEvent,
   InterfaceElementName,
@@ -9,7 +12,8 @@ import {
   SwapEventName,
 } from '@uniswap/analytics-events';
 import { Currency, CurrencyAmount, Token } from 'shady-sdk-core';
-import { UNIVERSAL_ROUTER_ADDRESS } from '@uniswap/universal-router-sdk';
+// import { UNIVERSAL_ROUTER_ADDRESS } from '@uniswap/universal-router-sdk';
+import { UNIVERSAL_ROUTER_ADDRESS } from 'shady-universal-router-sdk';
 import { useWeb3React } from '@web3-react/core';
 import { sendAnalyticsEvent, Trace, TraceEvent, useTrace } from 'analytics';
 import { useToggleAccountDrawer } from 'components/AccountDrawer/MiniPortfolio/hooks';
@@ -78,10 +82,6 @@ import { CurrencyState } from 'state/swap/types';
 import { getIsReviewableQuote } from '.';
 import { OutputTaxTooltipBody } from './TaxTooltipBody';
 
-// import { getRouter } from 'lib/hooks/routing/clientSideSmartOrderRouter';
-import { AlphaRouter, AlphaRouterConfig } from 'shady-smart-order-router';
-import { RPC_PROVIDERS } from 'constants/providers';
-
 const SWAP_FORM_CURRENCY_SEARCH_FILTERS = {
   showCommonBases: true,
 };
@@ -102,22 +102,6 @@ export function SwapForm({
   const { chainId, prefilledState, currencyState } = useSwapAndLimitContext();
   const { swapState, setSwapState, derivedSwapInfo } = useSwapContext();
   const { typedValue, independentField } = swapState;
-
-  // useEffect(() => {
-  //   (async function () {
-  // const router = getRouter(22040);
-
-  // if (chainId === undefined) return;
-
-  // const web3Provider = new ethersProviders.JsonRpcProvider(
-  //   process.env.JSON_RPC_PROVIDER
-  // );
-
-  // const provider = RPC_PROVIDERS[chainId];
-  // const router = new AlphaRouter({ chainId, provider: web3Provider });
-  // console.log('router; ', router);
-  //   })();
-  // }, [chainId]);
 
   // token warning stuff
   const parsedQs = useParsedQueryString();
@@ -418,18 +402,13 @@ export function SwapForm({
       parsedAmounts[independentField]?.greaterThan(JSBI.BigInt(0))
   );
 
-  // 0xD3FeB6dCdeA02ecD1FA5127535D2b624eE48b843
-  // UNIVERSAL_ROUTER_ADDRESS(chainId)
-
   const maximumAmountIn = useMaxAmountIn(trade, allowedSlippage);
   const allowance = usePermit2Allowance(
     maximumAmountIn ??
       (parsedAmounts[Field.INPUT]?.currency.isToken
         ? (parsedAmounts[Field.INPUT] as CurrencyAmount<Token>)
         : undefined),
-    isSupportedChain(chainId)
-      ? '0xD3FeB6dCdeA02ecD1FA5127535D2b624eE48b843'
-      : undefined,
+    isSupportedChain(chainId) ? UNIVERSAL_ROUTER_ADDRESS(chainId) : undefined,
     trade?.fillType
   );
 

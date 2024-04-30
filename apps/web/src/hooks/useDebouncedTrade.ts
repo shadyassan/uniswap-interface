@@ -9,7 +9,7 @@ import {
   RouterPreference,
   TradeState,
 } from 'state/routing/types';
-import { usePreviewTrade } from 'state/routing/usePreviewTrade';
+// import { usePreviewTrade } from 'state/routing/usePreviewTrade';
 import { useRoutingAPITrade } from 'state/routing/useRoutingAPITrade';
 import { useRouterPreference } from 'state/user/hooks';
 
@@ -97,14 +97,14 @@ export function useDebouncedTrade(
 
   const skipPreviewTradeFetch = skipBothFetches || isPreviewTradeDebouncing;
 
-  const previewTradeResult = usePreviewTrade(
-    skipPreviewTradeFetch,
-    tradeType,
-    amountSpecified,
-    otherCurrency,
-    inputTax,
-    outputTax
-  );
+  // const previewTradeResult = usePreviewTrade(
+  //   skipPreviewTradeFetch,
+  //   tradeType,
+  //   amountSpecified,
+  //   otherCurrency,
+  //   inputTax,
+  //   outputTax
+  // );
   const routingApiTradeResult = useRoutingAPITrade(
     skipRoutingFetch,
     tradeType,
@@ -116,7 +116,9 @@ export function useDebouncedTrade(
     outputTax
   );
 
-  return previewTradeResult.currentTrade && !routingApiTradeResult.currentTrade
-    ? previewTradeResult
-    : routingApiTradeResult;
+  return routingApiTradeResult;
+
+  // return previewTradeResult.currentTrade && !routingApiTradeResult.currentTrade
+  //   ? previewTradeResult
+  //   : routingApiTradeResult;
 }

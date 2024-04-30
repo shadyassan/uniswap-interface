@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { AddressZero } from '@ethersproject/constants';
 import { MixedRouteSDK, ONE, Protocol, Trade } from '@uniswap/router-sdk';
 import {

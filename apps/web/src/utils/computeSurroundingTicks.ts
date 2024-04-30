@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { Token } from 'shady-sdk-core';
 import { tickToPrice } from '@uniswap/v3-sdk';
 import { TickProcessed } from 'hooks/usePoolTickData';

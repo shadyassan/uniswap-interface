@@ -150,7 +150,11 @@ export const PUBLIC_RPC_URLS: Record<SupportedInterfaceChain, string[]> = {
  * These are URLs which may only be used by the interface, due to origin policies, &c.
  */
 export const APP_RPC_URLS: Record<SupportedInterfaceChain, string[]> = {
-  [ChainId.MAINNET]: [`https://mainnet.infura.io/v3/${INFURA_KEY}`],
+  [ChainId.MAINNET]: [
+    `https://eth.meowrpc.com`,
+    // `https://mainnet.infura.io/v3/${INFURA_KEY}`,
+    // QUICKNODE_MAINNET_RPC_URL,
+  ],
   [ChainId.GOERLI]: [`https://goerli.infura.io/v3/${INFURA_KEY}`],
   [ChainId.SEPOLIA]: [`https://sepolia.infura.io/v3/${INFURA_KEY}`],
   [ChainId.OPTIMISM]: [`https://optimism-mainnet.infura.io/v3/${INFURA_KEY}`],

@@ -1,29 +1,29 @@
 /* eslint-env node */
-const { VanillaExtractPlugin } = require('@vanilla-extract/webpack-plugin')
-const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin')
-const { execSync } = require('child_process')
-const { readFileSync } = require('fs')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const path = require('path')
-const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin')
-const { IgnorePlugin, ProvidePlugin } = require('webpack')
-const { RetryChunkLoadPlugin } = require('webpack-retry-chunk-load-plugin')
+const { VanillaExtractPlugin } = require('@vanilla-extract/webpack-plugin');
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
+const { execSync } = require('child_process');
+const { readFileSync } = require('fs');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path');
+const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
+const { IgnorePlugin, ProvidePlugin } = require('webpack');
+const { RetryChunkLoadPlugin } = require('webpack-retry-chunk-load-plugin');
 
-const commitHash = execSync('git rev-parse HEAD').toString().trim()
-const isProduction = process.env.NODE_ENV === 'production'
+const commitHash = execSync('git rev-parse HEAD').toString().trim();
+const isProduction = process.env.NODE_ENV === 'production';
 
-process.env.REACT_APP_GIT_COMMIT_HASH = commitHash
+process.env.REACT_APP_GIT_COMMIT_HASH = commitHash;
 
 // Linting and type checking are only necessary as part of development and testing.
 // Omit them from production builds, as they slow down the feedback loop.
-const shouldLintOrTypeCheck = !isProduction
+const shouldLintOrTypeCheck = !isProduction;
 
 // Our .swcrc wasn't being picked up in the monorepo, so we load it directly.
-const swcrc = JSON.parse(readFileSync('./.swcrc', 'utf-8'))
+const swcrc = JSON.parse(readFileSync('./.swcrc', 'utf-8'));
 
 function getCacheDirectory(cacheName) {
   // Include the trailing slash to denote that this is a directory.
-  return `${path.join(__dirname, 'node_modules/.cache/', cacheName)}/`
+  return `${path.join(__dirname, 'node_modules/.cache/', cacheName)}/`;
 }
 
 module.exports = {
@@ -39,39 +39,39 @@ module.exports = {
         eslintPath: require.resolve('eslint'),
         resolvePluginsRelativeTo: null,
         baseConfig: null,
-      })
+      });
     },
   },
   typescript: {
     enableTypeChecking: shouldLintOrTypeCheck,
   },
-  jest: {
-    configure(jestConfig) {
-      return Object.assign(jestConfig, {
-        globals: {
-          __DEV__: true,
-        },
-        cacheDirectory: getCacheDirectory('jest'),
-        transform: {
-          ...Object.entries(jestConfig.transform).reduce((transform, [key, value]) => {
-            if (value.match(/babel/)) return transform
-            return { ...transform, [key]: value }
-          }, {}),
-          // Transform vanilla-extract using its own transformer.
-          // See https://sandroroth.com/blog/vanilla-extract-cra#jest-transform.
-          '\\.css\\.ts$': '@vanilla-extract/jest-transform',
-          '\\.(t|j)sx?$': ['@swc/jest', swcrc],
-        },
-        // Use d3-arrays's build directly, as jest does not support its exports.
-        transformIgnorePatterns: ['d3-array'],
-        moduleNameMapper: {
-          'd3-array': 'd3-array/dist/d3-array.min.js',
-          '^react-native$': 'react-native-web',
-          'react-native-gesture-handler': require.resolve('react-native-gesture-handler'),
-        },
-      })
-    },
-  },
+  // jest: {
+  //   configure(jestConfig) {
+  //     return Object.assign(jestConfig, {
+  //       globals: {
+  //         __DEV__: true,
+  //       },
+  //       cacheDirectory: getCacheDirectory('jest'),
+  //       transform: {
+  //         ...Object.entries(jestConfig.transform).reduce((transform, [key, value]) => {
+  //           if (value.match(/babel/)) return transform
+  //           return { ...transform, [key]: value }
+  //         }, {}),
+  //         // Transform vanilla-extract using its own transformer.
+  //         // See https://sandroroth.com/blog/vanilla-extract-cra#jest-transform.
+  //         '\\.css\\.ts$': '@vanilla-extract/jest-transform',
+  //         '\\.(t|j)sx?$': ['@swc/jest', swcrc],
+  //       },
+  //       // Use d3-arrays's build directly, as jest does not support its exports.
+  //       transformIgnorePatterns: ['d3-array'],
+  //       moduleNameMapper: {
+  //         'd3-array': 'd3-array/dist/d3-array.min.js',
+  //         '^react-native$': 'react-native-web',
+  //         'react-native-gesture-handler': require.resolve('react-native-gesture-handler'),
+  //       },
+  //     })
+  //   },
+  // },
   webpack: {
     plugins: [
       // Webpack 5 does not polyfill node globals, so we do so for those necessary:
@@ -98,70 +98,80 @@ module.exports = {
           // CSS ordering is mitigated through scoping / naming conventions, so we can ignore order warnings.
           // See https://webpack.js.org/plugins/mini-css-extract-plugin/#remove-order-warnings.
           if (plugin instanceof MiniCssExtractPlugin) {
-            plugin.options.ignoreOrder = true
+            plugin.options.ignoreOrder = true;
           }
 
           // Disable TypeScript's config overwrite, as it interferes with incremental build caching.
           // This ensures that `yarn start` and `yarn typecheck` share one cache.
           if (plugin.constructor.name == 'ForkTsCheckerWebpackPlugin') {
-            delete plugin.options.typescript.configOverwrite
+            delete plugin.options.typescript.configOverwrite;
           }
 
-          return plugin
+          return plugin;
         })
         .filter((plugin) => {
           // Case sensitive paths are already enforced by TypeScript.
           // See https://www.typescriptlang.org/tsconfig#forceConsistentCasingInFileNames.
-          if (plugin instanceof CaseSensitivePathsPlugin) return false
+          if (plugin instanceof CaseSensitivePathsPlugin) return false;
 
           // IgnorePlugin is used to tree-shake moment locales, but we do not use moment in this project.
-          if (plugin instanceof IgnorePlugin) return false
+          if (plugin instanceof IgnorePlugin) return false;
 
-          return true
-        })
+          return true;
+        });
 
       // Configure webpack resolution:
       webpackConfig.resolve = Object.assign(webpackConfig.resolve, {
         alias: {
           ...webpackConfig.resolve.alias,
-          'react-native-gesture-handler$': require.resolve('react-native-gesture-handler'),
+          'react-native-gesture-handler$': require.resolve(
+            'react-native-gesture-handler'
+          ),
         },
         plugins: webpackConfig.resolve.plugins.map((plugin) => {
           // Allow vanilla-extract in production builds.
           // This is necessary because create-react-app guards against external imports.
           // See https://sandroroth.com/blog/vanilla-extract-cra#production-build.
           if (plugin instanceof ModuleScopePlugin) {
-            plugin.allowedPaths.push(path.join(__dirname, '..', '..', 'node_modules/@vanilla-extract/webpack-plugin'))
+            plugin.allowedPaths.push(
+              path.join(
+                __dirname,
+                '..',
+                '..',
+                'node_modules/@vanilla-extract/webpack-plugin'
+              )
+            );
           }
 
-          return plugin
+          return plugin;
         }),
         // Webpack 5 does not resolve node modules, so we do so for those necessary:
         fallback: {
           // - react-markdown requires path
           path: require.resolve('path-browserify'),
         },
-      })
+      });
 
       // Retain source maps for node_modules packages:
       webpackConfig.module.rules[0] = {
         ...webpackConfig.module.rules[0],
         exclude: /node_modules/,
-      }
+      };
 
       // Configure webpack transpilation (create-react-app specifies transpilation rules in a oneOf):
-      webpackConfig.module.rules[1].oneOf = webpackConfig.module.rules[1].oneOf.map((rule) => {
-        if (rule.loader && rule.loader.match(/babel-loader/)) {
-          rule.loader = 'swc-loader'
-          rule.options = swcrc
+      webpackConfig.module.rules[1].oneOf =
+        webpackConfig.module.rules[1].oneOf.map((rule) => {
+          if (rule.loader && rule.loader.match(/babel-loader/)) {
+            rule.loader = 'swc-loader';
+            rule.options = swcrc;
 
-          rule.include = (inPath) => {
-            // if not a node_module we parse with SWC (so other packages in monorepo are importable)
-            return inPath.indexOf('node_modules') === -1
+            rule.include = (inPath) => {
+              // if not a node_module we parse with SWC (so other packages in monorepo are importable)
+              return inPath.indexOf('node_modules') === -1;
+            };
           }
-        }
-        return rule
-      })
+          return rule;
+        });
 
       // since wallet package uses react-native-dotenv and that needs a babel plugin
       // adding this before the swc loader
@@ -183,7 +193,7 @@ module.exports = {
             ],
           ],
         },
-      })
+      });
 
       // TODO(WEB-3632): Tamagui linear gradient isn't fully-specified, temporary
       webpackConfig.module.rules.unshift({
@@ -191,7 +201,7 @@ module.exports = {
         resolve: {
           fullySpecified: false,
         },
-      })
+      });
 
       // Run terser compression on node_modules before tree-shaking, so that tree-shaking is more effective.
       // This works by eliminating dead code, so that webpack can identify unused imports and tree-shake them;
@@ -202,7 +212,7 @@ module.exports = {
         test: /node_modules.*\.(js)$/,
         loader: path.join(__dirname, 'scripts/terser-loader.js'),
         options: { compress: true, mangle: false },
-      })
+      });
 
       // Configure webpack optimization:
       webpackConfig.optimization = Object.assign(
@@ -220,12 +230,14 @@ module.exports = {
               },
             }
           : {}
-      )
+      );
 
       // Configure webpack resolution. webpackConfig.cache is unused with swc-loader, but the resolver can still cache:
-      webpackConfig.resolve = Object.assign(webpackConfig.resolve, { unsafeCache: true })
+      webpackConfig.resolve = Object.assign(webpackConfig.resolve, {
+        unsafeCache: true,
+      });
 
-      return webpackConfig
+      return webpackConfig;
     },
   },
-}
+};

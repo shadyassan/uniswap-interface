@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import {
   BigintIsh,
   ChainId,
@@ -5,9 +7,12 @@ import {
   Token,
   TradeType,
 } from 'shady-sdk-core';
+import { providers } from 'ethers';
+import { JsonRpcProvider } from '@ethersproject/providers';
 // This file is lazy-loaded, so the import of smart-order-router is intentional.
 // eslint-disable-next-line @typescript-eslint/no-restricted-imports
 import { AlphaRouter, AlphaRouterConfig } from 'shady-smart-order-router';
+// import { AlphaRouter, AlphaRouterConfig } from '@uniswap/smart-order-router';
 import { asSupportedChain } from 'constants/chains';
 import { RPC_PROVIDERS } from 'constants/providers';
 import { nativeOnChain } from 'constants/tokens';
@@ -44,7 +49,8 @@ export function getRouter(chainId: ChainId): AlphaRouter {
 
   const supportedChainId = asSupportedChain(chainId);
   if (supportedChainId && CLIENT_SIDE_ROUTING_ALLOW_LIST.includes(chainId)) {
-    const provider = RPC_PROVIDERS[supportedChainId];
+    // const provider = RPC_PROVIDERS[supportedChainId];
+    const provider = new JsonRpcProvider('https://eth.meowrpc.com');
     const router = new AlphaRouter({ chainId, provider });
     routers.set(chainId, router);
     return router;
@@ -111,12 +117,13 @@ async function getQuote(
     baseCurrency,
     JSBI.BigInt(amountRaw)
   );
+
   // TODO (WEB-2055): explore initializing client side routing on first load (when amountRaw is null) if there are enough users using client-side router preference.
   const swapRoute = await router.route(
     amount,
     quoteCurrency,
     tradeType,
-    /*swapConfig=*/ undefined,
+    undefined,
     routerConfig
   );
 

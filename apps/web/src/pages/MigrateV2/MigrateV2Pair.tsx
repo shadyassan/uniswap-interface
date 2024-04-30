@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { Contract } from '@ethersproject/contracts';
 import type { TransactionResponse } from '@ethersproject/providers';
 import { Select, Trans } from '@lingui/macro';

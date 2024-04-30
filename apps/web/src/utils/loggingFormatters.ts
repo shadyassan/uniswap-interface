@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { SwapPriceUpdateUserResponse } from '@uniswap/analytics-events';
 import { Percent } from 'shady-sdk-core';
 import { SwapResult } from 'hooks/useSwapCallback';

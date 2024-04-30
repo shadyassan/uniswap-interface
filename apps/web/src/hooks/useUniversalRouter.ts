@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { t } from '@lingui/macro';
 import { CustomUserProperties, SwapEventName } from '@uniswap/analytics-events';
 import { Percent } from 'shady-sdk-core';

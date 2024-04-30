@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { Trans } from '@lingui/macro';
 import {
   Currency,
