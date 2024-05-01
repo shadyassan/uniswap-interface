@@ -10,9 +10,9 @@ import { ReactNode, useEffect } from 'react';
 i18n.activate(DEFAULT_LOCALE);
 
 export async function dynamicActivate(locale: SupportedLocale) {
-  if (i18n.locale === locale) return;
+  // if (i18n.locale === locale) return;
   try {
-    const catalog = await import(`locales/${locale}.js`);
+    const catalog = await import(`locales/en-US.js`);
     // Bundlers will either export it as default or as a named export named default.
     i18n.load(locale, catalog.messages || catalog.default.messages);
   } catch (error: unknown) {
