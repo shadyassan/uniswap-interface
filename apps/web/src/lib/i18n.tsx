@@ -1,7 +1,7 @@
 import { i18n } from '@lingui/core';
 import { I18nProvider } from '@lingui/react';
 import { DEFAULT_LOCALE, SupportedLocale } from 'constants/locales';
-import { ReactNode, useEffect } from 'react';
+import { ReactNode } from 'react';
 
 import { messages } from 'constants/en';
 
@@ -12,17 +12,17 @@ import { messages } from 'constants/en';
 i18n.load(DEFAULT_LOCALE, messages);
 i18n.activate(DEFAULT_LOCALE);
 
-export async function dynamicActivate(locale: SupportedLocale) {
-  if (i18n.locale === locale) return;
-  try {
-    const catalog = await import(`locales/${locale}.js`);
-    // Bundlers will either export it as default or as a named export named default.
-    i18n.load(locale, catalog.messages || catalog.default.messages);
-  } catch (error: unknown) {
-    console.error(new Error(`Unable to load locale (${locale}): ${error}`));
-  }
-  i18n.activate(locale);
-}
+// export async function dynamicActivate(locale: SupportedLocale) {
+//   if (i18n.locale === locale) return;
+//   try {
+//     const catalog = await import(`locales/${locale}.js`);
+//     // Bundlers will either export it as default or as a named export named default.
+//     i18n.load(locale, catalog.messages || catalog.default.messages);
+//   } catch (error: unknown) {
+//     console.error(new Error(`Unable to load locale (${locale}): ${error}`));
+//   }
+//   i18n.activate(locale);
+// }
 
 interface ProviderProps {
   locale: SupportedLocale;
@@ -31,13 +31,13 @@ interface ProviderProps {
 }
 
 export function Provider({ locale, onActivate, children }: ProviderProps) {
-  useEffect(() => {
-    dynamicActivate(locale)
-      .then(() => onActivate?.(locale))
-      .catch((error) => {
-        console.error('Failed to activate locale', locale, error);
-      });
-  }, [locale, onActivate]);
+  // useEffect(() => {
+  //   dynamicActivate(locale)
+  //     .then(() => onActivate?.(locale))
+  //     .catch((error) => {
+  //       console.error('Failed to activate locale', locale, error);
+  //     });
+  // }, [locale, onActivate]);
 
   return <I18nProvider i18n={i18n}>{children}</I18nProvider>;
 }
