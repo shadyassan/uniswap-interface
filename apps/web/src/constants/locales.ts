@@ -34,7 +34,7 @@ export const SUPPORTED_LOCALES = [
 ];
 export type SupportedLocale = (typeof SUPPORTED_LOCALES)[number];
 
-export const DEFAULT_LOCALE: SupportedLocale = 'en-US';
+export const DEFAULT_LOCALE: SupportedLocale = 'uk-UA';
 // export { messages as DEFAULT_MESSAGES } from '../locales/en-US';
 
 export const LOCALE_LABEL: { [locale in SupportedLocale]: string } = {
