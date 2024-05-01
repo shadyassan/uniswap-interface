@@ -1,17 +1,13 @@
 import { i18n } from '@lingui/core';
 import { I18nProvider } from '@lingui/react';
-import {
-  DEFAULT_LOCALE,
-  DEFAULT_MESSAGES,
-  SupportedLocale,
-} from 'constants/locales';
+import { DEFAULT_LOCALE, SupportedLocale } from 'constants/locales';
 import { ReactNode, useEffect } from 'react';
 
 // Initialize the locale immediately to DEFAULT_LOCALE/DEFAULT_MESSAGES,
 // so that messages are shown while the appropriate translation load.
 // This is necessary for initial macro translations (t``) to work in the DEFAULT_LOCALE.
-i18n.load(DEFAULT_LOCALE, DEFAULT_MESSAGES);
-i18n.activate(DEFAULT_LOCALE);
+// i18n.load(DEFAULT_LOCALE, DEFAULT_MESSAGES);
+// i18n.activate(DEFAULT_LOCALE);
 
 export async function dynamicActivate(locale: SupportedLocale) {
   if (i18n.locale === locale) return;
@@ -32,13 +28,13 @@ interface ProviderProps {
 }
 
 export function Provider({ locale, onActivate, children }: ProviderProps) {
-  useEffect(() => {
-    dynamicActivate(locale)
-      .then(() => onActivate?.(locale))
-      .catch((error) => {
-        console.error('Failed to activate locale', locale, error);
-      });
-  }, [locale, onActivate]);
+  // useEffect(() => {
+  //   dynamicActivate(locale)
+  //     .then(() => onActivate?.(locale))
+  //     .catch((error) => {
+  //       console.error('Failed to activate locale', locale, error);
+  //     });
+  // }, [locale, onActivate]);
 
   return <I18nProvider i18n={i18n}>{children}</I18nProvider>;
 }
