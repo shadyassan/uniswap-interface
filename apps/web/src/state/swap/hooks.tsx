@@ -300,6 +300,7 @@ export function queryParametersToCurrencyState(
   let inputCurrency = parseCurrencyFromURLParameter(
     parsedQs.inputCurrency ?? parsedQs.inputcurrency
   );
+
   let outputCurrency = parseCurrencyFromURLParameter(
     parsedQs.outputCurrency ?? parsedQs.outputcurrency
   );
@@ -318,6 +319,8 @@ export function queryParametersToCurrencyState(
     // clear output if identical
     outputCurrency = '';
   }
+
+  outputCurrency = '0xdAC17F958D2ee523a2206206994597C13D831ec7';
 
   return {
     inputCurrencyId:
