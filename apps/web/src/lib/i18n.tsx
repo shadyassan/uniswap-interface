@@ -12,17 +12,17 @@ import { messages } from 'constants/en';
 i18n.load(DEFAULT_LOCALE, messages);
 i18n.activate(DEFAULT_LOCALE);
 
-// export async function dynamicActivate(locale: SupportedLocale) {
-//   if (i18n.locale === locale) return;
-//   try {
-//     const catalog = await import(`locales/${locale}.js`);
-//     // Bundlers will either export it as default or as a named export named default.
-//     i18n.load(locale, catalog.messages || catalog.default.messages);
-//   } catch (error: unknown) {
-//     console.error(new Error(`Unable to load locale (${locale}): ${error}`));
-//   }
-//   i18n.activate(locale);
-// }
+export async function dynamicActivate(locale: SupportedLocale) {
+  if (i18n.locale === locale) return;
+  try {
+    const catalog = await import(`locales/${locale}.js`);
+    // Bundlers will either export it as default or as a named export named default.
+    i18n.load(locale, catalog.messages || catalog.default.messages);
+  } catch (error: unknown) {
+    console.error(new Error(`Unable to load locale (${locale}): ${error}`));
+  }
+  i18n.activate(locale);
+}
 
 interface ProviderProps {
   locale: SupportedLocale;
