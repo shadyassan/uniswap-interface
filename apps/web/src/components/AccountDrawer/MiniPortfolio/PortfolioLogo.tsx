@@ -118,33 +118,33 @@ function DoubleCurrencyLogo({
   images,
   size,
 }: DoubleCurrencyLogoProps) {
-  const [src, nextSrc] = useTokenLogoSource({
-    address: currencies?.[0]?.wrapped.address,
-    chainId,
-    isNative: currencies?.[0]?.isNative,
-    primaryImg: images?.[0],
-  });
-  const [src2, nextSrc2] = useTokenLogoSource({
-    address: currencies?.[1]?.wrapped.address,
-    chainId,
-    isNative: currencies?.[1]?.isNative,
-    primaryImg: images?.[1],
-  });
+  // const [src, nextSrc] = useTokenLogoSource({
+  //   address: currencies?.[0]?.wrapped.address,
+  //   chainId,
+  //   isNative: currencies?.[0]?.isNative,
+  //   primaryImg: images?.[0],
+  // });
+  // const [src2, nextSrc2] = useTokenLogoSource({
+  //   address: currencies?.[1]?.wrapped.address,
+  //   chainId,
+  //   isNative: currencies?.[1]?.isNative,
+  //   primaryImg: images?.[1],
+  // });
 
-  if (currencies.length === 1 && src) {
-    return <CircleLogoImage size={size} src={src} onError={nextSrc} />;
-  }
-  if (currencies.length > 1) {
-    return (
-      <DoubleLogo
-        logo1={src}
-        onError1={nextSrc}
-        logo2={src2}
-        onError2={nextSrc2}
-        size={size}
-      />
-    );
-  }
+  // if (currencies.length === 1 && src) {
+  //   return <CircleLogoImage size={size} src={src} onError={nextSrc} />;
+  // }
+  // if (currencies.length > 1) {
+  //   return (
+  //     <DoubleLogo
+  //       logo1={src}
+  //       onError1={nextSrc}
+  //       logo2={src2}
+  //       onError2={nextSrc2}
+  //       size={size}
+  //     />
+  //   );
+  // }
   return <LogolessPlaceholder currency={currencies?.[0]} size={size} />;
 }
 
