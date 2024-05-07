@@ -67,7 +67,7 @@ export const STABLECOIN_AMOUNT_OUT: {
     10_000e6
   ),
   [ChainId.BLAST]: CurrencyAmount.fromRawAmount(USDB_BLAST, 10_000e18),
-  22040: CurrencyAmount.fromRawAmount(AMB, 10_000e6),
+  [ChainId.AIRDAO]: CurrencyAmount.fromRawAmount(AMB, 10_000e6),
 };
 
 /**

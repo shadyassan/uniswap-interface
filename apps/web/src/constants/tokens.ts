@@ -368,9 +368,9 @@ export const UNI: { [chainId: number]: Token } = {
 
 export const AMB = new Token(
   ChainId.AIRDAO,
-  '0x586EE5Df24c5a426e42eD7Ea6e3EB0f00a4a2256',
+  '0x00662a0aC35717A1898bEfd243B47e373cFd73f7',
   18,
-  'AMB',
+  'sAMB',
   'Amber'
 );
 
