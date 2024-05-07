@@ -26,11 +26,11 @@ import Swap from './Swap';
 // const MigrateV2 = lazy(() => import('pages/MigrateV2'));
 // const MigrateV2Pair = lazy(() => import('pages/MigrateV2/MigrateV2Pair'));
 const NotFound = lazy(() => import('pages/NotFound'));
-// const Pool = lazy(() => import('pages/Pool'));
-// const PositionPage = lazy(() => import('pages/Pool/PositionPage'));
-// const PoolV2 = lazy(() => import('pages/Pool/v2'));
-// const PoolDetails = lazy(() => import('pages/PoolDetails'));
-// const PoolFinder = lazy(() => import('pages/PoolFinder'));
+const Pool = lazy(() => import('pages/Pool'));
+const PositionPage = lazy(() => import('pages/Pool/PositionPage'));
+const PoolV2 = lazy(() => import('pages/Pool/v2'));
+const PoolDetails = lazy(() => import('pages/PoolDetails'));
+const PoolFinder = lazy(() => import('pages/PoolFinder'));
 // const RemoveLiquidity = lazy(() => import('pages/RemoveLiquidity'));
 // const RemoveLiquidityV3 = lazy(() => import('pages/RemoveLiquidity/V3'));
 // const TokenDetails = lazy(() => import('pages/TokenDetails'));
@@ -180,46 +180,46 @@ export const routes: RouteDefinition[] = [
     getElement: () => <Swap />,
     getTitle: () => SwapTitle,
   }),
-  // createRouteDefinition({
-  //   path: '/pool/v2/find',
-  //   getElement: () => <PoolFinder />,
-  //   getTitle: () => t`Explore top liquidity pools (v2) on Uniswap`,
-  // }),
-  // createRouteDefinition({
-  //   path: '/pool/v2',
-  //   getElement: () => <PoolV2 />,
-  //   getTitle: () => t`Provide liquidity to pools (v2) on Uniswap`,
-  // }),
-  // createRouteDefinition({
-  //   path: '/pool',
-  //   getElement: () => <Pool />,
-  //   getTitle: () => t`Manage & provide pool liquidity on Uniswap`,
-  // }),
-  // createRouteDefinition({
-  //   path: '/pool/:tokenId',
-  //   getElement: () => <PositionPage />,
-  //   getTitle: () => t`Manage pool liquidity on Uniswap`,
-  // }),
-  // createRouteDefinition({
-  //   path: '/pools/v2/find',
-  //   getElement: () => <PoolFinder />,
-  //   getTitle: () => t`Explore top liquidity pools (v2) on Uniswap`,
-  // }),
-  // createRouteDefinition({
-  //   path: '/pools/v2',
-  //   getElement: () => <PoolV2 />,
-  //   getTitle: () => t`Manage & provide v2 pool liquidity on Uniswap`,
-  // }),
-  // createRouteDefinition({
-  //   path: '/pools',
-  //   getElement: () => <Pool />,
-  //   getTitle: () => t`Manage & provide pool liquidity on Uniswap`,
-  // }),
-  // createRouteDefinition({
-  //   path: '/pools/:tokenId',
-  //   getElement: () => <PositionPage />,
-  //   getTitle: () => t`Manage pool liquidity on Uniswap`,
-  // }),
+  createRouteDefinition({
+    path: '/pool/v2/find',
+    getElement: () => <PoolFinder />,
+    getTitle: () => t`Explore top liquidity pools (v2) on Uniswap`,
+  }),
+  createRouteDefinition({
+    path: '/pool/v2',
+    getElement: () => <PoolV2 />,
+    getTitle: () => t`Provide liquidity to pools (v2) on Uniswap`,
+  }),
+  createRouteDefinition({
+    path: '/pool',
+    getElement: () => <Pool />,
+    getTitle: () => t`Manage & provide pool liquidity on Uniswap`,
+  }),
+  createRouteDefinition({
+    path: '/pool/:tokenId',
+    getElement: () => <PositionPage />,
+    getTitle: () => t`Manage pool liquidity on Uniswap`,
+  }),
+  createRouteDefinition({
+    path: '/pools/v2/find',
+    getElement: () => <PoolFinder />,
+    getTitle: () => t`Explore top liquidity pools (v2) on Uniswap`,
+  }),
+  createRouteDefinition({
+    path: '/pools/v2',
+    getElement: () => <PoolV2 />,
+    getTitle: () => t`Manage & provide v2 pool liquidity on Uniswap`,
+  }),
+  createRouteDefinition({
+    path: '/pools',
+    getElement: () => <Pool />,
+    getTitle: () => t`Manage & provide pool liquidity on Uniswap`,
+  }),
+  createRouteDefinition({
+    path: '/pools/:tokenId',
+    getElement: () => <PositionPage />,
+    getTitle: () => t`Manage pool liquidity on Uniswap`,
+  }),
   // createRouteDefinition({
   //   path: '/add/v2',
   //   nestedPaths: [':currencyIdA', ':currencyIdA/:currencyIdB'],
