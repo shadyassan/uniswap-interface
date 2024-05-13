@@ -1,7 +1,7 @@
 import { BigNumber } from '@ethersproject/bignumber';
 import { Trans } from '@lingui/macro';
-import { Percent, Price, Token } from 'shady-sdk-core';
-import { Position } from '@uniswap/v3-sdk';
+import { Percent, Price, Token } from '@sigismund/sdk-core';
+import { Position } from '@sigismund/v3-sdk';
 import RangeBadge from 'components/Badge/RangeBadge';
 import DoubleCurrencyLogo from 'components/DoubleLogo';
 import HoverInlineText from 'components/HoverInlineText';

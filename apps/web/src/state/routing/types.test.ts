@@ -1,4 +1,4 @@
-import { CurrencyAmount, TradeType } from 'shady-sdk-core';
+import { CurrencyAmount, TradeType } from '@sigismund/sdk-core';
 import { DAI, USDC_MAINNET } from 'constants/tokens';
 import { LIMIT_ORDER_TRADE } from 'test-utils/constants';
 

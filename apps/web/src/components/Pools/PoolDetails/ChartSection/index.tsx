@@ -1,6 +1,6 @@
 import { Trans, t } from '@lingui/macro';
-import { ChainId, CurrencyAmount, Token } from 'shady-sdk-core';
-import { FeeAmount } from '@uniswap/v3-sdk';
+import { ChainId, CurrencyAmount, Token } from '@sigismund/sdk-core';
+import { FeeAmount } from '@sigismund/v3-sdk';
 import { ChartHeader } from 'components/Charts/ChartHeader';
 import { Chart } from 'components/Charts/ChartModel';
 import {

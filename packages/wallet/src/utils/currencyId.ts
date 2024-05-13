@@ -1,4 +1,4 @@
-import { Currency } from 'shady-sdk-core';
+import { Currency } from '@sigismund/sdk-core';
 import { CurrencyId } from 'uniswap/src/types/currency';
 import {
   getNativeAddress,

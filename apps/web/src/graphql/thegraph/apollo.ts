@@ -6,7 +6,7 @@ import {
   InMemoryCache,
   NormalizedCacheObject,
 } from '@apollo/client';
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 
 import store from '../../state/index';
 
@@ -27,8 +27,6 @@ const CHAIN_SUBGRAPH_URL: Record<number, string> = {
     'https://api.thegraph.com/subgraphs/name/lynnshaoyu/uniswap-v3-avax?source=uniswap',
   [ChainId.BASE]:
     'https://api.studio.thegraph.com/query/48211/uniswap-v3-base/version/latest?source=uniswap',
-  [ChainId.BLAST]:
-    'https://gateway-arbitrum.network.thegraph.com/api/0ae45f0bf40ae2e73119b44ccd755967/subgraphs/id/2LHovKznvo8YmKC9ZprPjsYAZDCc4K5q4AYz8s3cnQn1',
 };
 
 const httpLink = new HttpLink({ uri: CHAIN_SUBGRAPH_URL[ChainId.MAINNET] });

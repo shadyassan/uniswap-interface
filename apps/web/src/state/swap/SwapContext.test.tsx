@@ -1,4 +1,4 @@
-import { ChainId, Percent } from 'shady-sdk-core';
+import { ChainId, Percent } from '@sigismund/sdk-core';
 import { Field, SwapTab } from 'components/swap/constants';
 import { nativeOnChain } from 'constants/tokens';
 import { render } from 'test-utils/render';

@@ -1,4 +1,4 @@
-import { Percent } from 'shady-sdk-core';
+import { Percent } from '@sigismund/sdk-core';
 
 export function largerPercentValue(a?: Percent, b?: Percent) {
   if (a && b) {

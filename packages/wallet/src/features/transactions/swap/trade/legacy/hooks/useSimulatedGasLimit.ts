@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, TradeType } from 'shady-sdk-core';
+import { Currency, CurrencyAmount, TradeType } from '@sigismund/sdk-core';
 import { useMemo } from 'react';
 import { useDebounceWithStatus } from 'utilities/src/time/timing';
 import { SimulatedGasEstimationInfo } from 'wallet/src/features/gas/types';

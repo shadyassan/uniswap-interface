@@ -16,8 +16,8 @@ import {
   Percent,
   Price,
   Token,
-} from 'shady-sdk-core';
-import { NonfungiblePositionManager, Pool, Position } from '@uniswap/v3-sdk';
+} from '@sigismund/sdk-core';
+import { NonfungiblePositionManager, Pool, Position } from '@sigismund/v3-sdk';
 import { useWeb3React } from '@web3-react/core';
 import { sendAnalyticsEvent, Trace } from 'analytics';
 import Badge from 'components/Badge';

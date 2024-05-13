@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro';
-import { Currency, Price } from 'shady-sdk-core';
+import { Currency, Price } from '@sigismund/sdk-core';
 import { useUSDPrice } from 'hooks/useUSDPrice';
 import tryParseCurrencyAmount from 'lib/utils/tryParseCurrencyAmount';
 import { useCallback, useMemo, useState } from 'react';

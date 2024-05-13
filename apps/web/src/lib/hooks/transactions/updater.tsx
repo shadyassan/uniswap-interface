@@ -1,5 +1,5 @@
 import { TransactionReceipt } from '@ethersproject/abstract-provider';
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import { useWeb3React } from '@web3-react/core';
 import useBlockNumber, {
   useFastForwardBlockNumber,
@@ -43,7 +43,6 @@ const RETRY_OPTIONS_BY_CHAIN_ID: { [chainId: number]: RetryOptions } = {
   [ChainId.OPTIMISM]: { n: 10, minWait: 250, maxWait: 1000 },
   [ChainId.OPTIMISM_GOERLI]: { n: 10, minWait: 250, maxWait: 1000 },
   [ChainId.BASE]: { n: 10, minWait: 250, maxWait: 1000 },
-  [ChainId.BLAST]: { n: 10, minWait: 250, maxWait: 1000 },
 };
 const DEFAULT_RETRY_OPTIONS: RetryOptions = { n: 1, minWait: 0, maxWait: 0 };
 

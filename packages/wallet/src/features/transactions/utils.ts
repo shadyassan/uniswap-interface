@@ -1,5 +1,5 @@
 import { NetInfoState } from '@react-native-community/netinfo';
-import { CurrencyAmount, NativeCurrency } from 'shady-sdk-core';
+import { CurrencyAmount, NativeCurrency } from '@sigismund/sdk-core';
 import { BigNumber, providers } from 'ethers';
 import { v4 as uuid } from 'uuid';
 import { ChainId } from 'wallet/src/constants/chains';

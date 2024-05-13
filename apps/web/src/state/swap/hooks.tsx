@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro';
-import { Currency, CurrencyAmount, TradeType } from 'shady-sdk-core';
+import { Currency, CurrencyAmount, TradeType } from '@sigismund/sdk-core';
 import { useWeb3React } from '@web3-react/core';
 import { Field } from 'components/swap/constants';
 import { useConnectionReady } from 'connection/eagerlyConnect';

@@ -1,5 +1,5 @@
 import { act } from '@testing-library/react';
-import { Percent } from 'shady-sdk-core';
+import { Percent } from '@sigismund/sdk-core';
 import { USDC_MAINNET } from 'constants/tokens';
 import store from 'state';
 import { RouterPreference } from 'state/routing/types';

@@ -1,4 +1,4 @@
-import { Percent } from 'shady-sdk-core';
+import { Percent } from '@sigismund/sdk-core';
 
 export enum SlippageValidationResult {
   TooLow,

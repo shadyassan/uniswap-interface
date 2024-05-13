@@ -1,4 +1,4 @@
-import { Currency } from 'shady-sdk-core';
+import { Currency } from '@sigismund/sdk-core';
 import { asSupportedChain } from 'constants/chains';
 
 import { nativeOnChain, WRAPPED_NATIVE_CURRENCY } from '../constants/tokens';

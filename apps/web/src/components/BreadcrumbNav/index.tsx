@@ -1,5 +1,5 @@
 import { t, Trans } from '@lingui/macro';
-import { Currency } from 'shady-sdk-core';
+import { Currency } from '@sigismund/sdk-core';
 import Row from 'components/Row';
 import Tooltip, { TooltipSize } from 'components/Tooltip';
 import useCopyClipboard from 'hooks/useCopyClipboard';

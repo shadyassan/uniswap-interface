@@ -5,7 +5,7 @@ import {
   CurrencyAmount,
   Percent,
   TradeType,
-} from 'shady-sdk-core';
+} from '@sigismund/sdk-core';
 import { ZERO_PERCENT } from 'constants/misc';
 import useIsWindowVisible from 'hooks/useIsWindowVisible';
 import { useMemo } from 'react';

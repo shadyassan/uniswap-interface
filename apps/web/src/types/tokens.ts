@@ -1,3 +1,3 @@
-import { Token } from 'shady-sdk-core';
+import { Token } from '@sigismund/sdk-core';
 
 export class UserAddedToken extends Token {}

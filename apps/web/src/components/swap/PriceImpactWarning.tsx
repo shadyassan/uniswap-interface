@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro';
-import { Percent } from 'shady-sdk-core';
+import { Percent } from '@sigismund/sdk-core';
 import { OutlineCard } from 'components/Card';
 import styled, { useTheme } from 'styled-components';
 import { ThemedText } from 'theme/components';

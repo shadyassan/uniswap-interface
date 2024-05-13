@@ -1,5 +1,5 @@
 import { t } from '@lingui/macro';
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import { PortfolioLogo } from 'components/AccountDrawer/MiniPortfolio/PortfolioLogo';
 import { DeltaArrow } from 'components/Tokens/TokenDetails/Delta';
 import { LDO, NATIVE_CHAIN_ID, UNI, USDC_BASE } from 'constants/tokens';

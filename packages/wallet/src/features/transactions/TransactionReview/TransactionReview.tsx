@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount } from 'shady-sdk-core';
+import { Currency, CurrencyAmount } from '@sigismund/sdk-core';
 import { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FadeInUp, FadeOut } from 'react-native-reanimated';

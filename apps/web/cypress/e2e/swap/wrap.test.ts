@@ -1,4 +1,4 @@
-import { ChainId, CurrencyAmount, WETH9 } from 'shady-sdk-core';
+import { ChainId, CurrencyAmount, WETH9 } from '@sigismund/sdk-core';
 
 import { getBalance, getTestSelector } from '../../utils';
 

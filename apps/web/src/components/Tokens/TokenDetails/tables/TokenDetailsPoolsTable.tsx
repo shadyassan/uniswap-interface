@@ -1,5 +1,5 @@
 import { ApolloError } from '@apollo/client';
-import { ChainId, Token } from 'shady-sdk-core';
+import { ChainId, Token } from '@sigismund/sdk-core';
 import {
   PoolTableColumns,
   PoolsTable,

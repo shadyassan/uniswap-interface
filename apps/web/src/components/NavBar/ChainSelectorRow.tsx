@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro';
 import { BrowserEvent, SharedEventName } from '@uniswap/analytics-events';
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import { useWeb3React } from '@web3-react/core';
 import { TraceEvent } from 'analytics';
 import Loader from 'components/Icons/LoadingSpinner';

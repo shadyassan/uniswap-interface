@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro';
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import { useOpenOffchainActivityModal } from 'components/AccountDrawer/MiniPortfolio/Activity/OffchainActivityModal';
 import {
   signatureToActivity,

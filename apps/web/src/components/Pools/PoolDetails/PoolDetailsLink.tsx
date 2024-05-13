@@ -1,5 +1,5 @@
 import { t, Trans } from '@lingui/macro';
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import { EtherscanLogo } from 'components/Icons/Etherscan';
 import { ExplorerIcon } from 'components/Icons/ExplorerIcon';
 import CurrencyLogo from 'components/Logo/CurrencyLogo';

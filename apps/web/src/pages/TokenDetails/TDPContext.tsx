@@ -1,5 +1,5 @@
 import { QueryResult } from '@apollo/client';
-import { ChainId, Currency } from 'shady-sdk-core';
+import { ChainId, Currency } from '@sigismund/sdk-core';
 import { TDPChartState } from 'components/Tokens/TokenDetails/ChartSection';
 import { Warning } from 'constants/tokenSafety';
 import { PropsWithChildren, createContext, useContext } from 'react';

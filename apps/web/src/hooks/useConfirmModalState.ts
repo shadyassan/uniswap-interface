@@ -1,7 +1,7 @@
 // @ts-nocheck
 
 import { InterfaceEventName } from '@uniswap/analytics-events';
-import { Currency, Percent } from 'shady-sdk-core';
+import { Currency, Percent } from '@sigismund/sdk-core';
 import { useWeb3React } from '@web3-react/core';
 import { sendAnalyticsEvent, useTrace } from 'analytics';
 import { Field, RESET_APPROVAL_TOKENS } from 'components/swap/constants';

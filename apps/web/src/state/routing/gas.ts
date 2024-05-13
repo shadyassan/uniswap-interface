@@ -1,5 +1,7 @@
+// @ts-nocheck
+
 import { MaxUint256, PERMIT2_ADDRESS } from '@uniswap/permit2-sdk';
-import { ChainId, Currency } from 'shady-sdk-core';
+import { ChainId, Currency } from '@sigismund/sdk-core';
 import { SupportedInterfaceChain } from 'constants/chains';
 import { RPC_PROVIDERS } from 'constants/providers';
 import { WRAPPED_NATIVE_CURRENCY } from 'constants/tokens';

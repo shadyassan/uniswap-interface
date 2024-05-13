@@ -5,9 +5,9 @@ import {
   Currency,
   Token,
   V3_CORE_FACTORY_ADDRESSES,
-} from 'shady-sdk-core';
+} from '@sigismund/sdk-core';
 import IUniswapV3PoolStateJSON from '@uniswap/v3-core/artifacts/contracts/interfaces/pool/IUniswapV3PoolState.sol/IUniswapV3PoolState.json';
-import { FeeAmount, Pool, computePoolAddress } from '@uniswap/v3-sdk';
+import { FeeAmount, Pool, computePoolAddress } from '@sigismund/v3-sdk';
 import { useWeb3React } from '@web3-react/core';
 import { useContractMultichain } from 'components/AccountDrawer/MiniPortfolio/Pools/hooks';
 import JSBI from 'jsbi';

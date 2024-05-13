@@ -3,7 +3,7 @@ import {
   Currency,
   NativeCurrency as NativeCurrencyClass,
   Token,
-} from 'shady-sdk-core';
+} from '@sigismund/sdk-core';
 import { getNativeAddress } from 'wallet/src/constants/addresses';
 import { CHAIN_INFO, ChainId } from 'wallet/src/constants/chains';
 import { wrappedNativeCurrency } from 'wallet/src/constants/tokens';

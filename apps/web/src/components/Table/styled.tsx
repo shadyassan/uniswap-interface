@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro';
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import { PortfolioLogo } from 'components/AccountDrawer/MiniPortfolio/PortfolioLogo';
 import { ButtonLight } from 'components/Button';
 import Column from 'components/Column';

@@ -7,7 +7,7 @@ import {
   Price,
   Rounding,
   Token,
-} from 'shady-sdk-core';
+} from '@sigismund/sdk-core';
 import {
   FeeAmount,
   Pool,
@@ -18,7 +18,7 @@ import {
   nearestUsableTick,
   priceToClosestTick,
   tickToPrice,
-} from '@uniswap/v3-sdk';
+} from '@sigismund/v3-sdk';
 import { useWeb3React } from '@web3-react/core';
 import { usePool } from 'hooks/usePools';
 import JSBI from 'jsbi';

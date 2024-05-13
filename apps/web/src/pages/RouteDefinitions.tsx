@@ -16,12 +16,12 @@ import Swap from './Swap';
 // const Collection = lazy(() => import('nft/pages/collection'));
 // const Profile = lazy(() => import('nft/pages/profile'));
 // const Asset = lazy(() => import('nft/pages/asset/Asset'));
-// const AddLiquidityWithTokenRedirects = lazy(
-//   () => import('pages/AddLiquidity/redirects')
-// );
-// const AddLiquidityV2WithTokenRedirects = lazy(
-//   () => import('pages/AddLiquidityV2/redirects')
-// );
+const AddLiquidityWithTokenRedirects = lazy(
+  () => import('pages/AddLiquidity/redirects')
+);
+const AddLiquidityV2WithTokenRedirects = lazy(
+  () => import('pages/AddLiquidityV2/redirects')
+);
 // const RedirectExplore = lazy(() => import('pages/Explore/redirects'));
 // const MigrateV2 = lazy(() => import('pages/MigrateV2'));
 // const MigrateV2Pair = lazy(() => import('pages/MigrateV2/MigrateV2Pair'));
@@ -29,7 +29,7 @@ const NotFound = lazy(() => import('pages/NotFound'));
 const Pool = lazy(() => import('pages/Pool'));
 const PositionPage = lazy(() => import('pages/Pool/PositionPage'));
 const PoolV2 = lazy(() => import('pages/Pool/v2'));
-const PoolDetails = lazy(() => import('pages/PoolDetails'));
+// const PoolDetails = lazy(() => import('pages/PoolDetails'));
 const PoolFinder = lazy(() => import('pages/PoolFinder'));
 // const RemoveLiquidity = lazy(() => import('pages/RemoveLiquidity'));
 // const RemoveLiquidityV3 = lazy(() => import('pages/RemoveLiquidity/V3'));
@@ -220,23 +220,23 @@ export const routes: RouteDefinition[] = [
     getElement: () => <PositionPage />,
     getTitle: () => t`Manage pool liquidity on Uniswap`,
   }),
-  // createRouteDefinition({
-  //   path: '/add/v2',
-  //   nestedPaths: [':currencyIdA', ':currencyIdA/:currencyIdB'],
-  //   getElement: () => <AddLiquidityV2WithTokenRedirects />,
-  //   getTitle: () => t`Provide liquidity to pools (v2) on Uniswap`,
-  // }),
-  // createRouteDefinition({
-  //   path: '/add',
-  //   nestedPaths: [
-  //     ':currencyIdA',
-  //     ':currencyIdA/:currencyIdB',
-  //     ':currencyIdA/:currencyIdB/:feeAmount',
-  //     ':currencyIdA/:currencyIdB/:feeAmount/:tokenId',
-  //   ],
-  //   getElement: () => <AddLiquidityWithTokenRedirects />,
-  //   getTitle: () => t`Provide liquidity to pools on Uniswap`,
-  // }),
+  createRouteDefinition({
+    path: '/add/v2',
+    nestedPaths: [':currencyIdA', ':currencyIdA/:currencyIdB'],
+    getElement: () => <AddLiquidityV2WithTokenRedirects />,
+    getTitle: () => t`Provide liquidity to pools (v2) on Uniswap`,
+  }),
+  createRouteDefinition({
+    path: '/add',
+    nestedPaths: [
+      ':currencyIdA',
+      ':currencyIdA/:currencyIdB',
+      ':currencyIdA/:currencyIdB/:feeAmount',
+      ':currencyIdA/:currencyIdB/:feeAmount/:tokenId',
+    ],
+    getElement: () => <AddLiquidityWithTokenRedirects />,
+    getTitle: () => t`Provide liquidity to pools on Uniswap`,
+  }),
   // createRouteDefinition({
   //   path: '/remove/v2/:currencyIdA/:currencyIdB',
   //   getElement: () => <RemoveLiquidity />,

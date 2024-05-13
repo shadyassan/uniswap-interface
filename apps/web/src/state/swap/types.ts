@@ -1,4 +1,9 @@
-import { ChainId, Currency, CurrencyAmount, Percent } from 'shady-sdk-core';
+import {
+  ChainId,
+  Currency,
+  CurrencyAmount,
+  Percent,
+} from '@sigismund/sdk-core';
 import { Field, SwapTab } from 'components/swap/constants';
 import { parsedQueryString } from 'hooks/useParsedQueryString';
 import { ParsedQs } from 'qs';

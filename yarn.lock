@@ -9161,6 +9161,110 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sigismund/router-sdk@npm:1.6.0-airdao.4":
+  version: 1.6.0-airdao.4
+  resolution: "@sigismund/router-sdk@npm:1.6.0-airdao.4"
+  dependencies:
+    "@ethersproject/abi": ^5.5.0
+    "@sigismund/sdk-core": 4.0.7-airdao.0
+    "@sigismund/v2-sdk": 3.2.3-airdao.3
+    "@sigismund/v3-sdk": 3.10.0-airdao.2
+    "@uniswap/swap-router-contracts": 1.1.0
+  checksum: 33b994bb5ff250af29d93239fbf45b888944e8966692b2de9527518b03d04991bdc11a2f60d13d59e7ec584a2a1f56c84f4119ab502d61ef6b3ba0bacf779541
+  languageName: node
+  linkType: hard
+
+"@sigismund/sdk-core@npm:4.0.7-airdao.0":
+  version: 4.0.7-airdao.0
+  resolution: "@sigismund/sdk-core@npm:4.0.7-airdao.0"
+  dependencies:
+    "@ethersproject/address": ^5.0.2
+    big.js: ^5.2.2
+    decimal.js-light: ^2.5.0
+    jsbi: ^3.1.4
+    tiny-invariant: ^1.1.0
+    toformat: ^2.0.0
+  checksum: 38b82229a6505c0403f85812436d03513eaffa64feba2c780af1dca345ec74111e143f58f2c424f3b2a26e6e2ab25eef30dd4f695c6e3835b419eb4a64c37f50
+  languageName: node
+  linkType: hard
+
+"@sigismund/smart-order-router@npm:3.17.3-airdao.2":
+  version: 3.17.3-airdao.2
+  resolution: "@sigismund/smart-order-router@npm:3.17.3-airdao.2"
+  dependencies:
+    "@sigismund/router-sdk": 1.6.0-airdao.4
+    "@sigismund/sdk-core": 4.0.7-airdao.0
+    "@sigismund/universal-router-sdk": 1.5.8-airdao.5
+    "@sigismund/v2-sdk": 3.2.3-airdao.3
+    "@sigismund/v3-sdk": 3.10.0-airdao.2
+    "@uniswap/default-token-list": ^11.2.0
+    "@uniswap/permit2-sdk": ^1.2.0
+    "@uniswap/swap-router-contracts": ^1.3.0
+    "@uniswap/token-lists": ^1.0.0-beta.31
+    "@uniswap/universal-router": ^1.0.1
+    async-retry: ^1.3.1
+    await-timeout: ^1.1.1
+    axios: ^0.21.1
+    bunyan: ^1.8.15
+    bunyan-blackhole: ^1.1.1
+    ethers: ^5.7.2
+    graphql: ^15.5.0
+    graphql-request: ^3.4.0
+    lodash: ^4.17.21
+    mnemonist: ^0.38.3
+    node-cache: ^5.1.2
+    stats-lite: ^2.2.0
+  peerDependencies:
+    jsbi: ^3.2.0
+  checksum: 9cf7265a305b529a48d5b0fa9f5f0366a75b1a0f797840656daa90df81b2b2fa7540fd734ecc28ef7985010a3eb129f938e42d06eb0ac544a4c64ac26144c15d
+  languageName: node
+  linkType: hard
+
+"@sigismund/universal-router-sdk@npm:1.5.8-airdao.5":
+  version: 1.5.8-airdao.5
+  resolution: "@sigismund/universal-router-sdk@npm:1.5.8-airdao.5"
+  dependencies:
+    "@sigismund/router-sdk": 1.6.0-airdao.4
+    "@sigismund/sdk-core": 4.0.7-airdao.0
+    "@sigismund/v2-sdk": 3.2.3-airdao.3
+    "@sigismund/v3-sdk": 3.10.0-airdao.2
+    "@uniswap/permit2-sdk": ^1.2.0
+    "@uniswap/universal-router": 1.4.3
+    bignumber.js: ^9.0.2
+    ethers: ^5.3.1
+  checksum: 307916ad3fac873836020cfa3229f83b36cfbed77a361370a6a2364273eebe1adc12e10c3513aa92851ddc79b5a9c0abe90a9e77e316d6522e595300d638ab3f
+  languageName: node
+  linkType: hard
+
+"@sigismund/v2-sdk@npm:3.2.3-airdao.3":
+  version: 3.2.3-airdao.3
+  resolution: "@sigismund/v2-sdk@npm:3.2.3-airdao.3"
+  dependencies:
+    "@ethersproject/address": ^5.0.0
+    "@ethersproject/solidity": ^5.0.0
+    "@sigismund/sdk-core": 4.0.7-airdao.0
+    tiny-invariant: ^1.1.0
+    tiny-warning: ^1.0.3
+  checksum: fa4e689ce5edd0c09c133f7447a1fe18853553a922842eec8bf31e38c9e4293444ff7e219f078d4d4277379d3eb0b928b395d7664938141e73cf9d3c85298b48
+  languageName: node
+  linkType: hard
+
+"@sigismund/v3-sdk@npm:3.10.0-airdao.2":
+  version: 3.10.0-airdao.2
+  resolution: "@sigismund/v3-sdk@npm:3.10.0-airdao.2"
+  dependencies:
+    "@ethersproject/abi": ^5.0.12
+    "@ethersproject/solidity": ^5.0.9
+    "@sigismund/sdk-core": 4.0.7-airdao.0
+    "@uniswap/swap-router-contracts": ^1.2.1
+    "@uniswap/v3-periphery": ^1.1.1
+    "@uniswap/v3-staker": 1.0.0
+    tiny-invariant: ^1.1.0
+    tiny-warning: ^1.0.3
+  checksum: 4488e62a234a470283879866f72fc6a3efd5bd63eaf7ba2c6018fd7f3085e96d5320573813f008ef57400e04cf4d7172b708bfe34403d0b2ca71f1cbbd748806
+  languageName: node
+  linkType: hard
+
 "@sinclair/typebox@npm:^0.24.1":
   version: 0.24.51
   resolution: "@sinclair/typebox@npm:0.24.51"
@@ -13833,6 +13937,12 @@ __metadata:
     "@sentry/core": 7.80.0
     "@sentry/react": 7.80.0
     "@sentry/types": 7.80.0
+    "@sigismund/router-sdk": 1.6.0-airdao.4
+    "@sigismund/sdk-core": 4.0.7-airdao.0
+    "@sigismund/smart-order-router": 3.17.3-airdao.2
+    "@sigismund/universal-router-sdk": 1.5.8-airdao.5
+    "@sigismund/v2-sdk": 3.2.3-airdao.3
+    "@sigismund/v3-sdk": 3.10.0-airdao.2
     "@swc/core": 1.3.72
     "@swc/jest": 0.2.29
     "@swc/plugin-styled-components": 1.5.97
@@ -13876,17 +13986,12 @@ __metadata:
     "@uniswap/merkle-distributor": 1.0.1
     "@uniswap/permit2-sdk": 1.2.0
     "@uniswap/redux-multicall": 1.1.8
-    "@uniswap/router-sdk": 1.9.0
-    "@uniswap/smart-order-router": 3.17.3
     "@uniswap/token-lists": 1.0.0-beta.33
     "@uniswap/uniswapx-sdk": 2.0.1-alpha.4
-    "@uniswap/universal-router-sdk": 1.8.2
     "@uniswap/v2-core": 1.0.1
     "@uniswap/v2-periphery": 1.1.0-beta.0
-    "@uniswap/v2-sdk": 4.3.0
     "@uniswap/v3-core": 1.0.1
     "@uniswap/v3-periphery": 1.4.4
-    "@uniswap/v3-sdk": 3.11.0
     "@vanilla-extract/css": 1.14.0
     "@vanilla-extract/dynamic": 2.1.0
     "@vanilla-extract/jest-transform": 1.1.1
@@ -13988,9 +14093,6 @@ __metadata:
     redux-persist: 6.0.0
     resize-observer-polyfill: 1.5.1
     serve: ^14.2.0
-    shady-sdk-core: 4.2.2
-    shady-smart-order-router: 3.29.5
-    shady-universal-router-sdk: 1.8.2
     source-map-explorer: 2.5.3
     start-server-and-test: 2.0.0
     statsig-react: 1.32.0
@@ -14231,7 +14333,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@uniswap/router-sdk@npm:1.9.0, @uniswap/router-sdk@npm:^1.6.0, @uniswap/router-sdk@npm:^1.9.0":
+"@uniswap/router-sdk@npm:1.9.0, @uniswap/router-sdk@npm:^1.9.0":
   version: 1.9.0
   resolution: "@uniswap/router-sdk@npm:1.9.0"
   dependencies:
@@ -14244,7 +14346,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@uniswap/sdk-core@npm:>= 3, @uniswap/sdk-core@npm:^4.0.3, @uniswap/sdk-core@npm:^4.0.7, @uniswap/sdk-core@npm:^4.2.0":
+"@uniswap/sdk-core@npm:>= 3, @uniswap/sdk-core@npm:^4.0.3, @uniswap/sdk-core@npm:^4.2.0":
   version: 4.2.0
   resolution: "@uniswap/sdk-core@npm:4.2.0"
   dependencies:
@@ -14255,38 +14357,6 @@ __metadata:
     tiny-invariant: ^1.1.0
     toformat: ^2.0.0
   checksum: fc38a3b9ab9b4984c4b2e011bf0883278563e327218a85482644af14a67452fb9d7d20e703ef5e3376e56a62e39df59db93d6161257460e9c9a1cf6a89dc3fae
-  languageName: node
-  linkType: hard
-
-"@uniswap/smart-order-router@npm:3.17.3":
-  version: 3.17.3
-  resolution: "@uniswap/smart-order-router@npm:3.17.3"
-  dependencies:
-    "@uniswap/default-token-list": ^11.2.0
-    "@uniswap/permit2-sdk": ^1.2.0
-    "@uniswap/router-sdk": ^1.6.0
-    "@uniswap/sdk-core": ^4.0.7
-    "@uniswap/swap-router-contracts": ^1.3.0
-    "@uniswap/token-lists": ^1.0.0-beta.31
-    "@uniswap/universal-router": ^1.0.1
-    "@uniswap/universal-router-sdk": ^1.5.8
-    "@uniswap/v2-sdk": ^3.2.3
-    "@uniswap/v3-sdk": ^3.10.0
-    async-retry: ^1.3.1
-    await-timeout: ^1.1.1
-    axios: ^0.21.1
-    bunyan: ^1.8.15
-    bunyan-blackhole: ^1.1.1
-    ethers: ^5.7.2
-    graphql: ^15.5.0
-    graphql-request: ^3.4.0
-    lodash: ^4.17.21
-    mnemonist: ^0.38.3
-    node-cache: ^5.1.2
-    stats-lite: ^2.2.0
-  peerDependencies:
-    jsbi: ^3.2.0
-  checksum: 2bcd7761548d3d1d426096d0af8ee4a315e1b9c2d96186f6708e406da8bb1c3929579f6f457b1f3742289e8bb6d3dca465b6c511526ed1c43b92d5cdc16fea69
   languageName: node
   linkType: hard
 
@@ -14325,6 +14395,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@uniswap/swap-router-contracts@npm:1.1.0":
+  version: 1.1.0
+  resolution: "@uniswap/swap-router-contracts@npm:1.1.0"
+  dependencies:
+    "@openzeppelin/contracts": 3.4.1-solc-0.7-2
+    "@uniswap/v2-core": 1.0.1
+    "@uniswap/v3-core": 1.0.0
+    "@uniswap/v3-periphery": 1.3.0
+    hardhat-watcher: ^2.1.1
+  checksum: bea8490b1bb6d6522382f197dadd3c74dc5ebe510560a4c05f12cdd26de9aaa7bcb2c038153e297815b46a3a970d574c7211568adbbc79cd649dd1dea2769caa
+  languageName: node
+  linkType: hard
+
 "@uniswap/swap-router-contracts@npm:^1.1.0, @uniswap/swap-router-contracts@npm:^1.2.1, @uniswap/swap-router-contracts@npm:^1.3.0, @uniswap/swap-router-contracts@npm:^1.3.1":
   version: 1.3.1
   resolution: "@uniswap/swap-router-contracts@npm:1.3.1"
@@ -14359,7 +14442,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@uniswap/universal-router-sdk@npm:1.8.2, @uniswap/universal-router-sdk@npm:^1.5.4, @uniswap/universal-router-sdk@npm:^1.5.8":
+"@uniswap/universal-router-sdk@npm:1.8.2, @uniswap/universal-router-sdk@npm:^1.5.4":
   version: 1.8.2
   resolution: "@uniswap/universal-router-sdk@npm:1.8.2"
   dependencies:
@@ -14388,6 +14471,17 @@ __metadata:
     bignumber.js: ^9.0.2
     ethers: ^5.3.1
   checksum: fc4bbe178cbdfc1228d93f9fe74de30b7d77feabc368576bbd972a6435a62f79da0ea26cf7d2754a8364c258e1b3521fcca68eee7609875d4b8daf08b06a6e3b
+  languageName: node
+  linkType: hard
+
+"@uniswap/universal-router@npm:1.4.3":
+  version: 1.4.3
+  resolution: "@uniswap/universal-router@npm:1.4.3"
+  dependencies:
+    "@openzeppelin/contracts": 4.7.0
+    "@uniswap/v2-core": 1.0.1
+    "@uniswap/v3-core": 1.0.0
+  checksum: f5b86a1c7c083f28ff7d64770437a3a9474c2b923b78652c2b43e1ee8f5514c40479ce0d210ce31338e8d4fdc4c9c728c7e2d1a1959a24deb31e8649b3df0a37
   languageName: node
   linkType: hard
 
@@ -14453,6 +14547,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@uniswap/v3-periphery@npm:1.3.0":
+  version: 1.3.0
+  resolution: "@uniswap/v3-periphery@npm:1.3.0"
+  dependencies:
+    "@openzeppelin/contracts": 3.4.1-solc-0.7-2
+    "@uniswap/lib": ^4.0.1-alpha
+    "@uniswap/v2-core": 1.0.1
+    "@uniswap/v3-core": 1.0.0
+    base64-sol: 1.0.1
+    hardhat-watcher: ^2.1.1
+  checksum: 669200142f23b610911adf9fef87c3af0e16772b51d4bc5a4f8b444c879f7a397d92bcdadf6a19a8bea37991d93751bd9d4c9937a2a3c3f9c0bc60d970fad5b5
+  languageName: node
+  linkType: hard
+
 "@uniswap/v3-periphery@npm:1.4.4, @uniswap/v3-periphery@npm:^1.0.1, @uniswap/v3-periphery@npm:^1.1.1, @uniswap/v3-periphery@npm:^1.4.4":
   version: 1.4.4
   resolution: "@uniswap/v3-periphery@npm:1.4.4"
@@ -14466,7 +14574,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@uniswap/v3-sdk@npm:3.11.0, @uniswap/v3-sdk@npm:^3.10.0, @uniswap/v3-sdk@npm:^3.11.0":
+"@uniswap/v3-sdk@npm:3.11.0, @uniswap/v3-sdk@npm:^3.11.0":
   version: 3.11.0
   resolution: "@uniswap/v3-sdk@npm:3.11.0"
   dependencies:
@@ -41006,68 +41114,6 @@ __metadata:
   version: 1.0.4
   resolution: "sha1-file@npm:1.0.4"
   checksum: d27cd0297c7be7bb08cb77e78a3825b9e5b6f4715b4679db47b42769f41f331ee4be3678cdf94502e2544199fe8ee619dfbc5481c4347f04eeaea4aa112f7a4e
-  languageName: node
-  linkType: hard
-
-"shady-sdk-core@npm:4.2.2":
-  version: 4.2.2
-  resolution: "shady-sdk-core@npm:4.2.2"
-  dependencies:
-    "@ethersproject/address": ^5.0.2
-    big.js: ^5.2.2
-    decimal.js-light: ^2.5.0
-    jsbi: ^3.1.4
-    tiny-invariant: ^1.1.0
-    toformat: ^2.0.0
-  checksum: bca1371fe78cf0e9e9ea0ff80d796420268d498d28f775952c5c5ee6fea4b50f3395e592c0e8a9d71f694b1e9c160ed51be2a1ef851b9364ebc88f27178c87f2
-  languageName: node
-  linkType: hard
-
-"shady-smart-order-router@npm:3.29.5":
-  version: 3.29.5
-  resolution: "shady-smart-order-router@npm:3.29.5"
-  dependencies:
-    "@uniswap/default-token-list": ^11.2.0
-    "@uniswap/permit2-sdk": ^1.2.0
-    "@uniswap/router-sdk": ^1.6.0
-    "@uniswap/sdk-core": ^4.0.7
-    "@uniswap/swap-router-contracts": ^1.3.0
-    "@uniswap/token-lists": ^1.0.0-beta.31
-    "@uniswap/universal-router": ^1.0.1
-    "@uniswap/universal-router-sdk": ^1.5.8
-    "@uniswap/v2-sdk": ^3.2.3
-    "@uniswap/v3-sdk": ^3.10.0
-    async-retry: ^1.3.1
-    await-timeout: ^1.1.1
-    axios: ^0.21.1
-    bunyan: ^1.8.15
-    bunyan-blackhole: ^1.1.1
-    ethers: ^5.7.2
-    graphql: ^15.5.0
-    graphql-request: ^3.4.0
-    lodash: ^4.17.21
-    mnemonist: ^0.38.3
-    node-cache: ^5.1.2
-    stats-lite: ^2.2.0
-  peerDependencies:
-    jsbi: ^3.2.0
-  checksum: 6569d8bc0f5f6b1e09a41eefd0915de8e674bb3628a112d43398f51cdc1dbd547191bebea76d4166c3249bc7178d3ea15288d9ff46879f71d8d45b6e963531ed
-  languageName: node
-  linkType: hard
-
-"shady-universal-router-sdk@npm:1.8.2":
-  version: 1.8.2
-  resolution: "shady-universal-router-sdk@npm:1.8.2"
-  dependencies:
-    "@uniswap/permit2-sdk": ^1.2.0
-    "@uniswap/router-sdk": ^1.9.0
-    "@uniswap/sdk-core": ^4.2.0
-    "@uniswap/universal-router": 1.6.0
-    "@uniswap/v2-sdk": ^4.2.0
-    "@uniswap/v3-sdk": ^3.11.0
-    bignumber.js: ^9.0.2
-    ethers: ^5.3.1
-  checksum: 389b85b0d72b0dc0dad3ee50d5dc4c5ac793917322f9019a34602140f28413284e74df3e97135e5e9ab02a3cde3fbb302c13248bf3114befb1f7226d7e670844
   languageName: node
   linkType: hard
 

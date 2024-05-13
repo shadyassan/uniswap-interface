@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount } from 'shady-sdk-core';
+import { Currency, CurrencyAmount } from '@sigismund/sdk-core';
 import Column from 'components/Column';
 import CurrencyLogo from 'components/Logo/CurrencyLogo';
 import Row from 'components/Row';

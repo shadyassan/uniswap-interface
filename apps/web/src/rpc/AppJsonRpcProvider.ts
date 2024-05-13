@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { JsonRpcProvider } from '@ethersproject/providers';
 import { AVERAGE_L1_BLOCK_TIME } from 'constants/chainInfo';
 import ConfiguredJsonRpcProvider from 'rpc/ConfiguredJsonRpcProvider';

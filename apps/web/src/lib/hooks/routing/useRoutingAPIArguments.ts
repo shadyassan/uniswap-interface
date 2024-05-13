@@ -1,5 +1,5 @@
 import { SkipToken, skipToken } from '@reduxjs/toolkit/query/react';
-import { Currency, CurrencyAmount, TradeType } from 'shady-sdk-core';
+import { Currency, CurrencyAmount, TradeType } from '@sigismund/sdk-core';
 import { useMemo } from 'react';
 import {
   GetQuoteArgs,

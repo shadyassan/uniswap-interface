@@ -1,5 +1,5 @@
 import { ApolloError, NetworkStatus } from '@apollo/client';
-import { TradeType } from 'shady-sdk-core';
+import { TradeType } from '@sigismund/sdk-core';
 import { useMemo } from 'react';
 import { uniswapUrls } from 'uniswap/src/constants/urls';
 import { useRestQuery } from 'uniswap/src/data/rest';

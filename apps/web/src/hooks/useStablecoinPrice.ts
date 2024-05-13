@@ -5,7 +5,7 @@ import {
   Price,
   Token,
   TradeType,
-} from 'shady-sdk-core';
+} from '@sigismund/sdk-core';
 import { useWeb3React } from '@web3-react/core';
 import tryParseCurrencyAmount from 'lib/utils/tryParseCurrencyAmount';
 import { useMemo, useRef } from 'react';
@@ -22,6 +22,7 @@ import {
   CUSD_CELO_ALFAJORES,
   DAI_OPTIMISM,
   USDB_BLAST,
+  USDC_AIRDAO,
   USDC_ARBITRUM,
   USDC_ARBITRUM_GOERLI,
   USDC_AVALANCHE,
@@ -66,8 +67,7 @@ export const STABLECOIN_AMOUNT_OUT: {
     CUSD_CELO_ALFAJORES,
     10_000e6
   ),
-  [ChainId.BLAST]: CurrencyAmount.fromRawAmount(USDB_BLAST, 10_000e18),
-  [ChainId.AIRDAO]: CurrencyAmount.fromRawAmount(AMB, 10_000e6),
+  [ChainId.AIRDAO_TEST]: CurrencyAmount.fromRawAmount(USDC_AIRDAO, 10_000e18),
 };
 
 /**

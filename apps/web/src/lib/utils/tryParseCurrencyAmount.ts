@@ -1,5 +1,5 @@
 import { parseUnits } from '@ethersproject/units';
-import { Currency, CurrencyAmount } from 'shady-sdk-core';
+import { Currency, CurrencyAmount } from '@sigismund/sdk-core';
 import JSBI from 'jsbi';
 
 function truncateValue(value: string, decimals: number): string {

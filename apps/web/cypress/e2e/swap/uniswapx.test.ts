@@ -1,4 +1,4 @@
-import { ChainId, CurrencyAmount } from 'shady-sdk-core';
+import { ChainId, CurrencyAmount } from '@sigismund/sdk-core';
 import { CyHttpMessages } from 'cypress/types/net-stubbing';
 import {
   DAI,

@@ -1,4 +1,4 @@
-import { NativeCurrency, Token } from 'shady-sdk-core';
+import { NativeCurrency, Token } from '@sigismund/sdk-core';
 import { TokenInfo } from '@uniswap/token-lists';
 import { isAddress } from 'utilities/src/addresses';
 

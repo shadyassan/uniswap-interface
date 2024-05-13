@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount } from 'shady-sdk-core';
+import { Currency, CurrencyAmount } from '@sigismund/sdk-core';
 import JSBI from 'jsbi';
 import { ChainId } from 'wallet/src/constants/chains';
 import {

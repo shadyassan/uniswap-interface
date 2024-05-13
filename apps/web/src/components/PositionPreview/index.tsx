@@ -1,8 +1,8 @@
 // @ts-nocheck
 
 import { Trans } from '@lingui/macro';
-import { Currency } from 'shady-sdk-core';
-import { Position } from '@uniswap/v3-sdk';
+import { Currency } from '@sigismund/sdk-core';
+import { Position } from '@sigismund/v3-sdk';
 import RangeBadge from 'components/Badge/RangeBadge';
 import { LightCard } from 'components/Card';
 import { AutoColumn } from 'components/Column';

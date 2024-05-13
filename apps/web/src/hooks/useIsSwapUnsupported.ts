@@ -1,4 +1,4 @@
-import { Currency } from 'shady-sdk-core';
+import { Currency } from '@sigismund/sdk-core';
 import { useMemo } from 'react';
 
 import { useUnsupportedTokens } from './Tokens';

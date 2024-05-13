@@ -5,14 +5,14 @@ import {
 } from 'components/Charts/ChartModel';
 import { ISeriesApi, UTCTimestamp } from 'lightweight-charts';
 
-import { ChainId, CurrencyAmount, Token } from 'shady-sdk-core';
+import { ChainId, CurrencyAmount, Token } from '@sigismund/sdk-core';
 import {
   FeeAmount,
   Pool,
   TICK_SPACINGS,
   TickMath,
   tickToPrice,
-} from '@uniswap/v3-sdk';
+} from '@sigismund/v3-sdk';
 import { BigNumber } from 'ethers/lib/ethers';
 import { TickProcessed, usePoolActiveLiquidity } from 'hooks/usePoolTickData';
 import JSBI from 'jsbi';

@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber';
-import { Currency, CurrencyAmount } from 'shady-sdk-core';
-import { Pool } from '@uniswap/v3-sdk';
+import { Currency, CurrencyAmount } from '@sigismund/sdk-core';
+import { Pool } from '@sigismund/v3-sdk';
 import { useSingleCallResult } from 'lib/hooks/multicall';
 import useBlockNumber from 'lib/hooks/useBlockNumber';
 import { useEffect, useState } from 'react';

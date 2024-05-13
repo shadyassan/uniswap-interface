@@ -1,4 +1,4 @@
-import { CurrencyAmount } from 'shady-sdk-core';
+import { CurrencyAmount } from '@sigismund/sdk-core';
 import {
   hasSufficientFundsIncludingGas,
   isOffline,

@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount } from 'shady-sdk-core';
+import { Currency, CurrencyAmount } from '@sigismund/sdk-core';
 import { useMemo } from 'react';
 import { uniswapUrls } from 'uniswap/src/constants/urls';
 import { useRestQuery } from 'uniswap/src/data/rest';

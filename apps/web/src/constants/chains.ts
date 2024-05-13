@@ -3,7 +3,7 @@ import {
   SUPPORTED_CHAINS,
   SupportedChainsType,
   V2_ROUTER_ADDRESSES,
-} from 'shady-sdk-core';
+} from '@sigismund/sdk-core';
 
 export const CHAIN_IDS_TO_NAMES = {
   [ChainId.MAINNET]: 'mainnet',
@@ -20,8 +20,7 @@ export const CHAIN_IDS_TO_NAMES = {
   [ChainId.BNB]: 'bnb',
   [ChainId.AVALANCHE]: 'avalanche',
   [ChainId.BASE]: 'base',
-  [ChainId.BLAST]: 'blast',
-  [ChainId.AIRDAO]: 'airdao',
+  [ChainId.AIRDAO_TEST]: 'airdao',
 } as const;
 
 // Include ChainIds in this array if they are not supported by the UX yet, but are already in the SDK.
@@ -29,7 +28,6 @@ const NOT_YET_UX_SUPPORTED_CHAIN_IDS: number[] = [
   ChainId.BASE_GOERLI,
   ChainId.ARBITRUM_SEPOLIA,
   ChainId.OPTIMISM_SEPOLIA,
-  ChainId.ROOTSTOCK,
   ChainId.ZORA,
   ChainId.ZORA_SEPOLIA,
 ];
@@ -40,7 +38,6 @@ export type SupportedInterfaceChain = Exclude<
   | ChainId.BASE_GOERLI
   | ChainId.ARBITRUM_SEPOLIA
   | ChainId.OPTIMISM_SEPOLIA
-  | ChainId.ROOTSTOCK
   | ChainId.ZORA
   | ChainId.ZORA_SEPOLIA
 >;
@@ -80,8 +77,7 @@ export const SUPPORTED_GAS_ESTIMATE_CHAIN_IDS = [
   ChainId.BNB,
   ChainId.AVALANCHE,
   ChainId.BASE,
-  ChainId.BLAST,
-  ChainId.AIRDAO,
+  ChainId.AIRDAO_TEST,
 ] as const;
 
 /**
@@ -102,7 +98,7 @@ export const TESTNET_CHAIN_IDS = [
   ChainId.ARBITRUM_GOERLI,
   ChainId.OPTIMISM_GOERLI,
   ChainId.CELO_ALFAJORES,
-  ChainId.AIRDAO,
+  ChainId.AIRDAO_TEST,
 ] as const;
 
 /**
@@ -118,7 +114,7 @@ export const L1_CHAIN_IDS = [
   ChainId.CELO_ALFAJORES,
   ChainId.BNB,
   ChainId.AVALANCHE,
-  ChainId.AIRDAO,
+  ChainId.AIRDAO_TEST,
 ] as const;
 
 export type SupportedL1ChainId = (typeof L1_CHAIN_IDS)[number];
@@ -133,7 +129,6 @@ export const L2_CHAIN_IDS = [
   ChainId.OPTIMISM,
   ChainId.OPTIMISM_GOERLI,
   ChainId.BASE,
-  ChainId.BLAST,
 ] as const;
 
 export type SupportedL2ChainId = (typeof L2_CHAIN_IDS)[number];
@@ -167,8 +162,6 @@ export function getChainPriority(chainId: ChainId): number {
     case ChainId.CELO:
     case ChainId.CELO_ALFAJORES:
       return 7;
-    case ChainId.BLAST:
-      return 8;
     default:
       return Infinity;
   }

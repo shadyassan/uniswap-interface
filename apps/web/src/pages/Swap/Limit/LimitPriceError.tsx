@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro';
-import { Currency } from 'shady-sdk-core';
+import { Currency } from '@sigismund/sdk-core';
 import Column from 'components/Column';
 import Row from 'components/Row';
 import { ReactNode } from 'react';

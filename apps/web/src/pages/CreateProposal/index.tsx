@@ -2,7 +2,7 @@ import { defaultAbiCoder } from '@ethersproject/abi';
 import { getAddress, isAddress } from '@ethersproject/address';
 import { Trans } from '@lingui/macro';
 import { InterfacePageName } from '@uniswap/analytics-events';
-import { Currency, CurrencyAmount, Token } from 'shady-sdk-core';
+import { Currency, CurrencyAmount, Token } from '@sigismund/sdk-core';
 import { useWeb3React } from '@web3-react/core';
 import { Trace } from 'analytics';
 import { ButtonError } from 'components/Button';

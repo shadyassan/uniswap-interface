@@ -1,8 +1,8 @@
 import { getCreate2Address } from '@ethersproject/address';
 import { keccak256, pack } from '@ethersproject/solidity';
 import { Trans } from '@lingui/macro';
-import { Token, V2_FACTORY_ADDRESSES } from 'shady-sdk-core';
-import { Pair } from '@uniswap/v2-sdk';
+import { Token, V2_FACTORY_ADDRESSES } from '@sigismund/sdk-core';
+import { Pair } from '@sigismund/v2-sdk';
 import { useWeb3React } from '@web3-react/core';
 import MigrateSushiPositionCard from 'components/PositionCard/Sushi';
 import MigrateV2PositionCard from 'components/PositionCard/V2';

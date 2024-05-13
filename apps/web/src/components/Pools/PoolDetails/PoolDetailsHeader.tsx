@@ -1,5 +1,5 @@
 import { t, Trans } from '@lingui/macro';
-import { ChainId, Percent } from 'shady-sdk-core';
+import { ChainId, Percent } from '@sigismund/sdk-core';
 import blankTokenUrl from 'assets/svg/blank_token.svg';
 import {
   BreadcrumbNavContainer,

@@ -1,5 +1,5 @@
-import { ChainId } from 'shady-sdk-core';
-import { UNIVERSAL_ROUTER_CREATION_BLOCK } from '@uniswap/universal-router-sdk';
+import { ChainId } from '@sigismund/sdk-core';
+import { UNIVERSAL_ROUTER_CREATION_BLOCK } from '@sigismund/universal-router-sdk';
 
 /* eslint-env node */
 require('dotenv').config();

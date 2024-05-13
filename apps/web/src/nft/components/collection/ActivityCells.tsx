@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro';
 import { InterfacePageName, NFTEventName } from '@uniswap/analytics-events';
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import { sendAnalyticsEvent, useTrace } from 'analytics';
 import { MouseoverTooltip } from 'components/Tooltip';
 import { Box } from 'nft/components/Box';

@@ -1,4 +1,4 @@
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import useHttpLocations from 'hooks/useHttpLocations';
 import { useMemo } from 'react';
 import { isAddress } from 'utilities/src/addresses';
@@ -39,8 +39,6 @@ export function chainIdToNetworkName(networkId: ChainId): Network {
       return 'avalanchec';
     case ChainId.BASE:
       return 'base';
-    case ChainId.BLAST:
-      return 'blast';
     default:
       return 'ethereum';
   }

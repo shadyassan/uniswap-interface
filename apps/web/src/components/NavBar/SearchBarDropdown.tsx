@@ -3,7 +3,7 @@ import {
   InterfaceSectionName,
   NavBarSearchTypes,
 } from '@uniswap/analytics-events';
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import { useWeb3React } from '@web3-react/core';
 import { useTrace } from 'analytics';
 import clsx from 'clsx';

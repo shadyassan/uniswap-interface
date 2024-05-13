@@ -1,4 +1,4 @@
-import { TradeType } from 'shady-sdk-core';
+import { TradeType } from '@sigismund/sdk-core';
 import { useWeb3React } from '@web3-react/core';
 import { DEFAULT_TXN_DISMISS_MS, L2_TXN_DISMISS_MS } from 'constants/misc';
 import {

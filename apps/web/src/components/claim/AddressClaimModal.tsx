@@ -1,6 +1,6 @@
 import { isAddress } from '@ethersproject/address';
 import { Trans } from '@lingui/macro';
-import { CurrencyAmount, Token } from 'shady-sdk-core';
+import { CurrencyAmount, Token } from '@sigismund/sdk-core';
 import { useWeb3React } from '@web3-react/core';
 import { useState } from 'react';
 import { Text } from 'rebass';

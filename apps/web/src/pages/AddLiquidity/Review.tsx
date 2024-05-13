@@ -1,5 +1,5 @@
-import { Currency, CurrencyAmount, Price } from 'shady-sdk-core';
-import { Position } from '@uniswap/v3-sdk';
+import { Currency, CurrencyAmount, Price } from '@sigismund/sdk-core';
+import { Position } from '@sigismund/v3-sdk';
 import { AutoColumn } from 'components/Column';
 import { PositionPreview } from 'components/PositionPreview';
 import styled from 'styled-components';

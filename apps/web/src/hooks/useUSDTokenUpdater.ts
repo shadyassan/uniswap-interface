@@ -1,4 +1,4 @@
-import { Currency } from 'shady-sdk-core';
+import { Currency } from '@sigismund/sdk-core';
 import tryParseCurrencyAmount from 'lib/utils/tryParseCurrencyAmount';
 import { useMemo } from 'react';
 import { NumberType, useFormatter } from 'utils/formatNumbers';

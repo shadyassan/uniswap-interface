@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro';
-import { Percent } from 'shady-sdk-core';
+import { Percent } from '@sigismund/sdk-core';
 import { ButtonEmphasis, ButtonSize, ThemeButton } from 'components/Button';
 import { ColumnCenter } from 'components/Column';
 import Row from 'components/Row';

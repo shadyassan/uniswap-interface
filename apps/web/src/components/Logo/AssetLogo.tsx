@@ -1,4 +1,4 @@
-import { ChainId, Currency } from 'shady-sdk-core';
+import { ChainId, Currency } from '@sigismund/sdk-core';
 import { PortfolioLogo } from 'components/AccountDrawer/MiniPortfolio/PortfolioLogo';
 import React from 'react';
 import styled from 'styled-components';

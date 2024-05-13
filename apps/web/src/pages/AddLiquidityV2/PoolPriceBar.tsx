@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro';
-import { Currency, Percent, Price } from 'shady-sdk-core';
+import { Currency, Percent, Price } from '@sigismund/sdk-core';
 import { Text } from 'rebass';
 import { useTheme } from 'styled-components';
 import { ThemedText } from 'theme/components';

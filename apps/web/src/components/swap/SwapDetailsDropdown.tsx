@@ -5,7 +5,7 @@ import {
   InterfaceElementName,
   SwapEventName,
 } from '@uniswap/analytics-events';
-import { Percent } from 'shady-sdk-core';
+import { Percent } from '@sigismund/sdk-core';
 import { TraceEvent, useTrace } from 'analytics';
 import AnimatedDropdown from 'components/AnimatedDropdown';
 import Column from 'components/Column';

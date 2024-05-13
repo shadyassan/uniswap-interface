@@ -1,5 +1,5 @@
-import { Currency, Token } from 'shady-sdk-core';
-import { FeeAmount } from '@uniswap/v3-sdk';
+import { Currency, Token } from '@sigismund/sdk-core';
+import { FeeAmount } from '@sigismund/v3-sdk';
 import useBlockNumber from 'lib/hooks/useBlockNumber';
 import ms from 'ms';
 import { useMemo } from 'react';

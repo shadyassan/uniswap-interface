@@ -1,4 +1,4 @@
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 
 import { getChainPriority } from './chains';
 
@@ -18,7 +18,6 @@ const chainPriorityTestCases: [ChainId, number][] = [
   [ChainId.AVALANCHE, 6],
   [ChainId.CELO, 7],
   [ChainId.CELO_ALFAJORES, 7],
-  [ChainId.BLAST, 8],
 ];
 
 test.each(chainPriorityTestCases)(

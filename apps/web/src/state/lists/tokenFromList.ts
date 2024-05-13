@@ -1,4 +1,4 @@
-import { Currency, Token } from 'shady-sdk-core';
+import { Currency, Token } from '@sigismund/sdk-core';
 import { Tags, TokenInfo, TokenList } from '@uniswap/token-lists';
 
 import { isAddress } from 'utilities/src/addresses';

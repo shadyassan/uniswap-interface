@@ -1,5 +1,5 @@
 /* eslint-disable complexity */
-import { Currency, CurrencyAmount } from 'shady-sdk-core';
+import { Currency, CurrencyAmount } from '@sigismund/sdk-core';
 import { forwardRef, memo, useCallback, useEffect, useRef } from 'react';
 import {
   NativeSyntheticEvent,

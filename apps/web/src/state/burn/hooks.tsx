@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro';
-import { Currency, CurrencyAmount, Percent, Token } from 'shady-sdk-core';
-import { Pair } from '@uniswap/v2-sdk';
+import { Currency, CurrencyAmount, Percent, Token } from '@sigismund/sdk-core';
+import { Pair } from '@sigismund/v2-sdk';
 import { useWeb3React } from '@web3-react/core';
 import JSBI from 'jsbi';
 import tryParseCurrencyAmount from 'lib/utils/tryParseCurrencyAmount';

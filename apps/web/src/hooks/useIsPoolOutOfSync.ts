@@ -4,7 +4,7 @@ import {
   Fraction,
   Price,
   Token,
-} from 'shady-sdk-core';
+} from '@sigismund/sdk-core';
 import { parseUnits } from 'ethers/lib/utils';
 import JSBI from 'jsbi';
 import { useStablecoinAmountFromFiatValue } from './useStablecoinPrice';

@@ -1,6 +1,6 @@
-import { Percent, TradeType } from 'shady-sdk-core';
-import { FlatFeeOptions } from '@uniswap/universal-router-sdk';
-import { FeeOptions } from '@uniswap/v3-sdk';
+import { Percent, TradeType } from '@sigismund/sdk-core';
+import { FlatFeeOptions } from '@sigismund/universal-router-sdk';
+import { FeeOptions } from '@sigismund/v3-sdk';
 import { useWeb3React } from '@web3-react/core';
 import { BigNumber } from 'ethers/lib/ethers';
 import { PermitSignature } from 'hooks/usePermitAllowance';

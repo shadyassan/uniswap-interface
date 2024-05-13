@@ -6,13 +6,13 @@ import {
   CurrencyAmount,
   Token,
   TradeType,
-} from 'shady-sdk-core';
+} from '@sigismund/sdk-core';
 import { providers } from 'ethers';
 import { JsonRpcProvider } from '@ethersproject/providers';
 // This file is lazy-loaded, so the import of smart-order-router is intentional.
 // eslint-disable-next-line @typescript-eslint/no-restricted-imports
-import { AlphaRouter, AlphaRouterConfig } from 'shady-smart-order-router';
-// import { AlphaRouter, AlphaRouterConfig } from '@uniswap/smart-order-router';
+import { AlphaRouter, AlphaRouterConfig } from '@sigismund/smart-order-router';
+// import { AlphaRouter, AlphaRouterConfig } from '@sigismund/smart-order-router';
 import { asSupportedChain } from 'constants/chains';
 import { RPC_PROVIDERS } from 'constants/providers';
 import { nativeOnChain } from 'constants/tokens';
@@ -40,7 +40,7 @@ const CLIENT_SIDE_ROUTING_ALLOW_LIST = [
   ChainId.BNB,
   ChainId.AVALANCHE,
   ChainId.BASE,
-  ChainId.AIRDAO,
+  ChainId.AIRDAO_TEST,
 ];
 const routers = new Map<ChainId, AlphaRouter>();
 export function getRouter(chainId: ChainId): AlphaRouter {
@@ -49,8 +49,11 @@ export function getRouter(chainId: ChainId): AlphaRouter {
 
   const supportedChainId = asSupportedChain(chainId);
   if (supportedChainId && CLIENT_SIDE_ROUTING_ALLOW_LIST.includes(chainId)) {
-    // const provider = RPC_PROVIDERS[supportedChainId];
-    const provider = new JsonRpcProvider('https://eth.meowrpc.com');
+    const provider = RPC_PROVIDERS[supportedChainId];
+    // const provider = new providers.JsonRpcProvider(
+    //   'https://network.ambrosus-test.io'
+    // );
+    // const provider = new JsonRpcProvider('https://eth.meowrpc.com');
     const router = new AlphaRouter({ chainId, provider });
     routers.set(chainId, router);
     return router;

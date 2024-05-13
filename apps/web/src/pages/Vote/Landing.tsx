@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro';
 import { InterfacePageName } from '@uniswap/analytics-events';
-import { CurrencyAmount, Token } from 'shady-sdk-core';
+import { CurrencyAmount, Token } from '@sigismund/sdk-core';
 import { useWeb3React } from '@web3-react/core';
 import { Trace } from 'analytics';
 import { ButtonPrimary } from 'components/Button';

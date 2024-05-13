@@ -1,5 +1,5 @@
 import { AddressZero } from '@ethersproject/constants';
-import { CurrencyAmount, Percent, Token } from 'shady-sdk-core';
+import { CurrencyAmount, Percent, Token } from '@sigismund/sdk-core';
 
 import { calculateSlippageAmount } from './calculateSlippageAmount';
 

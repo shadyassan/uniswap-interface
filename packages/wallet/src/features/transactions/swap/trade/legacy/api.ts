@@ -1,5 +1,5 @@
 import { ApolloError, QueryHookOptions } from '@apollo/client';
-import { TradeType } from 'shady-sdk-core';
+import { TradeType } from '@sigismund/sdk-core';
 import { BigNumber } from 'ethers';
 import { useMemo } from 'react';
 import { ROUTING_API_PATH } from 'uniswap/src/data/constants';
@@ -22,7 +22,8 @@ import {
 import { PermitSignatureInfo } from 'wallet/src/features/transactions/swap/usePermit2Signature';
 import { SwapRouterNativeAssets } from 'wallet/src/utils/currencyId';
 
-const protocols: string[] = ['v2', 'v3', 'mixed'];
+// const protocols: string[] = ['v2', 'v3', 'mixed'];
+const protocols: string[] = ['v3'];
 
 // error strings hardcoded in @uniswap/unified-routing-api
 // https://github.com/Uniswap/unified-routing-api/blob/020ea371a00d4cc25ce9f9906479b00a43c65f2c/lib/util/errors.ts#L4

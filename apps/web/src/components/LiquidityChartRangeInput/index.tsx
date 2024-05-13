@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro';
-import { Currency, Price, Token } from 'shady-sdk-core';
-import { FeeAmount } from '@uniswap/v3-sdk';
+import { Currency, Price, Token } from '@sigismund/sdk-core';
+import { FeeAmount } from '@sigismund/v3-sdk';
 import { AutoColumn, ColumnCenter } from 'components/Column';
 import Loader from 'components/Icons/LoadingSpinner';
 import { useColor } from 'hooks/useColor';

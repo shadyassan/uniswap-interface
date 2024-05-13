@@ -1,4 +1,4 @@
-import { Percent } from 'shady-sdk-core';
+import { Percent } from '@sigismund/sdk-core';
 
 const PRECISION = 10_000;
 const DENOMINATOR = PRECISION * 100;

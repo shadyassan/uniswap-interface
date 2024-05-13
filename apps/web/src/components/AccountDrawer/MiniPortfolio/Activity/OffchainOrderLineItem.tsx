@@ -1,7 +1,7 @@
 // @ts-nocheck
 
 import { Trans } from '@lingui/macro';
-import { Currency, CurrencyAmount, Price } from 'shady-sdk-core';
+import { Currency, CurrencyAmount, Price } from '@sigismund/sdk-core';
 import { DetailLineItem, LineItemData } from 'components/swap/DetailLineItem';
 import TradePrice from 'components/swap/TradePrice';
 import { UniswapXOrderDetails } from 'state/signatures/types';

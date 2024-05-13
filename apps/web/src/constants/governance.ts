@@ -5,7 +5,7 @@ import {
   GOVERNANCE_BRAVO_ADDRESSES,
   TIMELOCK_ADDRESSES,
   UNI_ADDRESSES,
-} from 'shady-sdk-core';
+} from '@sigismund/sdk-core';
 
 export const COMMON_CONTRACT_NAMES: Record<
   number,

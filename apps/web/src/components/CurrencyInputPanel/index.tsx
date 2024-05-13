@@ -4,8 +4,8 @@ import {
   InterfaceElementName,
   SwapEventName,
 } from '@uniswap/analytics-events';
-import { Currency, CurrencyAmount } from 'shady-sdk-core';
-import { Pair } from '@uniswap/v2-sdk';
+import { Currency, CurrencyAmount } from '@sigismund/sdk-core';
+import { Pair } from '@sigismund/v2-sdk';
 import { useWeb3React } from '@web3-react/core';
 import { TraceEvent } from 'analytics';
 import {

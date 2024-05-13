@@ -1,4 +1,4 @@
-import { Currency, TradeType } from 'shady-sdk-core';
+import { Currency, TradeType } from '@sigismund/sdk-core';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flex, Icons, Text, TouchableArea } from 'ui/src';

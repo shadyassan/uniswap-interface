@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro';
-import { Percent, TradeType } from 'shady-sdk-core';
+import { Percent, TradeType } from '@sigismund/sdk-core';
 import Column from 'components/Column';
 import { RowBetween } from 'components/Row';
 import { InterfaceTrade } from 'state/routing/types';

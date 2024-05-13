@@ -1,4 +1,4 @@
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import ms from 'ms';
 import { darkTheme } from 'theme/colors';
 
@@ -273,23 +273,12 @@ const CHAIN_INFO: ChainInfoMap = {
     nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
     color: darkTheme.chain_84531,
   },
-  [ChainId.BLAST]: {
-    networkType: NetworkType.L2,
-    bridge: 'https://blast.io/bridge',
-    defaultListUrl: '',
-    docs: 'https://docs.blast.io',
-    explorer: 'https://blastscan.io/',
-    infoLink: 'https://info.uniswap.org/#/blast/',
-    label: 'Blast',
-    nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
-    color: darkTheme.chain_81457,
-  },
-  [ChainId.AIRDAO]: {
+  [ChainId.AIRDAO_TEST]: {
     networkType: NetworkType.L1,
     bridge: 'https://airdao.io/bridge',
     defaultListUrl: '',
     docs: '',
-    explorer: 'https://explorer.ambrosus-test.io/',
+    explorer: 'https://testnet.airdao.io/explorer',
     infoLink: '',
     label: 'Ambrosus Testnet',
     nativeCurrency: { name: 'Amber', symbol: 'AMB', decimals: 18 },

@@ -5,7 +5,7 @@ import {
   Percent,
   Price,
   Token,
-} from 'shady-sdk-core';
+} from '@sigismund/sdk-core';
 import {
   DEFAULT_LOCAL_CURRENCY,
   LOCAL_CURRENCY_SYMBOL_DISPLAY_TYPE,

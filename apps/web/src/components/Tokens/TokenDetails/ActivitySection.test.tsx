@@ -1,5 +1,5 @@
 import { screen } from '@testing-library/react';
-import { Token } from 'shady-sdk-core';
+import { Token } from '@sigismund/sdk-core';
 import { render } from 'test-utils/render';
 
 import { ActivitySection } from './ActivitySection';

@@ -1,4 +1,4 @@
-import { Currency, Token } from 'shady-sdk-core';
+import { Currency, Token } from '@sigismund/sdk-core';
 import TokenSafety from 'components/TokenSafety';
 import { memo, useCallback, useEffect, useState } from 'react';
 

@@ -1,5 +1,5 @@
 // a list of tokens by chain
-import { ChainId, Currency, Token, WETH9 } from 'shady-sdk-core';
+import { ChainId, Currency, Token, WETH9 } from '@sigismund/sdk-core';
 
 import {
   ARB,
@@ -46,6 +46,7 @@ import {
   WRAPPED_NATIVE_CURRENCY,
   nativeOnChain,
   BOND_AIRDAO,
+  USDC_AIRDAO,
 } from './tokens';
 
 type ChainTokenList = {
@@ -117,10 +118,6 @@ export const COMMON_BASES: ChainCurrencyList = {
     WRAPPED_NATIVE_CURRENCY[ChainId.BASE] as Token,
     USDC_BASE,
   ],
-  [ChainId.BLAST]: [
-    nativeOnChain(ChainId.BLAST),
-    WRAPPED_NATIVE_CURRENCY[ChainId.BLAST] as Token,
-  ],
 
   [ChainId.POLYGON]: [
     nativeOnChain(ChainId.POLYGON),
@@ -168,10 +165,11 @@ export const COMMON_BASES: ChainCurrencyList = {
     USDT_AVALANCHE,
     WETH_AVALANCHE,
   ],
-  [ChainId.AIRDAO]: [
-    nativeOnChain(ChainId.AIRDAO),
-    WRAPPED_NATIVE_CURRENCY[ChainId.AIRDAO] as Token,
+  [ChainId.AIRDAO_TEST]: [
+    nativeOnChain(ChainId.AIRDAO_TEST),
+    WRAPPED_NATIVE_CURRENCY[ChainId.AIRDAO_TEST] as Token,
     BOND_AIRDAO,
+    USDC_AIRDAO,
   ],
 };
 

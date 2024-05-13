@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro';
-import { Currency } from 'shady-sdk-core';
+import { Currency } from '@sigismund/sdk-core';
 import CurrencyLogo from 'components/Logo/CurrencyLogo';
 import PrefetchBalancesWrapper from 'components/PrefetchBalancesWrapper/PrefetchBalancesWrapper';
 import Row from 'components/Row';

@@ -1,4 +1,4 @@
-import { Currency } from 'shady-sdk-core';
+import { Currency } from '@sigismund/sdk-core';
 import { LocalizationContextState } from 'wallet/src/features/language/LocalizationContext';
 import { getValidAddress, shortenAddress } from 'wallet/src/utils/addresses';
 import {

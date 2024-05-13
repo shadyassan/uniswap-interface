@@ -1,4 +1,4 @@
-import { Currency } from 'shady-sdk-core';
+import { Currency } from '@sigismund/sdk-core';
 
 export function formatCurrencySymbol(currency?: Currency): string | undefined {
   return currency && currency.symbol && currency.symbol.length > 20

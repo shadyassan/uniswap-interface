@@ -1,5 +1,5 @@
 import { t, Trans } from '@lingui/macro';
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import { useWeb3React } from '@web3-react/core';
 import { OrderContent } from 'components/AccountDrawer/MiniPortfolio/Activity/OffchainActivityModal';
 import Column, { ColumnCenter } from 'components/Column';

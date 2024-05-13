@@ -1,4 +1,4 @@
-import { ChainId, MaxUint256, UNI_ADDRESSES } from 'shady-sdk-core';
+import { ChainId, MaxUint256, UNI_ADDRESSES } from '@sigismund/sdk-core';
 
 const UNI_MAINNET = UNI_ADDRESSES[ChainId.MAINNET];
 

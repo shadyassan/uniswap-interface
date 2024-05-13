@@ -1,4 +1,4 @@
-import { Currency } from 'shady-sdk-core';
+import { Currency } from '@sigismund/sdk-core';
 
 export const getTestSelector = (selectorId: string) =>
   `[data-testid=${selectorId}]`;

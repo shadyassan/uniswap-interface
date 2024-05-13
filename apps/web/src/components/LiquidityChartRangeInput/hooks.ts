@@ -1,5 +1,5 @@
-import { Currency } from 'shady-sdk-core';
-import { FeeAmount } from '@uniswap/v3-sdk';
+import { Currency } from '@sigismund/sdk-core';
+import { FeeAmount } from '@sigismund/v3-sdk';
 import { TickProcessed, usePoolActiveLiquidity } from 'hooks/usePoolTickData';
 import { useCallback, useMemo } from 'react';
 

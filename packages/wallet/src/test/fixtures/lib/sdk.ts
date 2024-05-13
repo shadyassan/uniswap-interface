@@ -1,4 +1,4 @@
-import { Token } from 'shady-sdk-core';
+import { Token } from '@sigismund/sdk-core';
 import { getWrappedNativeAddress } from 'wallet/src/constants/addresses';
 import { ChainId } from 'wallet/src/constants/chains';
 

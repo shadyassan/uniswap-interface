@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro';
-import { CurrencyAmount, Price } from 'shady-sdk-core';
+import { CurrencyAmount, Price } from '@sigismund/sdk-core';
 import {
   useOpenOffchainActivityModal,
   useOrderAmounts,

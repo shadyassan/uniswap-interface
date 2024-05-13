@@ -1,5 +1,5 @@
 import { BigNumber } from '@ethersproject/bignumber';
-import { CurrencyAmount, Token } from 'shady-sdk-core';
+import { CurrencyAmount, Token } from '@sigismund/sdk-core';
 import JSBI from 'jsbi';
 
 import { ZERO_ADDRESS } from '../constants/misc';

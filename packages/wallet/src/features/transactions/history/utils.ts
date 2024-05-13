@@ -1,4 +1,4 @@
-import { Token } from 'shady-sdk-core';
+import { Token } from '@sigismund/sdk-core';
 import dayjs from 'dayjs';
 import {
   Amount,

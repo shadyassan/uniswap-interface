@@ -2,7 +2,7 @@
 
 import { Trans } from '@lingui/macro';
 import { providers } from 'ethers';
-import { Protocol } from '@uniswap/router-sdk';
+import { Protocol } from '@sigismund/router-sdk';
 import {
   BrowserEvent,
   InterfaceElementName,
@@ -11,9 +11,9 @@ import {
   SharedEventName,
   SwapEventName,
 } from '@uniswap/analytics-events';
-import { Currency, CurrencyAmount, Token } from 'shady-sdk-core';
-// import { UNIVERSAL_ROUTER_ADDRESS } from '@uniswap/universal-router-sdk';
-import { UNIVERSAL_ROUTER_ADDRESS } from 'shady-universal-router-sdk';
+import { Currency, CurrencyAmount, Token } from '@sigismund/sdk-core';
+// import { UNIVERSAL_ROUTER_ADDRESS } from '@sigismund/universal-router-sdk';
+import { UNIVERSAL_ROUTER_ADDRESS } from '@sigismund/universal-router-sdk';
 import { useWeb3React } from '@web3-react/core';
 import { sendAnalyticsEvent, Trace, TraceEvent, useTrace } from 'analytics';
 import { useToggleAccountDrawer } from 'components/AccountDrawer/MiniPortfolio/hooks';

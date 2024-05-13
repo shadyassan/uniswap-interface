@@ -1,12 +1,12 @@
 import { MaxUint256 } from '@ethersproject/constants';
-import { SwapEventName } from '@uniswap/analytics-events';
-import { PERMIT2_ADDRESS } from '@uniswap/permit2-sdk';
-import { Currency, CurrencyAmount, TradeType } from 'shady-sdk-core';
+import { Currency, CurrencyAmount, TradeType } from '@sigismund/sdk-core';
 import {
   FlatFeeOptions,
   UNIVERSAL_ROUTER_ADDRESS,
-} from '@uniswap/universal-router-sdk';
-import { FeeOptions } from '@uniswap/v3-sdk';
+} from '@sigismund/universal-router-sdk';
+import { FeeOptions } from '@sigismund/v3-sdk';
+import { SwapEventName } from '@uniswap/analytics-events';
+import { PERMIT2_ADDRESS } from '@uniswap/permit2-sdk';
 import { providers } from 'ethers';
 import { useCallback, useEffect, useMemo } from 'react';
 import ERC20_ABI from 'uniswap/src/abis/erc20.json';

@@ -1,4 +1,4 @@
-import { TradeType } from 'shady-sdk-core';
+import { TradeType } from '@sigismund/sdk-core';
 import { useMemo } from 'react';
 import { FeatureFlags } from 'uniswap/src/features/experiments/flags';
 import { useFeatureFlag } from 'uniswap/src/features/experiments/hooks';

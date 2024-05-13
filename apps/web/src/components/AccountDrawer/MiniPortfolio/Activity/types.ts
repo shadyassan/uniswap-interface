@@ -1,4 +1,4 @@
-import { ChainId, Currency } from 'shady-sdk-core';
+import { ChainId, Currency } from '@sigismund/sdk-core';
 import { UniswapXOrderDetails } from 'state/signatures/types';
 import { TransactionStatus } from 'uniswap/src/data/graphql/uniswap-data-api/__generated__/types-and-hooks';
 

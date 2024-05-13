@@ -4,7 +4,7 @@ import {
   Price,
   Token,
   TradeType,
-} from 'shady-sdk-core';
+} from '@sigismund/sdk-core';
 import { useMemo } from 'react';
 import { ChainId } from 'wallet/src/constants/chains';
 import { PollingInterval } from 'wallet/src/constants/misc';

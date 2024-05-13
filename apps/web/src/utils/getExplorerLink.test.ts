@@ -1,4 +1,4 @@
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 
 import { ExplorerDataType, getExplorerLink } from './getExplorerLink';
 
@@ -57,10 +57,5 @@ describe('#getExplorerLink', () => {
     expect(
       getExplorerLink(ChainId.BASE, 'abc', ExplorerDataType.ADDRESS)
     ).toEqual('https://basescan.org/address/abc');
-  });
-  it('blast', () => {
-    expect(
-      getExplorerLink(ChainId.BLAST, 'abc', ExplorerDataType.ADDRESS)
-    ).toEqual('https://blastscan.io/address/abc');
   });
 });

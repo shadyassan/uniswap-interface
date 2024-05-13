@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount } from 'shady-sdk-core';
+import { Currency, CurrencyAmount } from '@sigismund/sdk-core';
 import { ApprovalState, useApproval } from 'lib/hooks/useApproval';
 import { useCallback } from 'react';
 

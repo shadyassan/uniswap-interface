@@ -1,4 +1,4 @@
-import { TradeType } from 'shady-sdk-core';
+import { TradeType } from '@sigismund/sdk-core';
 import { UniswapXOrderStatus } from 'lib/hooks/orders/types';
 import { createStore, Store } from 'redux';
 

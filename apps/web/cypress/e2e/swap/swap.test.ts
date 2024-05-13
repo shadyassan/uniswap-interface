@@ -1,5 +1,5 @@
 import { SwapEventName } from '@uniswap/analytics-events';
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 
 import { UNI, USDC_MAINNET } from '../../../src/constants/tokens';
 import { getBalance, getTestSelector } from '../../utils';

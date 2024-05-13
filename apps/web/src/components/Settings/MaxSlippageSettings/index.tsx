@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro';
-import { Percent } from 'shady-sdk-core';
+import { Percent } from '@sigismund/sdk-core';
 import Expand from 'components/Expand';
 import QuestionHelper from 'components/QuestionHelper';
 import Row, { RowBetween } from 'components/Row';

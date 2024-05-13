@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { Protocol } from '@uniswap/router-sdk';
+import { Protocol } from '@sigismund/router-sdk';
 import { sendAnalyticsEvent } from 'analytics';
 import { isUniswapXSupportedChain } from 'constants/chains';
 import ms from 'ms';
@@ -28,10 +28,10 @@ if (UNISWAP_GATEWAY_DNS_URL === undefined) {
 }
 
 const CLIENT_PARAMS = {
-  protocols: [Protocol.V2, Protocol.V3, Protocol.MIXED],
+  protocols: [Protocol.V3],
 };
 
-const protocols: Protocol[] = [Protocol.V2, Protocol.V3, Protocol.MIXED];
+const protocols: Protocol[] = [Protocol.V3];
 
 // routing API quote query params: https://github.com/Uniswap/routing-api/blob/main/lib/handlers/quote/schema/quote-schema.ts
 const DEFAULT_QUERY_PARAMS = {
@@ -50,8 +50,6 @@ function getRoutingAPIConfig(args: GetQuoteArgs): RoutingConfig {
 
   const uniswapx = {
     useSyntheticQuotes: uniswapXForceSyntheticQuotes,
-    // Protocol supports swap+send to different destination address, but
-    // for now recipient === swapper
     recipient: account,
     swapper: account,
     routingType: URAQuoteType.DUTCH_LIMIT,
@@ -65,8 +63,6 @@ function getRoutingAPIConfig(args: GetQuoteArgs): RoutingConfig {
   };
 
   if (
-    // If the user has opted out of UniswapX during the opt-out transition period, we should respect that preference and only request classic quotes.
-    routerPreference === RouterPreference.API ||
     routerPreference === INTERNAL_ROUTER_PREFERENCE_PRICE ||
     !isUniswapXSupportedChain(tokenInChainId)
   ) {
@@ -186,11 +182,13 @@ export const routingApi = createApi({
                     'lib/hooks/routing/clientSideSmartOrderRouter'
                   );
                   const router = getRouter(args.tokenInChainId);
+                  console.log('router: ', router);
                   const quoteResult = await getClientSideQuote(
                     args,
                     router,
                     CLIENT_PARAMS
                   );
+                  console.log('quoteResult: ', router);
                   if (quoteResult.state === QuoteState.SUCCESS) {
                     const trade = await transformQuoteToTrade(
                       args,

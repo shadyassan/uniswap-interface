@@ -1,4 +1,4 @@
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import { USDC_MAINNET } from 'constants/tokens';
 import { render } from 'test-utils/render';
 

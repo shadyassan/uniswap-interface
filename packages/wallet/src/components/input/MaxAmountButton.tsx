@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount } from 'shady-sdk-core';
+import { Currency, CurrencyAmount } from '@sigismund/sdk-core';
 import { useTranslation } from 'react-i18next';
 import { GestureResponderEvent, StyleProp, ViewStyle } from 'react-native';
 import { Text, TouchableArea } from 'ui/src';

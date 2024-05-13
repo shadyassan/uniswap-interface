@@ -8,7 +8,7 @@ import {
   InterfaceEventName,
   LiquidityEventName,
 } from '@uniswap/analytics-events';
-import { Currency, Percent } from 'shady-sdk-core';
+import { Currency, Percent } from '@sigismund/sdk-core';
 import { useWeb3React } from '@web3-react/core';
 import { sendAnalyticsEvent, TraceEvent, useTrace } from 'analytics';
 import { useToggleAccountDrawer } from 'components/AccountDrawer/MiniPortfolio/hooks';

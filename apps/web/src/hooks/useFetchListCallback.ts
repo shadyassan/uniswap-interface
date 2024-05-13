@@ -1,5 +1,5 @@
 import { nanoid } from '@reduxjs/toolkit';
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import { TokenList } from '@uniswap/token-lists';
 import { RPC_PROVIDERS } from 'constants/providers';
 import getTokenList from 'lib/hooks/useTokenList/fetchTokenList';

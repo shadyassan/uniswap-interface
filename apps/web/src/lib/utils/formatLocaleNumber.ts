@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Price } from 'shady-sdk-core';
+import { Currency, CurrencyAmount, Price } from '@sigismund/sdk-core';
 import { DEFAULT_LOCALE, SUPPORTED_LOCALES } from 'constants/locales';
 
 interface FormatLocaleNumberArgs {

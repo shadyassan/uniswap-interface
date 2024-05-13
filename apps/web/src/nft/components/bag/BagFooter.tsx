@@ -6,7 +6,7 @@ import {
   InterfaceElementName,
   NFTEventName,
 } from '@uniswap/analytics-events';
-import { ChainId, Currency, CurrencyAmount, Token } from 'shady-sdk-core';
+import { ChainId, Currency, CurrencyAmount, Token } from '@sigismund/sdk-core';
 import { useWeb3React } from '@web3-react/core';
 import { TraceEvent, sendAnalyticsEvent } from 'analytics';
 import { useToggleAccountDrawer } from 'components/AccountDrawer/MiniPortfolio/hooks';

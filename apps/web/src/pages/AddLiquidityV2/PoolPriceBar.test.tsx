@@ -1,4 +1,4 @@
-import { Price, WETH9 } from 'shady-sdk-core';
+import { Price, WETH9 } from '@sigismund/sdk-core';
 import { USDC_MAINNET } from 'constants/tokens';
 import { Field } from 'state/mint/actions';
 import { render, screen } from 'test-utils/render';

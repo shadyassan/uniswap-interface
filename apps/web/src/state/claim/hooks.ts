@@ -4,7 +4,7 @@ import {
   CurrencyAmount,
   MERKLE_DISTRIBUTOR_ADDRESS,
   Token,
-} from 'shady-sdk-core';
+} from '@sigismund/sdk-core';
 import { useWeb3React } from '@web3-react/core';
 import JSBI from 'jsbi';
 import { useSingleCallResult } from 'lib/hooks/multicall';

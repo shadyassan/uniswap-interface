@@ -11,14 +11,14 @@ import {
   Price,
   Token,
   V2_FACTORY_ADDRESSES,
-} from 'shady-sdk-core';
+} from '@sigismund/sdk-core';
 import {
   FeeAmount,
   Pool,
   Position,
   priceToClosestTick,
   TickMath,
-} from '@uniswap/v3-sdk';
+} from '@sigismund/v3-sdk';
 import { useWeb3React } from '@web3-react/core';
 import { sendAnalyticsEvent, useTrace } from 'analytics';
 import Badge from 'components/Badge';

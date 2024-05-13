@@ -1,6 +1,6 @@
 import { Trans } from '@lingui/macro';
-import { Currency, CurrencyAmount, Percent } from 'shady-sdk-core';
-import { Position } from '@uniswap/v3-sdk';
+import { Currency, CurrencyAmount, Percent } from '@sigismund/sdk-core';
+import { Position } from '@sigismund/v3-sdk';
 import { useWeb3React } from '@web3-react/core';
 import { useToken } from 'hooks/Tokens';
 import { usePool } from 'hooks/usePools';

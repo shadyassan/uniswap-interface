@@ -1,6 +1,6 @@
 import { InterfaceEventName } from '@uniswap/analytics-events';
-import { ChainId, Percent } from 'shady-sdk-core';
-import { WETH_ADDRESS as getWethAddress } from '@uniswap/universal-router-sdk';
+import { ChainId, Percent } from '@sigismund/sdk-core';
+import { WETH_ADDRESS as getWethAddress } from '@sigismund/universal-router-sdk';
 import { useWeb3React } from '@web3-react/core';
 import { sendAnalyticsEvent } from 'analytics';
 import { BIPS_BASE, ZERO_PERCENT } from 'constants/misc';

@@ -1,4 +1,4 @@
-import { Currency } from 'shady-sdk-core';
+import { Currency } from '@sigismund/sdk-core';
 import { filter } from 'wallet/src/components/TokenSelector/filter';
 import { TokenOption } from 'wallet/src/components/TokenSelector/types';
 import { ChainId } from 'wallet/src/constants/chains';

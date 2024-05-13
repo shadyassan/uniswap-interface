@@ -1,7 +1,7 @@
 // @ts-nocheck
 
 import { AddressZero } from '@ethersproject/constants';
-import { MixedRouteSDK, ONE, Protocol, Trade } from '@uniswap/router-sdk';
+import { MixedRouteSDK, ONE, Protocol, Trade } from '@sigismund/router-sdk';
 import {
   ChainId,
   Currency,
@@ -11,14 +11,14 @@ import {
   Price,
   Token,
   TradeType,
-} from 'shady-sdk-core';
+} from '@sigismund/sdk-core';
 import {
   DutchOrderInfo,
   DutchOrderInfoJSON,
   DutchOrderTrade as IDutchOrderTrade,
 } from '@uniswap/uniswapx-sdk';
-import { Route as V2Route } from '@uniswap/v2-sdk';
-import { Route as V3Route } from '@uniswap/v3-sdk';
+import { Route as V2Route } from '@sigismund/v2-sdk';
+import { Route as V3Route } from '@sigismund/v3-sdk';
 import { ZERO_PERCENT } from 'constants/misc';
 import { BigNumber } from 'ethers/lib/ethers';
 import { SignatureType } from 'state/signatures/types';

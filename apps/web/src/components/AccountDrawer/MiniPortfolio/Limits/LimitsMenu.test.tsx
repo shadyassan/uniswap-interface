@@ -1,4 +1,4 @@
-import { ChainId, WETH9 } from 'shady-sdk-core';
+import { ChainId, WETH9 } from '@sigismund/sdk-core';
 import { useOpenLimitOrders } from 'components/AccountDrawer/MiniPortfolio/Activity/hooks';
 import { Activity } from 'components/AccountDrawer/MiniPortfolio/Activity/types';
 import { LimitsMenu } from 'components/AccountDrawer/MiniPortfolio/Limits/LimitsMenu';

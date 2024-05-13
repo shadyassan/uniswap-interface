@@ -1,9 +1,14 @@
 import { SerializedError } from '@reduxjs/toolkit';
 import { FetchBaseQueryError } from '@reduxjs/toolkit/dist/query';
-import { MixedRouteSDK, Trade as RouterSDKTrade } from '@uniswap/router-sdk';
-import { Currency, CurrencyAmount, Percent, TradeType } from 'shady-sdk-core';
-import { Route as V2RouteSDK } from '@uniswap/v2-sdk';
-import { Route as V3RouteSDK } from '@uniswap/v3-sdk';
+import { MixedRouteSDK, Trade as RouterSDKTrade } from '@sigismund/router-sdk';
+import {
+  Currency,
+  CurrencyAmount,
+  Percent,
+  TradeType,
+} from '@sigismund/sdk-core';
+import { Route as V2RouteSDK } from '@sigismund/v2-sdk';
+import { Route as V3RouteSDK } from '@sigismund/v3-sdk';
 import { providers } from 'ethers';
 import { PollingInterval } from 'wallet/src/constants/misc';
 import { QuoteResponse } from 'wallet/src/data/tradingApi/__generated__/index';

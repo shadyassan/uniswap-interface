@@ -13,8 +13,8 @@ import {
   CurrencyAmount,
   NONFUNGIBLE_POSITION_MANAGER_ADDRESSES,
   Percent,
-} from 'shady-sdk-core';
-import { FeeAmount, NonfungiblePositionManager } from '@uniswap/v3-sdk';
+} from '@sigismund/sdk-core';
+import { FeeAmount, NonfungiblePositionManager } from '@sigismund/v3-sdk';
 import { useWeb3React } from '@web3-react/core';
 import { TraceEvent, sendAnalyticsEvent, useTrace } from 'analytics';
 import { useToggleAccountDrawer } from 'components/AccountDrawer/MiniPortfolio/hooks';
@@ -721,7 +721,7 @@ function AddLiquidity() {
     hasExistingPosition && account && !ownsNFT
   );
   const showBlastRebasingWarning =
-    chainId === ChainId.BLAST &&
+    chainId === 81457 &&
     ((!!currencyIdA && BLAST_REBASING_TOKENS.includes(currencyIdA)) ||
       (!!currencyIdB && BLAST_REBASING_TOKENS.includes(currencyIdB)));
 

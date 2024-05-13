@@ -1,4 +1,4 @@
-import { Currency } from 'shady-sdk-core';
+import { Currency } from '@sigismund/sdk-core';
 import useTokenLogoSource from 'hooks/useAssetLogoSource';
 import { useMemo } from 'react';
 import { useTheme } from 'styled-components';

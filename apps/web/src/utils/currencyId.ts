@@ -1,4 +1,4 @@
-import { Currency } from 'shady-sdk-core';
+import { Currency } from '@sigismund/sdk-core';
 
 export function currencyId(currency?: Currency): string {
   if (currency?.isNative) return 'ETH';

@@ -1,4 +1,4 @@
-import { ChainId, Currency, Token } from 'shady-sdk-core';
+import { ChainId, Currency, Token } from '@sigismund/sdk-core';
 import { useWeb3React } from '@web3-react/core';
 import { getChainInfo } from 'constants/chainInfo';
 import {

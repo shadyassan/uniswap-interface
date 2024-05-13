@@ -5,7 +5,7 @@ import {
   Percent,
   Token,
   TradeType,
-} from 'shady-sdk-core';
+} from '@sigismund/sdk-core';
 import useAutoSlippageTolerance from 'hooks/useAutoSlippageTolerance';
 import { useDebouncedTrade } from 'hooks/useDebouncedTrade';
 import { useMemo } from 'react';

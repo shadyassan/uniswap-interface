@@ -2,7 +2,7 @@ import { ApolloError } from '@apollo/client';
 import { Trans } from '@lingui/macro';
 import { ColumnDef, createColumnHelper } from '@tanstack/react-table';
 import { InterfaceElementName } from '@uniswap/analytics-events';
-import { ChainId, Percent } from 'shady-sdk-core';
+import { ChainId, Percent } from '@sigismund/sdk-core';
 import { DoubleTokenAndChainLogo } from 'components/Pools/PoolDetails/PoolDetailsHeader';
 import Row from 'components/Row';
 import { Table } from 'components/Table';

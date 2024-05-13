@@ -1,7 +1,7 @@
 import { TransactionRequest } from '@ethersproject/abstract-provider';
 import { Web3Provider } from '@ethersproject/providers';
 import { t } from '@lingui/macro';
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import { CosignedV2DutchOrder, DutchOrder } from '@uniswap/uniswapx-sdk';
 import {
   getYear,

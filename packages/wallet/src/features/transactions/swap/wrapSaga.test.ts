@@ -1,4 +1,4 @@
-import { CurrencyAmount } from 'shady-sdk-core';
+import { CurrencyAmount } from '@sigismund/sdk-core';
 import { testSaga } from 'redux-saga-test-plan';
 import { ChainId } from 'wallet/src/constants/chains';
 import { NativeCurrency } from 'wallet/src/features/tokens/NativeCurrency';

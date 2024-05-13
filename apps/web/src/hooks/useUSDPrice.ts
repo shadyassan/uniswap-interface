@@ -5,7 +5,7 @@ import {
   CurrencyAmount,
   Price,
   TradeType,
-} from 'shady-sdk-core';
+} from '@sigismund/sdk-core';
 import { nativeOnChain } from 'constants/tokens';
 import {
   PollingInterval,

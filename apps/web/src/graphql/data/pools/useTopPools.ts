@@ -1,4 +1,4 @@
-import { ChainId, Percent } from 'shady-sdk-core';
+import { ChainId, Percent } from '@sigismund/sdk-core';
 import { exploreSearchStringAtom } from 'components/Tokens/state';
 import { BIPS_BASE } from 'constants/misc';
 import { OrderDirection, chainIdToBackendName } from 'graphql/data/util';

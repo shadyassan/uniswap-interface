@@ -1,6 +1,6 @@
 import { ContractTransaction } from '@ethersproject/contracts';
 import { InterfaceEventName } from '@uniswap/analytics-events';
-import { CurrencyAmount, MaxUint256, Token } from 'shady-sdk-core';
+import { CurrencyAmount, MaxUint256, Token } from '@sigismund/sdk-core';
 import { sendAnalyticsEvent, useTrace as useAnalyticsTrace } from 'analytics';
 import { useTokenContract } from 'hooks/useContract';
 import { useSingleCallResult } from 'lib/hooks/multicall';

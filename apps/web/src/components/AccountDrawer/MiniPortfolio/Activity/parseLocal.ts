@@ -1,6 +1,11 @@
 import { BigNumber } from '@ethersproject/bignumber';
 import { t } from '@lingui/macro';
-import { ChainId, Currency, CurrencyAmount, TradeType } from 'shady-sdk-core';
+import {
+  ChainId,
+  Currency,
+  CurrencyAmount,
+  TradeType,
+} from '@sigismund/sdk-core';
 import UniswapXBolt from 'assets/svg/bolt.svg';
 import { nativeOnChain } from 'constants/tokens';
 import { ChainTokenMap, useAllTokensMultichain } from 'hooks/Tokens';

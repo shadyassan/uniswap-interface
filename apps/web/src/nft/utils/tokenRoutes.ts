@@ -1,7 +1,7 @@
-import { IRoute, Protocol } from '@uniswap/router-sdk';
-import { Currency, CurrencyAmount } from 'shady-sdk-core';
-import { Pair } from '@uniswap/v2-sdk';
-import { Pool } from '@uniswap/v3-sdk';
+import { IRoute, Protocol } from '@sigismund/router-sdk';
+import { Currency, CurrencyAmount } from '@sigismund/sdk-core';
+import { Pair } from '@sigismund/v2-sdk';
+import { Pool } from '@sigismund/v3-sdk';
 import { ClassicTrade } from 'state/routing/types';
 import {
   TokenAmountInput,

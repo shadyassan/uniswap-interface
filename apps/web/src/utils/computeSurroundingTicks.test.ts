@@ -1,5 +1,5 @@
-import { Price, Token } from 'shady-sdk-core';
-import { FeeAmount, TICK_SPACINGS } from '@uniswap/v3-sdk';
+import { Price, Token } from '@sigismund/sdk-core';
+import { FeeAmount, TICK_SPACINGS } from '@sigismund/v3-sdk';
 import { TickData } from 'graphql/thegraph/AllV3TicksQuery';
 import { TickProcessed } from 'hooks/usePoolTickData';
 import JSBI from 'jsbi';

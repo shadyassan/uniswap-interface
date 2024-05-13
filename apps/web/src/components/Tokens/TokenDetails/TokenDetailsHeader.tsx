@@ -1,5 +1,5 @@
 import { t, Trans } from '@lingui/macro';
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import { ReactComponent as MenuIcon } from 'assets/images/menu.svg';
 import { PortfolioLogo } from 'components/AccountDrawer/MiniPortfolio/PortfolioLogo';
 import { CheckMark } from 'components/Icons/CheckMark';

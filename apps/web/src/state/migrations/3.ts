@@ -1,4 +1,4 @@
-import { ChainId, Token } from 'shady-sdk-core';
+import { ChainId, Token } from '@sigismund/sdk-core';
 import { PersistState } from 'redux-persist';
 import { UserState } from 'state/user/reducer';
 import { serializeToken } from 'state/user/utils';

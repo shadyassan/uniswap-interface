@@ -2,7 +2,7 @@ import {
   ChainId,
   NONFUNGIBLE_POSITION_MANAGER_ADDRESSES,
   WETH9,
-} from 'shady-sdk-core';
+} from '@sigismund/sdk-core';
 import { DAI } from 'constants/tokens';
 import {
   AssetActivityPartsFragment,

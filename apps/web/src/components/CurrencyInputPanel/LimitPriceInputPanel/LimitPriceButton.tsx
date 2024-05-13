@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro';
-import { Percent } from 'shady-sdk-core';
+import { Percent } from '@sigismund/sdk-core';
 import Row from 'components/Row';
 import { X } from 'react-feather';
 import styled, { css } from 'styled-components';

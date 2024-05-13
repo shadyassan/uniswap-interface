@@ -1,5 +1,10 @@
 import { Trans } from '@lingui/macro';
-import { ChainId, Currency, CurrencyAmount, TradeType } from 'shady-sdk-core';
+import {
+  ChainId,
+  Currency,
+  CurrencyAmount,
+  TradeType,
+} from '@sigismund/sdk-core';
 import { useWeb3React } from '@web3-react/core';
 import {
   CancellationState,

@@ -1,5 +1,5 @@
 import { t } from '@lingui/macro';
-import { Currency } from 'shady-sdk-core';
+import { Currency } from '@sigismund/sdk-core';
 
 export const getTokenPageTitle = (currency?: Currency) => {
   const tokenName = currency?.name;

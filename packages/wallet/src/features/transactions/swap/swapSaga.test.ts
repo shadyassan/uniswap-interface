@@ -1,8 +1,8 @@
 import { MaxUint256 } from '@ethersproject/constants';
 import { call, select } from '@redux-saga/core/effects';
-import { Protocol } from '@uniswap/router-sdk';
-import { TradeType } from 'shady-sdk-core';
-import { UNIVERSAL_ROUTER_ADDRESS } from '@uniswap/universal-router-sdk';
+import { Protocol } from '@sigismund/router-sdk';
+import { TradeType } from '@sigismund/sdk-core';
+import { UNIVERSAL_ROUTER_ADDRESS } from '@sigismund/universal-router-sdk';
 import { expectSaga } from 'redux-saga-test-plan';
 import {
   EffectProviders,

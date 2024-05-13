@@ -1,4 +1,4 @@
-import { ChainId, Currency, Token, TradeType } from 'shady-sdk-core';
+import { ChainId, Currency, Token, TradeType } from '@sigismund/sdk-core';
 import { nativeOnChain } from 'constants/tokens';
 
 import {

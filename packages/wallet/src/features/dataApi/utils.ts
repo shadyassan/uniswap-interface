@@ -1,5 +1,5 @@
 import { ApolloError } from '@apollo/client';
-import { Token } from 'shady-sdk-core';
+import { Token } from '@sigismund/sdk-core';
 import { useRef } from 'react';
 import {
   Chain,

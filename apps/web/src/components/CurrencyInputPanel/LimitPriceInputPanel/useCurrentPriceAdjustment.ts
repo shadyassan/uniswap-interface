@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Fraction, Price } from 'shady-sdk-core';
+import { Currency, CurrencyAmount, Fraction, Price } from '@sigismund/sdk-core';
 import { parseUnits } from 'ethers/lib/utils';
 import JSBI from 'jsbi';
 import { useMemo } from 'react';

@@ -1,4 +1,4 @@
-import { CurrencyAmount, Token } from 'shady-sdk-core';
+import { CurrencyAmount, Token } from '@sigismund/sdk-core';
 
 import { PermitInfo, PermitType, useERC20Permit } from './useERC20Permit';
 import useTransactionDeadline from './useTransactionDeadline';

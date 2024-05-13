@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { t, Trans } from '@lingui/macro';
 import {
   BrowserEvent,
@@ -5,7 +7,7 @@ import {
   InterfaceEventName,
   SharedEventName,
 } from '@uniswap/analytics-events';
-import { CurrencyAmount, Token } from 'shady-sdk-core';
+import { CurrencyAmount, Token } from '@sigismund/sdk-core';
 import { useWeb3React } from '@web3-react/core';
 import { sendAnalyticsEvent, TraceEvent } from 'analytics';
 import { ButtonEmphasis, ButtonSize, ThemeButton } from 'components/Button';

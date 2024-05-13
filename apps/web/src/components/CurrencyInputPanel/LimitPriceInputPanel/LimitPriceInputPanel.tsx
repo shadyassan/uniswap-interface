@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, Price } from 'shady-sdk-core';
+import { Currency, CurrencyAmount, Price } from '@sigismund/sdk-core';
 import { InputPanel } from 'components/CurrencyInputPanel/SwapCurrencyInputPanel';
 import CurrencyLogo from 'components/Logo/CurrencyLogo';
 import { StyledNumericalInput } from 'components/NumericalInput';

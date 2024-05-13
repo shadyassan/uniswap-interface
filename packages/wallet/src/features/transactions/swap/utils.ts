@@ -1,11 +1,11 @@
-import { Protocol } from '@uniswap/router-sdk';
-import { Currency, Percent, TradeType } from 'shady-sdk-core';
+import { Protocol } from '@sigismund/router-sdk';
+import { Currency, Percent, TradeType } from '@sigismund/sdk-core';
 import {
   FlatFeeOptions,
   SwapOptions as UniversalRouterSwapOptions,
   SwapRouter as UniversalSwapRouter,
-} from '@uniswap/universal-router-sdk';
-import { FeeOptions } from '@uniswap/v3-sdk';
+} from '@sigismund/universal-router-sdk';
+import { FeeOptions } from '@sigismund/v3-sdk';
 import { BigNumber } from 'ethers';
 import { AppTFunction } from 'ui/src/i18n/types';
 import { CurrencyId } from 'uniswap/src/types/currency';

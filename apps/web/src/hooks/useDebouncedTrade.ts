@@ -1,4 +1,9 @@
-import { Currency, CurrencyAmount, Percent, TradeType } from 'shady-sdk-core';
+import {
+  Currency,
+  CurrencyAmount,
+  Percent,
+  TradeType,
+} from '@sigismund/sdk-core';
 import { useWeb3React } from '@web3-react/core';
 import { WRAPPED_NATIVE_CURRENCY } from 'constants/tokens';
 import { useMemo } from 'react';

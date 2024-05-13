@@ -1,4 +1,4 @@
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import { PortfolioLogo } from 'components/AccountDrawer/MiniPortfolio/PortfolioLogo';
 import { SearchToken } from 'graphql/data/SearchTokens';
 import { TokenQueryData } from 'graphql/data/Token';

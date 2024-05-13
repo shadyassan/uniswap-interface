@@ -1,7 +1,7 @@
 import { OperationVariables, QueryResult } from '@apollo/client';
 import { DeepPartial } from '@apollo/client/utilities';
 import * as Sentry from '@sentry/react';
-import { ChainId, Currency, Token } from 'shady-sdk-core';
+import { ChainId, Currency, Token } from '@sigismund/sdk-core';
 import { AVERAGE_L1_BLOCK_TIME } from 'constants/chainInfo';
 import {
   NATIVE_CHAIN_ID,
@@ -124,7 +124,6 @@ export const CHAIN_ID_TO_BACKEND_NAME: { [key: number]: InterfaceGqlChain } = {
   [ChainId.BNB]: Chain.Bnb,
   [ChainId.AVALANCHE]: Chain.Avalanche,
   [ChainId.BASE]: Chain.Base,
-  [ChainId.BLAST]: Chain.Blast,
 };
 
 export function chainIdToBackendName(chainId: number | undefined) {

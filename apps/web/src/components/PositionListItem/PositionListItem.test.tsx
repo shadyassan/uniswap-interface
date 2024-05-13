@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber';
-import { ChainId, Token, WETH9 } from 'shady-sdk-core';
-import { FeeAmount, Pool } from '@uniswap/v3-sdk';
+import { ChainId, Token, WETH9 } from '@sigismund/sdk-core';
+import { FeeAmount, Pool } from '@sigismund/v3-sdk';
 import { USDC_MAINNET } from 'constants/tokens';
 import { useToken } from 'hooks/Tokens';
 import { PoolState, usePool } from 'hooks/usePools';

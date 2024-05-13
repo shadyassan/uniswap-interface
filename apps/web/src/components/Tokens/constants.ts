@@ -1,5 +1,5 @@
 /* eslint-enable prettier/prettier */
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 
 // Breakpoints specifically for the token pages
 // TODO(WEB-2968): Deprecate these in the new .info project

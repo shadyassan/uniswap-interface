@@ -1,4 +1,4 @@
-import { ChainId, Currency } from 'shady-sdk-core';
+import { ChainId, Currency } from '@sigismund/sdk-core';
 import { useWeb3React } from '@web3-react/core';
 import { SwapTab } from 'components/swap/constants';
 import usePrevious from 'hooks/usePrevious';

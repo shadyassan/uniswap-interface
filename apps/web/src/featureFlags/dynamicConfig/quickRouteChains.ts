@@ -1,4 +1,4 @@
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import { DynamicConfigs } from 'uniswap/src/features/experiments/configs';
 import { useDynamicConfig } from 'uniswap/src/features/experiments/hooks';
 

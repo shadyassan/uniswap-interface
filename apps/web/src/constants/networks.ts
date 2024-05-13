@@ -1,4 +1,4 @@
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import { SupportedInterfaceChain } from 'constants/chains';
 
 const INFURA_KEY = process.env.REACT_APP_INFURA_KEY;
@@ -134,15 +134,7 @@ export const PUBLIC_RPC_URLS: Record<SupportedInterfaceChain, string[]> = {
     'https://1rpc.io/base',
     'https://base.meowrpc.com',
   ],
-  [ChainId.BLAST]: [
-    // "Safe" URLs
-    'https://rpc.blast.io/',
-    'https://rpc.ankr.com/blast',
-    'https://blast.din.dev/rpc',
-    'https://blastl2-mainnet.public.blastapi.io',
-    'https://blast.blockpi.network/v1/rpc/public',
-  ],
-  [ChainId.AIRDAO]: ['https://network.ambrosus-test.io'],
+  [ChainId.AIRDAO_TEST]: ['https://network.ambrosus-test.io'],
 };
 
 /**
@@ -179,8 +171,7 @@ export const APP_RPC_URLS: Record<SupportedInterfaceChain, string[]> = {
   [ChainId.BNB]: [QUICKNODE_BNB_RPC_URL],
   [ChainId.AVALANCHE]: [`https://avalanche-mainnet.infura.io/v3/${INFURA_KEY}`],
   [ChainId.BASE]: [`https://base-mainnet.infura.io/v3/${INFURA_KEY}`],
-  [ChainId.BLAST]: [`https://blast-mainnet.infura.io/v3/${INFURA_KEY}`],
-  [ChainId.AIRDAO]: [`https://network.ambrosus-test.io`],
+  [ChainId.AIRDAO_TEST]: [`https://network.ambrosus-test.io`],
 };
 
 export const INFURA_PREFIX_TO_CHAIN_ID: { [prefix: string]: ChainId } = {

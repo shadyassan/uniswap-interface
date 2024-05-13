@@ -1,4 +1,4 @@
-import { Percent } from 'shady-sdk-core';
+import { Percent } from '@sigismund/sdk-core';
 import { Allowance } from 'hooks/usePermit2Allowance';
 import { buildAllTradeRouteInputs } from 'nft/utils/tokenRoutes';
 import { useEffect } from 'react';

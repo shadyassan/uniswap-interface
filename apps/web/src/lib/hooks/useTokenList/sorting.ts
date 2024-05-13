@@ -1,4 +1,4 @@
-import { ChainId, Currency, Token } from 'shady-sdk-core';
+import { ChainId, Currency, Token } from '@sigismund/sdk-core';
 import { TokenInfo } from '@uniswap/token-lists';
 import { nativeOnChain } from 'constants/tokens';
 import { supportedChainIdFromGQLChain } from 'graphql/data/util';

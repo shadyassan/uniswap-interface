@@ -3,7 +3,7 @@ import {
   InterfaceElementName,
   InterfaceEventName,
 } from '@uniswap/analytics-events';
-import { Currency } from 'shady-sdk-core';
+import { Currency } from '@sigismund/sdk-core';
 import { useWeb3React } from '@web3-react/core';
 import { TraceEvent } from 'analytics';
 import CurrencyLogo from 'components/Logo/CurrencyLogo';

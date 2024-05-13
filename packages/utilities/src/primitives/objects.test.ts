@@ -1,4 +1,4 @@
-import { Token } from 'shady-sdk-core';
+import { Token } from '@sigismund/sdk-core';
 import { flattenObjectOfObjects, unnestObject } from './objects';
 
 const DAI = new Token(

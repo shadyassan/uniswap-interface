@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro';
-import { Fraction, TradeType } from 'shady-sdk-core';
+import { Fraction, TradeType } from '@sigismund/sdk-core';
 import { BigNumber } from 'ethers/lib/ethers';
 import JSBI from 'jsbi';
 

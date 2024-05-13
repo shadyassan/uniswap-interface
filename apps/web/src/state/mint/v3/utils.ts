@@ -1,6 +1,6 @@
 // @ts-nocheck
 
-import { Price, Token } from 'shady-sdk-core';
+import { Price, Token } from '@sigismund/sdk-core';
 import {
   FeeAmount,
   TICK_SPACINGS,
@@ -8,7 +8,7 @@ import {
   encodeSqrtRatioX96,
   nearestUsableTick,
   priceToClosestTick,
-} from '@uniswap/v3-sdk';
+} from '@sigismund/v3-sdk';
 import JSBI from 'jsbi';
 
 export function tryParsePrice(

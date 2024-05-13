@@ -1,4 +1,4 @@
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import { chainIdToBackendName } from 'graphql/data/util';
 import { useCallback, useMemo, useRef } from 'react';
 import {

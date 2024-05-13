@@ -1,4 +1,4 @@
-import { ChainId as MockChainId } from 'shady-sdk-core';
+import { ChainId as MockChainId } from '@sigismund/sdk-core';
 import {
   DAI as MockDAI,
   USDC_MAINNET as MockUSDC_MAINNET,

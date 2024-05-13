@@ -1,4 +1,4 @@
-import { Currency } from 'shady-sdk-core';
+import { Currency } from '@sigismund/sdk-core';
 import { BigNumberish } from 'ethers';
 import { useMemo } from 'react';
 import { ChainId } from 'wallet/src/constants/chains';

@@ -7,7 +7,7 @@ import {
   Token,
   UNI_ADDRESSES,
   WETH9,
-} from 'shady-sdk-core';
+} from '@sigismund/sdk-core';
 import invariant from 'tiny-invariant';
 
 // eslint-disable-next-line no-restricted-syntax
@@ -306,7 +306,7 @@ export const DAI_BSC = new Token(
 );
 
 export const USDB_BLAST = new Token(
-  ChainId.BLAST,
+  8,
   '0x4300000000000000000000000000000000000003',
   18,
   'USDB',
@@ -367,16 +367,24 @@ export const UNI: { [chainId: number]: Token } = {
 };
 
 export const AMB = new Token(
-  ChainId.AIRDAO,
+  ChainId.AIRDAO_TEST,
   '0x00662a0aC35717A1898bEfd243B47e373cFd73f7',
   18,
   'sAMB',
   'Amber'
 );
 
+export const USDC_AIRDAO = new Token(
+  ChainId.AIRDAO_TEST,
+  '0x5EB2A478dc3556A039ea88C1926766Ee2712079C',
+  18,
+  'USDC',
+  'USD Coin'
+);
+
 export const BOND_AIRDAO = new Token(
-  ChainId.AIRDAO,
-  '0x58E98B0974A22270D974Ce914Fc430E048368546',
+  ChainId.AIRDAO_TEST,
+  '0x3baEAb018E7ec713813C1b6A742Cd00341962eed',
   18,
   'BOND',
   'AirBond'
@@ -507,15 +515,8 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } =
       'WAVAX',
       'Wrapped AVAX'
     ),
-    [ChainId.BLAST]: new Token(
-      ChainId.BLAST,
-      '0x4300000000000000000000000000000000000004',
-      18,
-      'WETH',
-      'Wrapped Ether'
-    ),
-    [ChainId.AIRDAO]: new Token(
-      ChainId.AIRDAO,
+    [ChainId.AIRDAO_TEST]: new Token(
+      ChainId.AIRDAO_TEST,
       '0x00662a0aC35717A1898bEfd243B47e373cFd73f7',
       18,
       'sAMB',
@@ -719,8 +720,6 @@ const STABLECOINS: { [chainId in ChainId]: Token[] } = {
   [ChainId.ARBITRUM_SEPOLIA]: [],
   [ChainId.ZORA_SEPOLIA]: [],
   [ChainId.ZORA]: [],
-  [ChainId.ROOTSTOCK]: [],
-  [ChainId.BLAST]: [USDB_BLAST],
 };
 
 export function isStablecoin(currency?: Currency): boolean {

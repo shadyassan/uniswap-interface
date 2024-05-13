@@ -1,4 +1,4 @@
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import { TokenList } from '@uniswap/token-lists';
 import { RecentConnectionMeta } from 'connection/types';
 import { SupportedLocale } from 'constants/locales';

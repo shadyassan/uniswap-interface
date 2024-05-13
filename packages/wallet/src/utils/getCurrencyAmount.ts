@@ -1,5 +1,5 @@
 import { parseUnits } from '@ethersproject/units';
-import { Currency, CurrencyAmount } from 'shady-sdk-core';
+import { Currency, CurrencyAmount } from '@sigismund/sdk-core';
 import { BigNumber } from 'ethers';
 import { convertScientificNotationToNumber } from 'utilities/src/format/convertScientificNotation';
 import { logger } from 'utilities/src/logger/logger';

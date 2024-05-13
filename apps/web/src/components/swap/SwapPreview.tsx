@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro';
-import { Currency, Percent, TradeType } from 'shady-sdk-core';
+import { Currency, Percent, TradeType } from '@sigismund/sdk-core';
 import Column, { AutoColumn } from 'components/Column';
 import { useUSDPrice } from 'hooks/useUSDPrice';
 import { InterfaceTrade } from 'state/routing/types';

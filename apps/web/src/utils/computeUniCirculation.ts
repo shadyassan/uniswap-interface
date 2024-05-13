@@ -1,5 +1,5 @@
 import { BigNumber } from '@ethersproject/bignumber';
-import { CurrencyAmount, Token } from 'shady-sdk-core';
+import { CurrencyAmount, Token } from '@sigismund/sdk-core';
 import JSBI from 'jsbi';
 
 import { STAKING_GENESIS } from '../state/stake/hooks';

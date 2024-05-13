@@ -1,4 +1,4 @@
-import { CurrencyAmount, Percent, Token } from 'shady-sdk-core';
+import { CurrencyAmount, Percent, Token } from '@sigismund/sdk-core';
 import { useMemo } from 'react';
 import { InterfaceTrade } from 'state/routing/types';
 

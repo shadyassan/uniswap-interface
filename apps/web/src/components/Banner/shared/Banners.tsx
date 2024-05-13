@@ -1,5 +1,5 @@
 import { InterfacePageName } from '@uniswap/analytics-events';
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import {
   OutageBanner,
   getOutageBannerSessionStorageKey,

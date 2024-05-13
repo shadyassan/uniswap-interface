@@ -6,7 +6,7 @@ import {
   Percent,
   Price,
   Token,
-} from 'shady-sdk-core';
+} from '@sigismund/sdk-core';
 import { NATIVE_CHAIN_ID } from 'constants/tokens';
 import {
   InterfaceTrade,

@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 
 import {
   SerializableTransactionReceipt,

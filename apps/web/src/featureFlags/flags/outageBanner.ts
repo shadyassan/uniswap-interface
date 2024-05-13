@@ -1,7 +1,7 @@
 // @ts-nocheck
 
 import { ApolloError } from '@apollo/client';
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import { atomWithReset, useResetAtom, useUpdateAtom } from 'jotai/utils';
 import { ProtocolVersion } from 'uniswap/src/data/graphql/uniswap-data-api/__generated__/types-and-hooks';
 import { FeatureFlags } from 'uniswap/src/features/experiments/flags';
@@ -56,7 +56,5 @@ export function useOutageBanners(): Record<ChainId, boolean> {
     [ChainId.BASE]: false,
     [ChainId.ZORA_SEPOLIA]: false,
     [ChainId.ZORA]: false,
-    [ChainId.ROOTSTOCK]: false,
-    [ChainId.BLAST]: false,
   };
 }

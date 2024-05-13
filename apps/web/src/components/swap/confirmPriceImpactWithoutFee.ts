@@ -1,4 +1,4 @@
-import { Percent } from 'shady-sdk-core';
+import { Percent } from '@sigismund/sdk-core';
 
 import {
   ALLOWED_PRICE_IMPACT_HIGH,

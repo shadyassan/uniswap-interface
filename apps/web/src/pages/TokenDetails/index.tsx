@@ -1,4 +1,4 @@
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import { useWeb3React } from '@web3-react/core';
 import PrefetchBalancesWrapper, {
   useCachedPortfolioBalancesQuery,

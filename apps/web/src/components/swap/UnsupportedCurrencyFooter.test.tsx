@@ -1,5 +1,5 @@
 import userEvent from '@testing-library/user-event';
-import { Token } from 'shady-sdk-core';
+import { Token } from '@sigismund/sdk-core';
 import { useUnsupportedTokens } from 'hooks/Tokens';
 import { mocked } from 'test-utils/mocked';
 import {

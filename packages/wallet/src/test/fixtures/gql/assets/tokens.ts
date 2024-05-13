@@ -1,4 +1,4 @@
-import { Token as SDKToken } from 'shady-sdk-core';
+import { Token as SDKToken } from '@sigismund/sdk-core';
 import {
   Currency,
   HistoryDuration,

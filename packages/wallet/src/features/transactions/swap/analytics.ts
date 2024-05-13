@@ -1,5 +1,5 @@
+import { Currency, TradeType } from '@sigismund/sdk-core';
 import { SwapEventName } from '@uniswap/analytics-events';
-import { Currency, TradeType } from 'shady-sdk-core';
 import { useEffect } from 'react';
 import { NumberType } from 'utilities/src/format/types';
 import {

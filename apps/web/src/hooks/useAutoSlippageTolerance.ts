@@ -3,10 +3,15 @@ import {
   partitionMixedRouteByProtocol,
   Protocol,
   Trade,
-} from '@uniswap/router-sdk';
-import { Currency, CurrencyAmount, Percent, TradeType } from 'shady-sdk-core';
-import { Pair } from '@uniswap/v2-sdk';
-import { Pool } from '@uniswap/v3-sdk';
+} from '@sigismund/router-sdk';
+import {
+  Currency,
+  CurrencyAmount,
+  Percent,
+  TradeType,
+} from '@sigismund/sdk-core';
+import { Pair } from '@sigismund/v2-sdk';
+import { Pool } from '@sigismund/v3-sdk';
 import { useWeb3React } from '@web3-react/core';
 import {
   L2_CHAIN_IDS,

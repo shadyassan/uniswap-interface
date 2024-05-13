@@ -1,4 +1,4 @@
-import { ChainId, NativeCurrency, Token } from 'shady-sdk-core';
+import { ChainId, NativeCurrency, Token } from '@sigismund/sdk-core';
 import { nativeOnChain } from 'constants/tokens';
 import { useMemo } from 'react';
 

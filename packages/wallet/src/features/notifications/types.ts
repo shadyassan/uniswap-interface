@@ -1,4 +1,4 @@
-import { TradeType } from 'shady-sdk-core';
+import { TradeType } from '@sigismund/sdk-core';
 import { CurrencyInfo } from 'uniswap/src/features/dataApi/types';
 import { ChainId } from 'wallet/src/constants/chains';
 import { AssetType } from 'wallet/src/entities/assets';

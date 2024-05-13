@@ -1,5 +1,9 @@
-import { ChainId, TradeType as MockTradeType, Token } from 'shady-sdk-core';
-import { PERMIT2_ADDRESS } from '@uniswap/universal-router-sdk';
+import {
+  ChainId,
+  TradeType as MockTradeType,
+  Token,
+} from '@sigismund/sdk-core';
+import { PERMIT2_ADDRESS } from '@sigismund/universal-router-sdk';
 import {
   DAI as MockDAI,
   USDC_MAINNET as MockUSDC_MAINNET,

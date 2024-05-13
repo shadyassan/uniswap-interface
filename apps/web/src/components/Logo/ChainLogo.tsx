@@ -1,4 +1,4 @@
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import { getChainInfo } from 'constants/chainInfo';
 import { isSupportedChain, SupportedInterfaceChain } from 'constants/chains';
 import { CSSProperties, FunctionComponent } from 'react';
@@ -89,18 +89,6 @@ export function getChainUI(
         bgColor: '#0052FF33',
         textColor: '#0052FF',
       };
-    case ChainId.BLAST:
-      return darkMode
-        ? {
-            Symbol: blast,
-            bgColor: 'rgba(252, 252, 3, 0.12)',
-            textColor: 'rgba(252, 252, 3, 1) ',
-          }
-        : {
-            Symbol: blastLight,
-            bgColor: 'rgba(252, 252, 3, 0.16)',
-            textColor: 'rgba(17, 20, 12, 1)',
-          };
     default:
       return undefined;
   }

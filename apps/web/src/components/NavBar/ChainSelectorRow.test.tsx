@@ -1,4 +1,4 @@
-import { ChainId, SUPPORTED_CHAINS } from 'shady-sdk-core';
+import { ChainId, SUPPORTED_CHAINS } from '@sigismund/sdk-core';
 import { render } from 'test-utils/render';
 
 import ChainSelectorRow from './ChainSelectorRow';

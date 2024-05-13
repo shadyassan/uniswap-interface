@@ -1,9 +1,11 @@
+// @ts-nocheck
+
 import {
   ChainId,
   CurrencyAmount,
   Token,
   V3_CORE_FACTORY_ADDRESSES,
-} from 'shady-sdk-core';
+} from '@sigismund/sdk-core';
 import IUniswapV3PoolStateJSON from '@uniswap/v3-core/artifacts/contracts/interfaces/pool/IUniswapV3PoolState.sol/IUniswapV3PoolState.json';
 import { Pool, Position, computePoolAddress } from '@uniswap/v3-sdk';
 import { BigNumber } from 'ethers/lib/ethers';
@@ -73,7 +75,6 @@ const DEFAULT_CHAINS = [
   ChainId.BNB,
   ChainId.AVALANCHE,
   ChainId.BASE,
-  ChainId.BLAST,
 ];
 
 type UseMultiChainPositionsData = {

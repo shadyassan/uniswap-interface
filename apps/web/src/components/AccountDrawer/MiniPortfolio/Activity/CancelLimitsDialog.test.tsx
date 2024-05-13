@@ -1,4 +1,4 @@
-import { ChainId, WETH9 } from 'shady-sdk-core';
+import { ChainId, WETH9 } from '@sigismund/sdk-core';
 import {
   CancelLimitsDialog,
   CancellationState,

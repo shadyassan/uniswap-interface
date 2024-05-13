@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro';
-import { ChainId } from 'shady-sdk-core';
+import { ChainId } from '@sigismund/sdk-core';
 import { useSwapAndLimitContext, useSwapContext } from 'state/swap/hooks';
 import styled from 'styled-components';
 import { isIFramed } from 'utils/isIFramed';

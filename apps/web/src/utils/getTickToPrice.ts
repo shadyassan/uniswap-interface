@@ -1,7 +1,7 @@
 // @ts-nocheck
 
-import { Price, Token } from 'shady-sdk-core';
-import { tickToPrice } from '@uniswap/v3-sdk';
+import { Price, Token } from '@sigismund/sdk-core';
+import { tickToPrice } from '@sigismund/v3-sdk';
 
 export function getTickToPrice(
   baseToken?: Token,

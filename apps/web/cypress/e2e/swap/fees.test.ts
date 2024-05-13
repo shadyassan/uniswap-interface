@@ -1,4 +1,4 @@
-import { CurrencyAmount } from 'shady-sdk-core';
+import { CurrencyAmount } from '@sigismund/sdk-core';
 import { USDC_MAINNET } from '../../../src/constants/tokens';
 import { getBalance, getTestSelector } from '../../utils';
 

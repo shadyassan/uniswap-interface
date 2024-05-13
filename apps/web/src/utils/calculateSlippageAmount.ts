@@ -1,4 +1,9 @@
-import { Currency, CurrencyAmount, Fraction, Percent } from 'shady-sdk-core';
+import {
+  Currency,
+  CurrencyAmount,
+  Fraction,
+  Percent,
+} from '@sigismund/sdk-core';
 import JSBI from 'jsbi';
 
 const ONE = new Fraction(1, 1);
