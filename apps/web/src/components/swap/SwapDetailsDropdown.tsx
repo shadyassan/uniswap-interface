@@ -62,7 +62,7 @@ export default function SwapDetailsDropdown(props: SwapDetailsProps) {
 
   return (
     <Wrapper>
-      <TraceEvent
+      {/* <TraceEvent
         events={[BrowserEvent.onClick]}
         name={SwapEventName.SWAP_DETAILS_EXPANDED}
         element={InterfaceElementName.SWAP_DETAILS_DROPDOWN}
@@ -73,38 +73,38 @@ export default function SwapDetailsDropdown(props: SwapDetailsProps) {
           ...trace,
         }}
         shouldLogImpression={!showDetails}
+      > */}
+      <StyledHeaderRow
+        data-testid="swap-details-header-row"
+        onClick={() => setShowDetails(!showDetails)}
+        disabled={!trade}
+        open={showDetails}
       >
-        <StyledHeaderRow
-          data-testid="swap-details-header-row"
-          onClick={() => setShowDetails(!showDetails)}
-          disabled={!trade}
-          open={showDetails}
-        >
-          <RowFixed>
-            {trade ? (
-              <LoadingOpacityContainer
-                $loading={syncing}
-                data-testid="trade-price-container"
-              >
-                <TradePrice price={trade.executionPrice} />
-              </LoadingOpacityContainer>
-            ) : loading || syncing ? (
-              <ThemedText.DeprecatedMain fontSize={14}>
-                <Trans>Fetching best price...</Trans>
-              </ThemedText.DeprecatedMain>
-            ) : null}
-          </RowFixed>
-          <RowFixed gap="xs">
-            {!showDetails && isSubmittableTrade(trade) && (
-              <GasEstimateTooltip trade={trade} loading={syncing || loading} />
-            )}
-            <RotatingArrow
-              stroke={trade ? theme.neutral3 : theme.surface2}
-              open={Boolean(trade && showDetails)}
-            />
-          </RowFixed>
-        </StyledHeaderRow>
-      </TraceEvent>
+        <RowFixed>
+          {trade ? (
+            <LoadingOpacityContainer
+              $loading={syncing}
+              data-testid="trade-price-container"
+            >
+              <TradePrice price={trade.executionPrice} />
+            </LoadingOpacityContainer>
+          ) : loading || syncing ? (
+            <ThemedText.DeprecatedMain fontSize={14}>
+              <Trans>Fetching best price...</Trans>
+            </ThemedText.DeprecatedMain>
+          ) : null}
+        </RowFixed>
+        <RowFixed gap="xs">
+          {!showDetails && isSubmittableTrade(trade) && (
+            <GasEstimateTooltip trade={trade} loading={syncing || loading} />
+          )}
+          <RotatingArrow
+            stroke={trade ? theme.neutral3 : theme.surface2}
+            open={Boolean(trade && showDetails)}
+          />
+        </RowFixed>
+      </StyledHeaderRow>
+      {/* </TraceEvent> */}
       <AdvancedSwapDetails {...props} open={showDetails} />
     </Wrapper>
   );

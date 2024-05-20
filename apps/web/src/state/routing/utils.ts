@@ -341,40 +341,40 @@ export async function transformQuoteToTrade(
   });
 
   // If the top-level URA quote type is DUTCH_LIMIT, then UniswapX is better for the user
-  const isUniswapXBetter = data.routing === URAQuoteType.DUTCH_LIMIT;
-  if (isUniswapXBetter) {
-    const orderInfo = toDutchOrderInfo(data.quote.orderInfo);
-    const swapFee = getSwapFee(data.quote);
-    const wrapInfo = await getWrapInfo(
-      needsWrapIfUniswapX,
-      account,
-      currencyIn.chainId,
-      amount,
-      usdCostPerGas
-    );
+  // const isUniswapXBetter = data.routing === URAQuoteType.DUTCH_LIMIT;
+  // if (isUniswapXBetter) {
+  //   const orderInfo = toDutchOrderInfo(data.quote.orderInfo);
+  //   const swapFee = getSwapFee(data.quote);
+  //   const wrapInfo = await getWrapInfo(
+  //     needsWrapIfUniswapX,
+  //     account,
+  //     currencyIn.chainId,
+  //     amount,
+  //     usdCostPerGas
+  //   );
 
-    const uniswapXTrade = new DutchOrderTrade({
-      currencyIn,
-      currenciesOut: [currencyOut],
-      orderInfo,
-      tradeType,
-      quoteId: data.quote.quoteId,
-      requestId: data.quote.requestId,
-      classicGasUseEstimateUSD: classicTrade.totalGasUseEstimateUSD,
-      wrapInfo,
-      approveInfo,
-      auctionPeriodSecs: data.quote.auctionPeriodSecs,
-      startTimeBufferSecs: data.quote.startTimeBufferSecs,
-      deadlineBufferSecs: data.quote.deadlineBufferSecs,
-      slippageTolerance: toSlippagePercent(data.quote.slippageTolerance),
-      swapFee,
-    });
+  //   const uniswapXTrade = new DutchOrderTrade({
+  //     currencyIn,
+  //     currenciesOut: [currencyOut],
+  //     orderInfo,
+  //     tradeType,
+  //     quoteId: data.quote.quoteId,
+  //     requestId: data.quote.requestId,
+  //     classicGasUseEstimateUSD: classicTrade.totalGasUseEstimateUSD,
+  //     wrapInfo,
+  //     approveInfo,
+  //     auctionPeriodSecs: data.quote.auctionPeriodSecs,
+  //     startTimeBufferSecs: data.quote.startTimeBufferSecs,
+  //     deadlineBufferSecs: data.quote.deadlineBufferSecs,
+  //     slippageTolerance: toSlippagePercent(data.quote.slippageTolerance),
+  //     swapFee,
+  //   });
 
-    return {
-      state: QuoteState.SUCCESS,
-      trade: uniswapXTrade,
-    };
-  }
+  //   return {
+  //     state: QuoteState.SUCCESS,
+  //     trade: uniswapXTrade,
+  //   };
+  // }
 
   return { state: QuoteState.SUCCESS, trade: classicTrade };
 }

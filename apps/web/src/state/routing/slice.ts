@@ -182,13 +182,11 @@ export const routingApi = createApi({
                     'lib/hooks/routing/clientSideSmartOrderRouter'
                   );
                   const router = getRouter(args.tokenInChainId);
-                  console.log('router: ', router);
                   const quoteResult = await getClientSideQuote(
                     args,
                     router,
                     CLIENT_PARAMS
                   );
-                  console.log('quoteResult: ', router);
                   if (quoteResult.state === QuoteState.SUCCESS) {
                     const trade = await transformQuoteToTrade(
                       args,

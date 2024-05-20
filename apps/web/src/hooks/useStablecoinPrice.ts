@@ -17,12 +17,9 @@ import { useRoutingAPITrade } from 'state/routing/useRoutingAPITrade';
 
 import { SupportedInterfaceChain, asSupportedChain } from 'constants/chains';
 import {
-  AMB,
   CUSD_CELO,
   CUSD_CELO_ALFAJORES,
   DAI_OPTIMISM,
-  USDB_BLAST,
-  USDC_AIRDAO,
   USDC_ARBITRUM,
   USDC_ARBITRUM_GOERLI,
   USDC_AVALANCHE,
@@ -34,6 +31,8 @@ import {
   USDC_POLYGON_MUMBAI,
   USDC_SEPOLIA,
   USDT_BSC,
+  USDC_AIRDAO_TEST,
+  // USDC_AIRDAO_DEV,
 } from '../constants/tokens';
 
 // Stablecoin amounts used when calculating spot price for a given currency.
@@ -67,7 +66,11 @@ export const STABLECOIN_AMOUNT_OUT: {
     CUSD_CELO_ALFAJORES,
     10_000e6
   ),
-  [ChainId.AIRDAO_TEST]: CurrencyAmount.fromRawAmount(USDC_AIRDAO, 10_000e18),
+  [ChainId.AIRDAO_TEST]: CurrencyAmount.fromRawAmount(
+    USDC_AIRDAO_TEST,
+    10_000e18
+  ),
+  // 30746: CurrencyAmount.fromRawAmount(USDC_AIRDAO_DEV, 10_000e18),
 };
 
 /**

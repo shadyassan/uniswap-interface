@@ -34,7 +34,8 @@ export enum ChainId {
   Optimism = 10,
   Polygon = 137,
   PolygonMumbai = 80001,
-  AirDAO = 22040,
+  AirDAO_TEST = 22040,
+  AirDAO_DEV = 30746,
   Bnb = 56,
 }
 
@@ -56,7 +57,8 @@ export const ALL_SUPPORTED_CHAIN_IDS: ChainId[] = [
 export const TESTNET_CHAIN_IDS = [
   ChainId.Goerli,
   ChainId.PolygonMumbai,
-  ChainId.AirDAO,
+  ChainId.AirDAO_TEST,
+  ChainId.AirDAO_DEV,
 ];
 
 export const ETHEREUM_CHAIN_IDS = [ChainId.Mainnet, ChainId.Goerli] as const;
@@ -338,7 +340,7 @@ export const CHAIN_INFO: ChainInfo = {
       [RPCType.PublicAlt]: 'https://rpc-endpoints.superfluid.dev/mumbai',
     },
   },
-  [ChainId.AirDAO]: {
+  [ChainId.AirDAO_TEST]: {
     blockWaitMsBeforeWarning: 600000, // 10 minutes
     bridge: '',
     docs: '',
@@ -367,4 +369,33 @@ export const CHAIN_INFO: ChainInfo = {
       [RPCType.PublicAlt]: 'https://network.ambrosus-test.io',
     },
   },
+  // [ChainId.AirDAO_DEV]: {
+  //   blockWaitMsBeforeWarning: 600000, // 10 minutes
+  //   bridge: '',
+  //   docs: '',
+  //   explorer: {
+  //     name: 'ExplorerAirdao',
+  //     url: 'https://explorer.ambrosus-dev.io/',
+  //     logoLight: Logos.PolygonscanLogoLight,
+  //     logoDark: Logos.PolygonscanLogoDark,
+  //   },
+  //   infoLink: '',
+  //   label: 'Ambrosus Devnet',
+  //   logo: MUMBAI_LOGO,
+  //   nativeCurrency: {
+  //     name: 'Amber',
+  //     symbol: 'AMB',
+  //     decimals: 18,
+  //     address: '0x0000000000000000000000000000000000001010',
+  //   },
+  //   wrappedNativeCurrency: {
+  //     name: 'Wrapped Amber',
+  //     symbol: 'sAMB',
+  //     decimals: 18,
+  //     address: '0x00662a0aC35717A1898bEfd243B47e373cFd73f7',
+  //   },
+  //   rpcUrls: {
+  //     [RPCType.PublicAlt]: 'https://network.ambrosus-dev.io',
+  //   },
+  // },
 };

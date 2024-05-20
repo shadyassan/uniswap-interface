@@ -38,7 +38,9 @@ export const RPC_PROVIDERS = {
   // [ChainId.BNB]: getAppProvider(ChainId.BNB),
   // [ChainId.AVALANCHE]: getAppProvider(ChainId.AVALANCHE),
   // [ChainId.BASE]: getAppProvider(ChainId.BASE),
-  [ChainId.AIRDAO_TEST]: new providers.JsonRpcProvider(
-    'https://network.ambrosus-test.io'
-  ),
+  [ChainId.AIRDAO_TEST]: getAppProvider(ChainId.AIRDAO_TEST),
+  // [ChainId.AIRDAO_TEST]: new providers.JsonRpcProvider(
+  //   'https://network.ambrosus-test.io'
+  // ),
+  30746: new providers.JsonRpcProvider('https://network.ambrosus-dev.io'),
 } satisfies Record<SupportedInterfaceChain, AppJsonRpcProvider>;

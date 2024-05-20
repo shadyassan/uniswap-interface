@@ -236,6 +236,9 @@ export class ClassicTrade extends Trade<Currency, Currency, TradeType> {
   quoteMethod: QuoteMethod;
   swapFee: SwapFeeInfo | undefined;
 
+  // inputTax = ZERO_PERCENT;
+  // outputTax = ZERO_PERCENT;
+
   constructor({
     gasUseEstimate,
     gasUseEstimateUSD,
@@ -310,6 +313,28 @@ export class ClassicTrade extends Trade<Currency, Currency, TradeType> {
     }
 
     return this.gasUseEstimateUSD;
+  }
+
+  /**
+   * Returns the sell tax of the input token
+   */
+  public get inputTax(): Percent {
+    const inputCurrency = this.inputAmount.currency;
+    if (inputCurrency.isNative || !inputCurrency.wrapped.sellFeeBps)
+      return ZERO_PERCENT;
+
+    return new Percent(inputCurrency.wrapped.sellFeeBps.toNumber(), 10000);
+  }
+
+  /**
+   * Returns the buy tax of the output token
+   */
+  public get outputTax(): Percent {
+    const outputCurrency = this.outputAmount.currency;
+    if (outputCurrency.isNative || !outputCurrency.wrapped.buyFeeBps)
+      return ZERO_PERCENT;
+
+    return new Percent(outputCurrency.wrapped.buyFeeBps.toNumber(), 10000);
   }
 }
 

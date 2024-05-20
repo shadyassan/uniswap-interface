@@ -45,8 +45,10 @@ import {
   WETH_POLYGON_MUMBAI,
   WRAPPED_NATIVE_CURRENCY,
   nativeOnChain,
-  BOND_AIRDAO,
-  USDC_AIRDAO,
+  USDC_AIRDAO_TEST,
+  BOND_AIRDAO_TEST,
+  // USDC_AIRDAO_DEV,
+  // BOND_AIRDAO_DEV,
 } from './tokens';
 
 type ChainTokenList = {
@@ -168,9 +170,15 @@ export const COMMON_BASES: ChainCurrencyList = {
   [ChainId.AIRDAO_TEST]: [
     nativeOnChain(ChainId.AIRDAO_TEST),
     WRAPPED_NATIVE_CURRENCY[ChainId.AIRDAO_TEST] as Token,
-    BOND_AIRDAO,
-    USDC_AIRDAO,
+    USDC_AIRDAO_TEST,
+    BOND_AIRDAO_TEST,
   ],
+  // 30746: [
+  //   nativeOnChain(30746),
+  //   WRAPPED_NATIVE_CURRENCY[30746] as Token,
+  //   USDC_AIRDAO_DEV,
+  //   BOND_AIRDAO_DEV,
+  // ],
 };
 
 // used to construct the list of all pairs we consider by default in the frontend

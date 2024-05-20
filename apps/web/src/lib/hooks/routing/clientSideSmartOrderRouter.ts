@@ -41,6 +41,7 @@ const CLIENT_SIDE_ROUTING_ALLOW_LIST = [
   ChainId.AVALANCHE,
   ChainId.BASE,
   ChainId.AIRDAO_TEST,
+  30746,
 ];
 const routers = new Map<ChainId, AlphaRouter>();
 export function getRouter(chainId: ChainId): AlphaRouter {
@@ -50,9 +51,7 @@ export function getRouter(chainId: ChainId): AlphaRouter {
   const supportedChainId = asSupportedChain(chainId);
   if (supportedChainId && CLIENT_SIDE_ROUTING_ALLOW_LIST.includes(chainId)) {
     const provider = RPC_PROVIDERS[supportedChainId];
-    // const provider = new providers.JsonRpcProvider(
-    //   'https://network.ambrosus-test.io'
-    // );
+    // Provider for Ethereum
     // const provider = new JsonRpcProvider('https://eth.meowrpc.com');
     const router = new AlphaRouter({ chainId, provider });
     routers.set(chainId, router);

@@ -69,6 +69,7 @@ export default function usePermit2Allowance(
     account,
     PERMIT2_ADDRESS
   );
+
   const updateTokenAllowance = useUpdateTokenAllowance(amount, PERMIT2_ADDRESS);
   const revokeTokenAllowance = useRevokeTokenAllowance(token, PERMIT2_ADDRESS);
   const isApproved = useMemo(() => {
@@ -128,6 +129,7 @@ export default function usePermit2Allowance(
     nonce,
     setSignature
   );
+
   const isPermitted = useMemo(() => {
     if (!amount || !permitAllowance || !permitExpiration) return false;
     return (

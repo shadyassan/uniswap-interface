@@ -366,30 +366,6 @@ export const UNI: { [chainId: number]: Token } = {
   ),
 };
 
-export const AMB = new Token(
-  ChainId.AIRDAO_TEST,
-  '0x00662a0aC35717A1898bEfd243B47e373cFd73f7',
-  18,
-  'sAMB',
-  'Amber'
-);
-
-export const USDC_AIRDAO = new Token(
-  ChainId.AIRDAO_TEST,
-  '0x5EB2A478dc3556A039ea88C1926766Ee2712079C',
-  18,
-  'USDC',
-  'USD Coin'
-);
-
-export const BOND_AIRDAO = new Token(
-  ChainId.AIRDAO_TEST,
-  '0x3baEAb018E7ec713813C1b6A742Cd00341962eed',
-  18,
-  'BOND',
-  'AirBond'
-);
-
 export const ARB = new Token(
   ChainId.ARBITRUM_ONE,
   '0x912CE59144191C1204E64559FE8253a0e49E6548',
@@ -427,6 +403,54 @@ export const MNW = new Token(
   'MNW',
   'Morpheus.Network'
 );
+
+export const AMB_TEST = new Token(
+  ChainId.AIRDAO_TEST,
+  '0x2Cf845b49e1c4E5D657fbBF36E97B7B5B7B7b74b',
+  18,
+  'sAMB',
+  'Amber'
+);
+
+export const USDC_AIRDAO_TEST = new Token(
+  ChainId.AIRDAO_TEST,
+  '0xdd82283Fc93Aa4373B6B27a7B25EB3A770fc3aba',
+  18,
+  'USDC',
+  'USD Coin'
+);
+
+export const BOND_AIRDAO_TEST = new Token(
+  ChainId.AIRDAO_TEST,
+  '0x765e3e03f8dfca312EfdAb378e386E1EA60ee93F',
+  18,
+  'BOND',
+  'AirBond'
+);
+
+// export const AMB_DEV = new Token(
+//   30746,
+//   '0x00661a0aC35717A1898bEfd243B43e373cFd13f7',
+//   18,
+//   'sAMB',
+//   'Amber'
+// );
+
+// export const USDC_AIRDAO_DEV = new Token(
+//   30746,
+//   '0x5EB2A478dc3556A039ea88C1926766Ee2712078C',
+//   18,
+//   'USDC',
+//   'USD Coin'
+// );
+
+// export const BOND_AIRDAO_DEV = new Token(
+//   30746,
+//   '0x3baEAb018E7ec713813C1b3A742Cd00341962ced',
+//   18,
+//   'BOND',
+//   'AirBond'
+// );
 
 export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } =
   {
@@ -517,11 +541,18 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } =
     ),
     [ChainId.AIRDAO_TEST]: new Token(
       ChainId.AIRDAO_TEST,
-      '0x00662a0aC35717A1898bEfd243B47e373cFd73f7',
+      '0x2Cf845b49e1c4E5D657fbBF36E97B7B5B7B7b74b',
       18,
       'sAMB',
       'Wrapped Amber'
     ),
+    // 30746: new Token(
+    //   30746,
+    //   '0x00662a0aC35717A1898bEfd243B47e373cFd73f7',
+    //   18,
+    //   'sAMB',
+    //   'Wrapped Amber'
+    // ),
   };
 
 export function isCelo(
@@ -547,24 +578,46 @@ export function isPolygon(
   return chainId === ChainId.POLYGON_MUMBAI || chainId === ChainId.POLYGON;
 }
 
-export function isAirDAO(chainId: number): chainId is 22040 {
+export function isAirDAOTest(chainId: number): chainId is 22040 {
   return chainId === 22040;
 }
 
-class AirdaoNativeCurrency extends NativeCurrency {
+export function isAirDAODev(chainId: number): chainId is 30746 {
+  return chainId === 30746;
+}
+
+class AirdaoNativeCurrencyTest extends NativeCurrency {
   equals(other: Currency): boolean {
     return other.isNative && other.chainId === this.chainId;
   }
 
   get wrapped(): Token {
-    if (!isAirDAO(this.chainId)) throw new Error('Not AirDAO');
+    if (!isAirDAOTest(this.chainId)) throw new Error('Not AirDAO Test');
     const wrapped = WRAPPED_NATIVE_CURRENCY[this.chainId];
     invariant(wrapped instanceof Token);
     return wrapped;
   }
 
   public constructor(chainId: number) {
-    if (!isAirDAO(chainId)) throw new Error('Not AirDAO');
+    if (!isAirDAOTest(chainId)) throw new Error('Not AirDAO Test');
+    super(chainId, 18, 'AMB', 'Amber');
+  }
+}
+
+class AirdaoNativeCurrencyDev extends NativeCurrency {
+  equals(other: Currency): boolean {
+    return other.isNative && other.chainId === this.chainId;
+  }
+
+  get wrapped(): Token {
+    if (!isAirDAODev(this.chainId)) throw new Error('Not AirDAO Dev');
+    const wrapped = WRAPPED_NATIVE_CURRENCY[this.chainId];
+    invariant(wrapped instanceof Token);
+    return wrapped;
+  }
+
+  public constructor(chainId: number) {
+    if (!isAirDAODev(chainId)) throw new Error('Not AirDAO Dev');
     super(chainId, 18, 'AMB', 'Amber');
   }
 }
@@ -669,8 +722,10 @@ export function nativeOnChain(chainId: number): NativeCurrency | Token {
     nativeCurrency = new BscNativeCurrency(chainId);
   } else if (isAvalanche(chainId)) {
     nativeCurrency = new AvaxNativeCurrency(chainId);
-  } else if (isAirDAO(chainId)) {
-    nativeCurrency = new AirdaoNativeCurrency(chainId);
+  } else if (isAirDAOTest(chainId)) {
+    nativeCurrency = new AirdaoNativeCurrencyTest(chainId);
+  } else if (isAirDAODev(chainId)) {
+    nativeCurrency = new AirdaoNativeCurrencyDev(chainId);
   } else {
     nativeCurrency = ExtendedEther.onChain(chainId);
   }

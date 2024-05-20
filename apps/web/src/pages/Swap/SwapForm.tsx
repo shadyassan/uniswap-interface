@@ -12,7 +12,6 @@ import {
   SwapEventName,
 } from '@uniswap/analytics-events';
 import { Currency, CurrencyAmount, Token } from '@sigismund/sdk-core';
-// import { UNIVERSAL_ROUTER_ADDRESS } from '@sigismund/universal-router-sdk';
 import { UNIVERSAL_ROUTER_ADDRESS } from '@sigismund/universal-router-sdk';
 import { useWeb3React } from '@web3-react/core';
 import { sendAnalyticsEvent, Trace, TraceEvent, useTrace } from 'analytics';
@@ -403,11 +402,13 @@ export function SwapForm({
   );
 
   const maximumAmountIn = useMaxAmountIn(trade, allowedSlippage);
+
   const allowance = usePermit2Allowance(
-    maximumAmountIn ??
-      (parsedAmounts[Field.INPUT]?.currency.isToken
-        ? (parsedAmounts[Field.INPUT] as CurrencyAmount<Token>)
-        : undefined),
+    // maximumAmountIn ??
+    //   (parsedAmounts[Field.INPUT]?.currency.isToken
+    //     ? (parsedAmounts[Field.INPUT] as CurrencyAmount<Token>)
+    //     : undefined),
+    undefined,
     isSupportedChain(chainId) ? UNIVERSAL_ROUTER_ADDRESS(chainId) : undefined,
     trade?.fillType
   );

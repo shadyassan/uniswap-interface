@@ -135,6 +135,7 @@ export const PUBLIC_RPC_URLS: Record<SupportedInterfaceChain, string[]> = {
     'https://base.meowrpc.com',
   ],
   [ChainId.AIRDAO_TEST]: ['https://network.ambrosus-test.io'],
+  30746: ['https://network.ambrosus-dev.io'],
 };
 
 /**
@@ -172,6 +173,7 @@ export const APP_RPC_URLS: Record<SupportedInterfaceChain, string[]> = {
   [ChainId.AVALANCHE]: [`https://avalanche-mainnet.infura.io/v3/${INFURA_KEY}`],
   [ChainId.BASE]: [`https://base-mainnet.infura.io/v3/${INFURA_KEY}`],
   [ChainId.AIRDAO_TEST]: [`https://network.ambrosus-test.io`],
+  30746: [`https://network.ambrosus-dev.io`],
 };
 
 export const INFURA_PREFIX_TO_CHAIN_ID: { [prefix: string]: ChainId } = {

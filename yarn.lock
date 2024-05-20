@@ -9161,22 +9161,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sigismund/router-sdk@npm:1.6.0-airdao.4":
-  version: 1.6.0-airdao.4
-  resolution: "@sigismund/router-sdk@npm:1.6.0-airdao.4"
+"@sigismund/router-sdk@npm:1.6.0-airdao.7":
+  version: 1.6.0-airdao.7
+  resolution: "@sigismund/router-sdk@npm:1.6.0-airdao.7"
   dependencies:
     "@ethersproject/abi": ^5.5.0
-    "@sigismund/sdk-core": 4.0.7-airdao.0
-    "@sigismund/v2-sdk": 3.2.3-airdao.3
-    "@sigismund/v3-sdk": 3.10.0-airdao.2
+    "@sigismund/sdk-core": 4.0.7-airdao.1
+    "@sigismund/v2-sdk": 3.2.3-airdao.5
+    "@sigismund/v3-sdk": 3.10.0-airdao.3
     "@uniswap/swap-router-contracts": 1.1.0
-  checksum: 33b994bb5ff250af29d93239fbf45b888944e8966692b2de9527518b03d04991bdc11a2f60d13d59e7ec584a2a1f56c84f4119ab502d61ef6b3ba0bacf779541
+  checksum: b50d228050867d31f7c25700710f0a2c8ff4dcd2ae08cd67b044a2512f1d8a910cd5c8510cb5141661f9931e797db330a5b28161d487a212ac2d86a4252b493c
   languageName: node
   linkType: hard
 
-"@sigismund/sdk-core@npm:4.0.7-airdao.0":
-  version: 4.0.7-airdao.0
-  resolution: "@sigismund/sdk-core@npm:4.0.7-airdao.0"
+"@sigismund/sdk-core@npm:4.0.7-airdao.1":
+  version: 4.0.7-airdao.1
+  resolution: "@sigismund/sdk-core@npm:4.0.7-airdao.1"
   dependencies:
     "@ethersproject/address": ^5.0.2
     big.js: ^5.2.2
@@ -9184,19 +9184,19 @@ __metadata:
     jsbi: ^3.1.4
     tiny-invariant: ^1.1.0
     toformat: ^2.0.0
-  checksum: 38b82229a6505c0403f85812436d03513eaffa64feba2c780af1dca345ec74111e143f58f2c424f3b2a26e6e2ab25eef30dd4f695c6e3835b419eb4a64c37f50
+  checksum: 694cae105f75c829677ac00bab2e6a258338eea9403aa9f7d57ff4f50eab101ccc29b40c764c780689075da3d7397570a4d3d6fac5bb52417cb3c51eca4d46ae
   languageName: node
   linkType: hard
 
-"@sigismund/smart-order-router@npm:3.17.3-airdao.2":
-  version: 3.17.3-airdao.2
-  resolution: "@sigismund/smart-order-router@npm:3.17.3-airdao.2"
+"@sigismund/smart-order-router@npm:3.17.3-airdao.6":
+  version: 3.17.3-airdao.6
+  resolution: "@sigismund/smart-order-router@npm:3.17.3-airdao.6"
   dependencies:
-    "@sigismund/router-sdk": 1.6.0-airdao.4
-    "@sigismund/sdk-core": 4.0.7-airdao.0
-    "@sigismund/universal-router-sdk": 1.5.8-airdao.5
-    "@sigismund/v2-sdk": 3.2.3-airdao.3
-    "@sigismund/v3-sdk": 3.10.0-airdao.2
+    "@sigismund/router-sdk": 1.6.0-airdao.7
+    "@sigismund/sdk-core": 4.0.7-airdao.1
+    "@sigismund/universal-router-sdk": 1.5.8-airdao.7
+    "@sigismund/v2-sdk": 3.2.3-airdao.5
+    "@sigismund/v3-sdk": 3.10.0-airdao.3
     "@uniswap/default-token-list": ^11.2.0
     "@uniswap/permit2-sdk": ^1.2.0
     "@uniswap/swap-router-contracts": ^1.3.0
@@ -9216,52 +9216,52 @@ __metadata:
     stats-lite: ^2.2.0
   peerDependencies:
     jsbi: ^3.2.0
-  checksum: 9cf7265a305b529a48d5b0fa9f5f0366a75b1a0f797840656daa90df81b2b2fa7540fd734ecc28ef7985010a3eb129f938e42d06eb0ac544a4c64ac26144c15d
+  checksum: 2bf6cc74be6ef014a10ec1ea4bc83b6b8766c28e06f430c303611a0de75468d67e0f26344b4769072e24795a4940d993525a05f3cad2c5a005ee9654710d8ac5
   languageName: node
   linkType: hard
 
-"@sigismund/universal-router-sdk@npm:1.5.8-airdao.5":
-  version: 1.5.8-airdao.5
-  resolution: "@sigismund/universal-router-sdk@npm:1.5.8-airdao.5"
+"@sigismund/universal-router-sdk@npm:1.5.8-airdao.7":
+  version: 1.5.8-airdao.7
+  resolution: "@sigismund/universal-router-sdk@npm:1.5.8-airdao.7"
   dependencies:
-    "@sigismund/router-sdk": 1.6.0-airdao.4
-    "@sigismund/sdk-core": 4.0.7-airdao.0
-    "@sigismund/v2-sdk": 3.2.3-airdao.3
-    "@sigismund/v3-sdk": 3.10.0-airdao.2
+    "@sigismund/router-sdk": 1.6.0-airdao.7
+    "@sigismund/sdk-core": 4.0.7-airdao.1
+    "@sigismund/v2-sdk": 3.2.3-airdao.5
+    "@sigismund/v3-sdk": 3.10.0-airdao.3
     "@uniswap/permit2-sdk": ^1.2.0
     "@uniswap/universal-router": 1.4.3
     bignumber.js: ^9.0.2
     ethers: ^5.3.1
-  checksum: 307916ad3fac873836020cfa3229f83b36cfbed77a361370a6a2364273eebe1adc12e10c3513aa92851ddc79b5a9c0abe90a9e77e316d6522e595300d638ab3f
+  checksum: 6fb1d2b39e47b40abbf1dff29e1d7c0e7c2bfda9d7feb58b6872234321bd899075c737ea918640ff75317dab660005ade22a6fca38da63d0ac004d2d0e8fd485
   languageName: node
   linkType: hard
 
-"@sigismund/v2-sdk@npm:3.2.3-airdao.3":
-  version: 3.2.3-airdao.3
-  resolution: "@sigismund/v2-sdk@npm:3.2.3-airdao.3"
+"@sigismund/v2-sdk@npm:3.2.3-airdao.5":
+  version: 3.2.3-airdao.5
+  resolution: "@sigismund/v2-sdk@npm:3.2.3-airdao.5"
   dependencies:
     "@ethersproject/address": ^5.0.0
     "@ethersproject/solidity": ^5.0.0
-    "@sigismund/sdk-core": 4.0.7-airdao.0
+    "@sigismund/sdk-core": 4.0.7-airdao.1
     tiny-invariant: ^1.1.0
     tiny-warning: ^1.0.3
-  checksum: fa4e689ce5edd0c09c133f7447a1fe18853553a922842eec8bf31e38c9e4293444ff7e219f078d4d4277379d3eb0b928b395d7664938141e73cf9d3c85298b48
+  checksum: 9a44306ba1f6509a528a5fb9373da8541c2215f8cc89cabd3ac6e0e19d9b2b667e4b782b6c51d6c1d8cf073f84328cb23653ac9a701070ed61b0ff89d551200d
   languageName: node
   linkType: hard
 
-"@sigismund/v3-sdk@npm:3.10.0-airdao.2":
-  version: 3.10.0-airdao.2
-  resolution: "@sigismund/v3-sdk@npm:3.10.0-airdao.2"
+"@sigismund/v3-sdk@npm:3.10.0-airdao.3":
+  version: 3.10.0-airdao.3
+  resolution: "@sigismund/v3-sdk@npm:3.10.0-airdao.3"
   dependencies:
     "@ethersproject/abi": ^5.0.12
     "@ethersproject/solidity": ^5.0.9
-    "@sigismund/sdk-core": 4.0.7-airdao.0
+    "@sigismund/sdk-core": 4.0.7-airdao.1
     "@uniswap/swap-router-contracts": ^1.2.1
     "@uniswap/v3-periphery": ^1.1.1
     "@uniswap/v3-staker": 1.0.0
     tiny-invariant: ^1.1.0
     tiny-warning: ^1.0.3
-  checksum: 4488e62a234a470283879866f72fc6a3efd5bd63eaf7ba2c6018fd7f3085e96d5320573813f008ef57400e04cf4d7172b708bfe34403d0b2ca71f1cbbd748806
+  checksum: 15c08564787dcfe28aaf275245c491699b02fc4b7c3eaeabcc1c4d5d963b2b881e2e364460be378d10cd54fb563619ab7937928d237ff531076f8c1da02d104f
   languageName: node
   linkType: hard
 
@@ -13937,12 +13937,12 @@ __metadata:
     "@sentry/core": 7.80.0
     "@sentry/react": 7.80.0
     "@sentry/types": 7.80.0
-    "@sigismund/router-sdk": 1.6.0-airdao.4
-    "@sigismund/sdk-core": 4.0.7-airdao.0
-    "@sigismund/smart-order-router": 3.17.3-airdao.2
-    "@sigismund/universal-router-sdk": 1.5.8-airdao.5
-    "@sigismund/v2-sdk": 3.2.3-airdao.3
-    "@sigismund/v3-sdk": 3.10.0-airdao.2
+    "@sigismund/router-sdk": 1.6.0-airdao.7
+    "@sigismund/sdk-core": 4.0.7-airdao.1
+    "@sigismund/smart-order-router": 3.17.3-airdao.6
+    "@sigismund/universal-router-sdk": 1.5.8-airdao.7
+    "@sigismund/v2-sdk": 3.2.3-airdao.5
+    "@sigismund/v3-sdk": 3.10.0-airdao.3
     "@swc/core": 1.3.72
     "@swc/jest": 0.2.29
     "@swc/plugin-styled-components": 1.5.97

@@ -21,6 +21,7 @@ export const CHAIN_IDS_TO_NAMES = {
   [ChainId.AVALANCHE]: 'avalanche',
   [ChainId.BASE]: 'base',
   [ChainId.AIRDAO_TEST]: 'airdao',
+  30746: 'airdao_dev',
 } as const;
 
 // Include ChainIds in this array if they are not supported by the UX yet, but are already in the SDK.
@@ -78,6 +79,7 @@ export const SUPPORTED_GAS_ESTIMATE_CHAIN_IDS = [
   ChainId.AVALANCHE,
   ChainId.BASE,
   ChainId.AIRDAO_TEST,
+  30746,
 ] as const;
 
 /**
@@ -99,6 +101,7 @@ export const TESTNET_CHAIN_IDS = [
   ChainId.OPTIMISM_GOERLI,
   ChainId.CELO_ALFAJORES,
   ChainId.AIRDAO_TEST,
+  30746,
 ] as const;
 
 /**
@@ -115,6 +118,7 @@ export const L1_CHAIN_IDS = [
   ChainId.BNB,
   ChainId.AVALANCHE,
   ChainId.AIRDAO_TEST,
+  30746,
 ] as const;
 
 export type SupportedL1ChainId = (typeof L1_CHAIN_IDS)[number];

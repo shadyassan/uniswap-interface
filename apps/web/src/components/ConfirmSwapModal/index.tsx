@@ -142,6 +142,7 @@ export function ConfirmSwapModal({
     const showAcceptChanges =
       confirmModalState !== ConfirmModalState.PENDING_CONFIRMATION &&
       doesTradeDiffer;
+
     let showPreview,
       showDetails,
       showProgressIndicator,

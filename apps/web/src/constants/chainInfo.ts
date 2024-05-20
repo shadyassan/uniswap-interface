@@ -284,6 +284,17 @@ const CHAIN_INFO: ChainInfoMap = {
     nativeCurrency: { name: 'Amber', symbol: 'AMB', decimals: 18 },
     color: darkTheme.chain_81457,
   },
+  // 30746: {
+  //   networkType: NetworkType.L1,
+  //   bridge: 'https://airdao.io/bridge',
+  //   defaultListUrl: '',
+  //   docs: '',
+  //   explorer: 'https://devnet.airdao.io/explorer',
+  //   infoLink: '',
+  //   label: 'Ambrosus Devnet',
+  //   nativeCurrency: { name: 'Amber', symbol: 'AMB', decimals: 18 },
+  //   color: darkTheme.chain_81457,
+  // },
 } as const;
 
 export function getChainInfo(
