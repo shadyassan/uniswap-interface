@@ -3,7 +3,7 @@ import {
   MaxAllowanceTransferAmount,
   PERMIT2_ADDRESS,
   PermitSingle,
-} from '@uniswap/permit2-sdk';
+} from '@sigismund/permit2-sdk';
 import { CurrencyAmount, Token } from '@sigismund/sdk-core';
 import { useWeb3React } from '@web3-react/core';
 import { useContract } from 'hooks/useContract';

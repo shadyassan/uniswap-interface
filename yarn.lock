@@ -9161,6 +9161,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sigismund/permit2-sdk@npm:1.2.0-airdao.0":
+  version: 1.2.0-airdao.0
+  resolution: "@sigismund/permit2-sdk@npm:1.2.0-airdao.0"
+  dependencies:
+    ethers: ^5.3.1
+    tiny-invariant: ^1.3.1
+  checksum: f0f519421e6285eff81321ac2d8217b6a6b025184f106b340dcb073de1db192edd7fadea45873a3cbbef42d95835249b947e553e4c272ea2218901f26d7488af
+  languageName: node
+  linkType: hard
+
 "@sigismund/router-sdk@npm:1.6.0-airdao.7":
   version: 1.6.0-airdao.7
   resolution: "@sigismund/router-sdk@npm:1.6.0-airdao.7"
@@ -9188,13 +9198,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sigismund/smart-order-router@npm:3.17.3-airdao.6":
-  version: 3.17.3-airdao.6
-  resolution: "@sigismund/smart-order-router@npm:3.17.3-airdao.6"
+"@sigismund/smart-order-router@npm:3.17.3-airdao.8":
+  version: 3.17.3-airdao.8
+  resolution: "@sigismund/smart-order-router@npm:3.17.3-airdao.8"
   dependencies:
     "@sigismund/router-sdk": 1.6.0-airdao.7
     "@sigismund/sdk-core": 4.0.7-airdao.1
-    "@sigismund/universal-router-sdk": 1.5.8-airdao.7
+    "@sigismund/universal-router-sdk": 1.5.8-airdao.8
     "@sigismund/v2-sdk": 3.2.3-airdao.5
     "@sigismund/v3-sdk": 3.10.0-airdao.3
     "@uniswap/default-token-list": ^11.2.0
@@ -9216,13 +9226,13 @@ __metadata:
     stats-lite: ^2.2.0
   peerDependencies:
     jsbi: ^3.2.0
-  checksum: 2bf6cc74be6ef014a10ec1ea4bc83b6b8766c28e06f430c303611a0de75468d67e0f26344b4769072e24795a4940d993525a05f3cad2c5a005ee9654710d8ac5
+  checksum: f14f0972b51ec55020c8ae86ddb2190b94c299f9a0682da9f8ce301d83e05795e68b1d7f6849239a9971cdb5a8f38f6f7063fc3de59e39c4071a54977178171c
   languageName: node
   linkType: hard
 
-"@sigismund/universal-router-sdk@npm:1.5.8-airdao.7":
-  version: 1.5.8-airdao.7
-  resolution: "@sigismund/universal-router-sdk@npm:1.5.8-airdao.7"
+"@sigismund/universal-router-sdk@npm:1.5.8-airdao.10":
+  version: 1.5.8-airdao.10
+  resolution: "@sigismund/universal-router-sdk@npm:1.5.8-airdao.10"
   dependencies:
     "@sigismund/router-sdk": 1.6.0-airdao.7
     "@sigismund/sdk-core": 4.0.7-airdao.1
@@ -9232,7 +9242,23 @@ __metadata:
     "@uniswap/universal-router": 1.4.3
     bignumber.js: ^9.0.2
     ethers: ^5.3.1
-  checksum: 6fb1d2b39e47b40abbf1dff29e1d7c0e7c2bfda9d7feb58b6872234321bd899075c737ea918640ff75317dab660005ade22a6fca38da63d0ac004d2d0e8fd485
+  checksum: f33f9ee10b90f5abbd99f7d3fb626e4647dd20634e4a2815b3df22a55183693c6b939f828c4ec757727bead239691f407f783a9805c47c68fcd83381212badc4
+  languageName: node
+  linkType: hard
+
+"@sigismund/universal-router-sdk@npm:1.5.8-airdao.8":
+  version: 1.5.8-airdao.8
+  resolution: "@sigismund/universal-router-sdk@npm:1.5.8-airdao.8"
+  dependencies:
+    "@sigismund/router-sdk": 1.6.0-airdao.7
+    "@sigismund/sdk-core": 4.0.7-airdao.1
+    "@sigismund/v2-sdk": 3.2.3-airdao.5
+    "@sigismund/v3-sdk": 3.10.0-airdao.3
+    "@uniswap/permit2-sdk": ^1.2.0
+    "@uniswap/universal-router": 1.4.3
+    bignumber.js: ^9.0.2
+    ethers: ^5.3.1
+  checksum: b464ab604aaa3bced402ae565654b5904237dfaa21d791df9976c61a992cad416d0c1c8f753dd743838aa4438b85c930c9d1e132bd496430712988ea49440411
   languageName: node
   linkType: hard
 
@@ -13937,10 +13963,11 @@ __metadata:
     "@sentry/core": 7.80.0
     "@sentry/react": 7.80.0
     "@sentry/types": 7.80.0
+    "@sigismund/permit2-sdk": 1.2.0-airdao.0
     "@sigismund/router-sdk": 1.6.0-airdao.7
     "@sigismund/sdk-core": 4.0.7-airdao.1
-    "@sigismund/smart-order-router": 3.17.3-airdao.6
-    "@sigismund/universal-router-sdk": 1.5.8-airdao.7
+    "@sigismund/smart-order-router": 3.17.3-airdao.8
+    "@sigismund/universal-router-sdk": 1.5.8-airdao.10
     "@sigismund/v2-sdk": 3.2.3-airdao.5
     "@sigismund/v3-sdk": 3.10.0-airdao.3
     "@swc/core": 1.3.72
@@ -13984,7 +14011,6 @@ __metadata:
     "@uniswap/governance": 1.0.2
     "@uniswap/liquidity-staker": 1.0.2
     "@uniswap/merkle-distributor": 1.0.1
-    "@uniswap/permit2-sdk": 1.2.0
     "@uniswap/redux-multicall": 1.1.8
     "@uniswap/token-lists": 1.0.0-beta.33
     "@uniswap/uniswapx-sdk": 2.0.1-alpha.4
